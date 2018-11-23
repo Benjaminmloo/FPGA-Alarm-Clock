@@ -1,0 +1,1303 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Nov 16 17:25:38 2018
+# Process ID: 92668
+# Current directory: E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent90528 E:\Documents\Google\UNI\18F\ELEC_3500\ELEC_3500_Labs\lab_9\alarm_clock\alarm_clock.xpr
+# Log file: E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/vivado.log
+# Journal file: E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/local.bloo/Google Drive/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 809.742 ; gain = 131.250
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Fri Nov 16 17:30:47 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Fri Nov 16 17:35:46 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Fri Nov 16 17:38:26 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Fri Nov 16 17:39:57 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Fri Nov 16 17:43:20 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Fri Nov 16 17:46:37 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Fri Nov 16 17:48:59 2018] Launched impl_1...
+Run output will be captured here: E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Fri Nov 16 17:58:20 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1/runme.log
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: top
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 933.996 ; gain = 71.453
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+	Parameter COUNT_BITS bound to: 16 - type: integer 
+	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
+WARNING: [Synth 8-5788] Register d_prev_reg in module debounce is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (1#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (2#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'count_to' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 24 - type: integer 
+	Parameter COUNT_TO bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:74]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter COUNT_TO bound to: 59 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_seconds' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:81]
+INFO: [Synth 8-6157] synthesizing module 'clock_counter' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-689] width (5) of port connection 'm' does not match port width (4) of module 'count_to__parameterized1' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:51]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-689] width (5) of port connection 'm' does not match port width (4) of module 'count_to__parameterized2' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:59]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter COUNT_TO bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-689] width (6) of port connection 'm' does not match port width (5) of module 'count_to__parameterized3' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:67]
+WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:63]
+INFO: [Synth 8-6157] synthesizing module 'increment_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (4#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hours_to_bcd_encoder' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (5#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+WARNING: [Synth 8-689] width (6) of port connection 'h' does not match port width (5) of module 'hours_to_bcd_encoder' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:94]
+WARNING: [Synth 8-689] width (11) of port connection 'bcd' does not match port width (9) of module 'hours_to_bcd_encoder' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:95]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (6#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'master_controller' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'master_controller' (7#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'display_mux' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'display_mux' (8#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+WARNING: [Synth 8-689] width (17) of port connection 'q' does not match port width (16) of module 'display_mux' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:127]
+WARNING: [Synth 8-350] instance 'dm' of module 'display_mux' requires 5 connections, but only 3 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+INFO: [Synth 8-6157] synthesizing module 'seg_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+	Parameter NUM_SEG bound to: 4 - type: integer 
+WARNING: [Synth 8-3848] Net bcd_array[7] in module/entity seg_driver does not have driver. [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:35]
+WARNING: [Synth 8-3848] Net bcd_array[6] in module/entity seg_driver does not have driver. [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:35]
+WARNING: [Synth 8-3848] Net bcd_array[5] in module/entity seg_driver does not have driver. [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:35]
+WARNING: [Synth 8-3848] Net bcd_array[4] in module/entity seg_driver does not have driver. [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (9#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+WARNING: [Synth 8-689] width (17) of port connection 'bcd' does not match port width (16) of module 'seg_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:135]
+INFO: [Synth 8-6155] done synthesizing module 'top' (10#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+WARNING: [Synth 8-3331] design display_mux has unconnected port d_time[16]
+WARNING: [Synth 8-3331] design display_mux has unconnected port d_alarm[16]
+WARNING: [Synth 8-3331] design increment_driver has unconnected port rst
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 977.383 ; gain = 114.840
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[15] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[14] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[13] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[12] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[11] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[10] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[9] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[8] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[7] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[6] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[5] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[4] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[3] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[2] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[1] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[0] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:s to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 977.383 ; gain = 114.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 977.383 ; gain = 114.840
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:20 . Memory (MB): peak = 1381.668 ; gain = 519.125
+38 Infos, 36 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:20 . Memory (MB): peak = 1381.668 ; gain = 519.125
+update_compile_order -fileset sources_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1384.266 ; gain = 2.598
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+	Parameter COUNT_BITS bound to: 16 - type: integer 
+	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
+WARNING: [Synth 8-5788] Register d_prev_reg in module debounce is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (1#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (2#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'count_to' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 24 - type: integer 
+	Parameter COUNT_TO bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:74]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter COUNT_TO bound to: 59 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_seconds' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:81]
+INFO: [Synth 8-6157] synthesizing module 'clock_counter' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-689] width (5) of port connection 'm' does not match port width (4) of module 'count_to__parameterized1' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:51]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-689] width (5) of port connection 'm' does not match port width (4) of module 'count_to__parameterized2' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:59]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter COUNT_TO bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-689] width (6) of port connection 'm' does not match port width (5) of module 'count_to__parameterized3' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:67]
+WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:63]
+ERROR: [Synth 8-439] module 'increment_driver' not found [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:74]
+ERROR: [Synth 8-6156] failed synthesizing module 'clock_counter' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+ERROR: [Synth 8-6156] failed synthesizing module 'top' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1424.176 ; gain = 42.508
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+update_compile_order -fileset sources_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1430.926 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+	Parameter COUNT_BITS bound to: 16 - type: integer 
+	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
+WARNING: [Synth 8-5788] Register d_prev_reg in module debounce is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (1#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (2#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'count_to' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 24 - type: integer 
+	Parameter COUNT_TO bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:74]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter COUNT_TO bound to: 59 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_seconds' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:81]
+INFO: [Synth 8-6157] synthesizing module 'clock_counter' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-689] width (5) of port connection 'm' does not match port width (4) of module 'count_to__parameterized1' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:51]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-689] width (5) of port connection 'm' does not match port width (4) of module 'count_to__parameterized2' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:59]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter COUNT_TO bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-689] width (6) of port connection 'm' does not match port width (5) of module 'count_to__parameterized3' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:67]
+WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:63]
+INFO: [Synth 8-6157] synthesizing module 'increment_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+	Parameter S0 bound to: 2'b00 
+	Parameter S1 bound to: 2'b01 
+	Parameter S2 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (4#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hours_to_bcd_encoder' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (5#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+WARNING: [Synth 8-689] width (6) of port connection 'h' does not match port width (5) of module 'hours_to_bcd_encoder' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:94]
+WARNING: [Synth 8-689] width (11) of port connection 'bcd' does not match port width (9) of module 'hours_to_bcd_encoder' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:95]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (6#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'master_controller' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'master_controller' (7#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'display_mux' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'display_mux' (8#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+WARNING: [Synth 8-689] width (17) of port connection 'q' does not match port width (16) of module 'display_mux' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:127]
+WARNING: [Synth 8-350] instance 'dm' of module 'display_mux' requires 5 connections, but only 3 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+INFO: [Synth 8-6157] synthesizing module 'seg_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+	Parameter NUM_SEG bound to: 4 - type: integer 
+WARNING: [Synth 8-3848] Net bcd_array[7] in module/entity seg_driver does not have driver. [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:35]
+WARNING: [Synth 8-3848] Net bcd_array[6] in module/entity seg_driver does not have driver. [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:35]
+WARNING: [Synth 8-3848] Net bcd_array[5] in module/entity seg_driver does not have driver. [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:35]
+WARNING: [Synth 8-3848] Net bcd_array[4] in module/entity seg_driver does not have driver. [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (9#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+WARNING: [Synth 8-689] width (17) of port connection 'bcd' does not match port width (16) of module 'seg_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:135]
+INFO: [Synth 8-6155] done synthesizing module 'top' (10#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+WARNING: [Synth 8-3331] design display_mux has unconnected port d_time[16]
+WARNING: [Synth 8-3331] design display_mux has unconnected port d_alarm[16]
+WARNING: [Synth 8-3331] design increment_driver has unconnected port en
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1430.926 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[15] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[14] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[13] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[12] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[11] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[10] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[9] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[8] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[7] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[6] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[5] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[4] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[3] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[2] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[1] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[0] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:s to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1430.926 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1430.926 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 1445.227 ; gain = 17.090
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1445.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+	Parameter COUNT_BITS bound to: 16 - type: integer 
+	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
+WARNING: [Synth 8-5788] Register d_prev_reg in module debounce is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (1#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (2#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'count_to' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 24 - type: integer 
+	Parameter COUNT_TO bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:74]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter COUNT_TO bound to: 59 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_seconds' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:81]
+INFO: [Synth 8-6157] synthesizing module 'clock_counter' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-689] width (5) of port connection 'm' does not match port width (4) of module 'count_to__parameterized1' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:51]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-689] width (5) of port connection 'm' does not match port width (4) of module 'count_to__parameterized2' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:59]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter COUNT_TO bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-689] width (6) of port connection 'm' does not match port width (5) of module 'count_to__parameterized3' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:67]
+WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:63]
+INFO: [Synth 8-6157] synthesizing module 'increment_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+	Parameter S0 bound to: 2'b00 
+	Parameter S1 bound to: 2'b01 
+	Parameter S2 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (4#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hours_to_bcd_encoder' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (5#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+WARNING: [Synth 8-689] width (6) of port connection 'h' does not match port width (5) of module 'hours_to_bcd_encoder' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:94]
+WARNING: [Synth 8-689] width (11) of port connection 'bcd' does not match port width (9) of module 'hours_to_bcd_encoder' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:95]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (6#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'master_controller' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'master_controller' (7#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'display_mux' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'display_mux' (8#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+WARNING: [Synth 8-689] width (17) of port connection 'q' does not match port width (16) of module 'display_mux' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:127]
+WARNING: [Synth 8-350] instance 'dm' of module 'display_mux' requires 5 connections, but only 3 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+INFO: [Synth 8-6157] synthesizing module 'seg_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+	Parameter NUM_SEG bound to: 4 - type: integer 
+WARNING: [Synth 8-3848] Net bcd_array[7] in module/entity seg_driver does not have driver. [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:35]
+WARNING: [Synth 8-3848] Net bcd_array[6] in module/entity seg_driver does not have driver. [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:35]
+WARNING: [Synth 8-3848] Net bcd_array[5] in module/entity seg_driver does not have driver. [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:35]
+WARNING: [Synth 8-3848] Net bcd_array[4] in module/entity seg_driver does not have driver. [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (9#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+WARNING: [Synth 8-689] width (17) of port connection 'bcd' does not match port width (16) of module 'seg_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:135]
+INFO: [Synth 8-6155] done synthesizing module 'top' (10#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+WARNING: [Synth 8-3331] design display_mux has unconnected port d_time[16]
+WARNING: [Synth 8-3331] design display_mux has unconnected port d_alarm[16]
+WARNING: [Synth 8-3331] design increment_driver has unconnected port en
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1445.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[15] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[14] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[13] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[12] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[11] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[10] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[9] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[8] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[7] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[6] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[5] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[4] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[3] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[2] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[1] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[0] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:s to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1445.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1445.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1464.113 ; gain = 18.887
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Fri Nov 16 19:19:38 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1464.113 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+	Parameter COUNT_BITS bound to: 16 - type: integer 
+	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (1#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (2#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'count_to' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 24 - type: integer 
+	Parameter COUNT_TO bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:74]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter COUNT_TO bound to: 59 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_seconds' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:81]
+INFO: [Synth 8-6157] synthesizing module 'clock_counter' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-689] width (5) of port connection 'm' does not match port width (4) of module 'count_to__parameterized1' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:51]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-689] width (5) of port connection 'm' does not match port width (4) of module 'count_to__parameterized2' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:59]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter COUNT_TO bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-689] width (6) of port connection 'm' does not match port width (5) of module 'count_to__parameterized3' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:67]
+WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:63]
+INFO: [Synth 8-6157] synthesizing module 'increment_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+	Parameter S0 bound to: 2'b00 
+	Parameter S1 bound to: 2'b01 
+	Parameter S2 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (4#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hours_to_bcd_encoder' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (5#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+WARNING: [Synth 8-689] width (6) of port connection 'h' does not match port width (5) of module 'hours_to_bcd_encoder' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:94]
+WARNING: [Synth 8-689] width (11) of port connection 'bcd' does not match port width (9) of module 'hours_to_bcd_encoder' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:95]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (6#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'master_controller' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'master_controller' (7#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'display_mux' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'display_mux' (8#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+WARNING: [Synth 8-689] width (17) of port connection 'q' does not match port width (16) of module 'display_mux' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:127]
+WARNING: [Synth 8-350] instance 'dm' of module 'display_mux' requires 5 connections, but only 3 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+INFO: [Synth 8-6157] synthesizing module 'seg_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+	Parameter NUM_SEG bound to: 4 - type: integer 
+WARNING: [Synth 8-3848] Net bcd_array[7] in module/entity seg_driver does not have driver. [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:35]
+WARNING: [Synth 8-3848] Net bcd_array[6] in module/entity seg_driver does not have driver. [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:35]
+WARNING: [Synth 8-3848] Net bcd_array[5] in module/entity seg_driver does not have driver. [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:35]
+WARNING: [Synth 8-3848] Net bcd_array[4] in module/entity seg_driver does not have driver. [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (9#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+WARNING: [Synth 8-689] width (17) of port connection 'bcd' does not match port width (16) of module 'seg_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:135]
+INFO: [Synth 8-6155] done synthesizing module 'top' (10#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+WARNING: [Synth 8-3331] design display_mux has unconnected port d_time[16]
+WARNING: [Synth 8-3331] design display_mux has unconnected port d_alarm[16]
+WARNING: [Synth 8-3331] design increment_driver has unconnected port en
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1464.113 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[15] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[14] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[13] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[12] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[11] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[10] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[9] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[8] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[7] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[6] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[5] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[4] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[3] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[2] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[1] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:d_alarm[0] to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+WARNING: [Synth 8-3295] tying undriven pin dm:s to constant 0 [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:125]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1464.113 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1464.113 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1495.879 ; gain = 31.766
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Fri Nov 16 19:25:00 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Fri Nov 16 19:29:37 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Fri Nov 16 19:34:08 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1495.879 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+	Parameter COUNT_BITS bound to: 16 - type: integer 
+	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (1#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (2#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'count_to' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 24 - type: integer 
+	Parameter COUNT_TO bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:74]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter COUNT_TO bound to: 59 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_seconds' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:81]
+INFO: [Synth 8-6157] synthesizing module 'clock_counter' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter COUNT_TO bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:63]
+INFO: [Synth 8-6157] synthesizing module 'increment_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+	Parameter S0 bound to: 2'b00 
+	Parameter S1 bound to: 2'b01 
+	Parameter S2 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (4#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hours_to_bcd_encoder' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (5#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (6#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'master_controller' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'master_controller' (7#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'display_mux' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'display_mux' (8#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+WARNING: [Synth 8-689] width (17) of port connection 'q' does not match port width (16) of module 'display_mux' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:129]
+INFO: [Synth 8-6157] synthesizing module 'seg_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+	Parameter NUM_SEG bound to: 4 - type: integer 
+WARNING: [Synth 8-3848] Net bcd_array[7] in module/entity seg_driver does not have driver. [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:35]
+WARNING: [Synth 8-3848] Net bcd_array[6] in module/entity seg_driver does not have driver. [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:35]
+WARNING: [Synth 8-3848] Net bcd_array[5] in module/entity seg_driver does not have driver. [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:35]
+WARNING: [Synth 8-3848] Net bcd_array[4] in module/entity seg_driver does not have driver. [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (9#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+WARNING: [Synth 8-689] width (17) of port connection 'bcd' does not match port width (16) of module 'seg_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:137]
+INFO: [Synth 8-6155] done synthesizing module 'top' (10#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+WARNING: [Synth 8-3331] design display_mux has unconnected port d_time[16]
+WARNING: [Synth 8-3331] design display_mux has unconnected port d_alarm[16]
+WARNING: [Synth 8-3331] design increment_driver has unconnected port en
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1495.879 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1495.879 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1495.879 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1499.434 ; gain = 3.555
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Fri Nov 16 19:41:26 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1499.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+	Parameter COUNT_BITS bound to: 16 - type: integer 
+	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (1#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (2#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'count_to' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 24 - type: integer 
+	Parameter COUNT_TO bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:74]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter COUNT_TO bound to: 59 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_seconds' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:81]
+INFO: [Synth 8-6157] synthesizing module 'clock_counter' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter COUNT_TO bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:63]
+INFO: [Synth 8-6157] synthesizing module 'increment_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+	Parameter S0 bound to: 2'b00 
+	Parameter S1 bound to: 2'b01 
+	Parameter S2 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (4#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hours_to_bcd_encoder' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (5#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (6#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'master_controller' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'master_controller' (7#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'display_mux' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'display_mux' (8#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+ERROR: [Synth 8-448] named port connection 'pm' does not exist for instance 'dm' of module 'display_mux' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:130]
+INFO: [Synth 8-6157] synthesizing module 'seg_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+	Parameter NUM_SEG bound to: 4 - type: integer 
+ERROR: [Synth 8-6156] failed synthesizing module 'seg_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+ERROR: [Synth 8-6156] failed synthesizing module 'top' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1499.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Fri Nov 16 19:42:01 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1499.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+	Parameter COUNT_BITS bound to: 16 - type: integer 
+	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (1#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (2#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'count_to' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 24 - type: integer 
+	Parameter COUNT_TO bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:74]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter COUNT_TO bound to: 59 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_seconds' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:81]
+INFO: [Synth 8-6157] synthesizing module 'clock_counter' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter COUNT_TO bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:63]
+INFO: [Synth 8-6157] synthesizing module 'increment_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+	Parameter S0 bound to: 2'b00 
+	Parameter S1 bound to: 2'b01 
+	Parameter S2 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (4#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hours_to_bcd_encoder' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (5#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (6#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'master_controller' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'master_controller' (7#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'display_mux' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'display_mux' (8#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6157] synthesizing module 'seg_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+	Parameter NUM_SEG bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (9#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'top' (10#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1499.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1499.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1499.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1504.418 ; gain = 4.984
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1504.418 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+	Parameter COUNT_BITS bound to: 16 - type: integer 
+	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (1#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (2#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'count_to' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 24 - type: integer 
+	Parameter COUNT_TO bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:74]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter COUNT_TO bound to: 59 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_seconds' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:81]
+INFO: [Synth 8-6157] synthesizing module 'clock_counter' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter COUNT_TO bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:63]
+INFO: [Synth 8-6157] synthesizing module 'increment_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+	Parameter S0 bound to: 2'b00 
+	Parameter S1 bound to: 2'b01 
+	Parameter S2 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (4#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hours_to_bcd_encoder' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (5#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (6#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'master_controller' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'master_controller' (7#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'display_mux' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'display_mux' (8#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6157] synthesizing module 'seg_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+	Parameter NUM_SEG bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (9#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'top' (10#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1504.418 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1504.418 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1504.418 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1549.004 ; gain = 44.586
+close [ open E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/is_pm.v w ]
+add_files E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/is_pm.v
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/is_pm.v] -no_script -reset -force -quiet
+remove_files  E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/is_pm.v
+file delete -force E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/is_pm.v
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1549.004 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+	Parameter COUNT_BITS bound to: 16 - type: integer 
+	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (1#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (2#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'count_to' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 24 - type: integer 
+	Parameter COUNT_TO bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:74]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter COUNT_TO bound to: 59 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_seconds' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:81]
+INFO: [Synth 8-6157] synthesizing module 'clock_counter' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter COUNT_TO bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:63]
+INFO: [Synth 8-6157] synthesizing module 'increment_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+	Parameter S0 bound to: 2'b00 
+	Parameter S1 bound to: 2'b01 
+	Parameter S2 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (4#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hours_to_bcd_encoder' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (5#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (6#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'master_controller' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'master_controller' (7#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'display_mux' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'display_mux' (8#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6157] synthesizing module 'seg_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+	Parameter NUM_SEG bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (9#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'top' (10#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1549.004 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1549.004 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1549.004 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1554.016 ; gain = 5.012
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Sat Nov 17 16:02:54 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1598.586 ; gain = 6.945
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+	Parameter COUNT_BITS bound to: 16 - type: integer 
+	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (1#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (2#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'count_to' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 24 - type: integer 
+	Parameter COUNT_TO bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:74]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter COUNT_TO bound to: 59 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_seconds' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:81]
+INFO: [Synth 8-6157] synthesizing module 'clock_counter' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter COUNT_TO bound to: 23 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:63]
+INFO: [Synth 8-6157] synthesizing module 'increment_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+	Parameter S0 bound to: 2'b00 
+	Parameter S1 bound to: 2'b01 
+	Parameter S2 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (4#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hours_to_bcd_encoder' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (5#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (6#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'master_controller' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'master_controller' (7#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'display_mux' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'display_mux' (8#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6157] synthesizing module 'seg_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+	Parameter NUM_SEG bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (9#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'top' (10#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1612.398 ; gain = 20.758
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1613.715 ; gain = 22.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1613.715 ; gain = 22.074
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 1661.918 ; gain = 71.605
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1661.918 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+	Parameter COUNT_BITS bound to: 16 - type: integer 
+	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (1#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (2#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/.Xil/Vivado-92668-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'count_to' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 24 - type: integer 
+	Parameter COUNT_TO bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:74]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter COUNT_TO bound to: 59 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_seconds' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:81]
+INFO: [Synth 8-6157] synthesizing module 'clock_counter' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter COUNT_TO bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter COUNT_TO bound to: 23 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (3#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:63]
+INFO: [Synth 8-6157] synthesizing module 'increment_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+	Parameter S0 bound to: 2'b00 
+	Parameter S1 bound to: 2'b01 
+	Parameter S2 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (4#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hours_to_bcd_encoder' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (5#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (6#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'master_controller' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'master_controller' (7#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'display_mux' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'display_mux' (8#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6157] synthesizing module 'seg_driver' [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+	Parameter NUM_SEG bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (9#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'top' (10#1) [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1661.918 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1661.918 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1661.918 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 1676.309 ; gain = 14.391
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Sat Nov 17 16:22:13 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/Google/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1/runme.log
