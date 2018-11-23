@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="synth_1" LaunchDir="C:/Users/local.bloo/Google Drive/UNI/18F/ELEC_3500/ELEC_3500_Labs/lab_9/alarm_clock/alarm_clock.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+
