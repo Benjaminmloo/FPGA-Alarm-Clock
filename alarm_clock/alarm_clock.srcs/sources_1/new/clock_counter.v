@@ -43,7 +43,7 @@ module clock_counter (
 //COUNTERS
 //////////////////////////////////////////////////////     
     sequential_enable #(3) counter_enable(
-        .en_in({so_minute_1, so_minute_0, en}),
+        .en_in({so_minute_1, so_minute_0, en & ~set | inc_m}),
         .en_out(counter_en)
         );
 
@@ -52,7 +52,7 @@ module clock_counter (
     count_to #(4, 9) count_minute_0(
         .clk        (clk),
         .rst        (rst),
-        .en         (counter_en[0] & ~set | inc_m), 
+        .en         (counter_en[0]), 
         .m          (minutes_0),
         .shift_out  (so_minute_0)
         );

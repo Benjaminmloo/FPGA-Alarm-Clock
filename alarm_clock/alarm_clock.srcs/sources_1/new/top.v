@@ -21,7 +21,9 @@
 
 
 module top#(
-    parameter tb = 0
+    parameter tb = 0,
+    parameter DEBOUNCE_CYCLES = 50_000,
+    parameter DEBOUNCE_BITS = 16
     )(
     input   clk_100MHz,
     input   rst,
@@ -34,62 +36,51 @@ module top#(
     output  [7:0] seg,
     output  pm,
     output  alarm_en,
-    output  alarm_on
+    output  alarm_led
     );
+       
+        
+//////////////////////////////////////////////////////
+//BUSSES
+////////////////////////////////////////////////////// 
     wire [7:0]      p_pattern = 8'b1111_1011;
     wire [4 * 4:0]  d_rt, d_alarm, d_display;
     
     
+    
+//////////////////////////////////////////////////////
+//WIRES
+////////////////////////////////////////////////////// 
     wire    clk_5MHz,
             btn_h_stb,
             btn_m_stb,
             en_1Hz,
-            en_1_60Hz;
-
-//////////////////////////////////////////////////////
-//CLOCKS of various kinds
-//////////////////////////////////////////////////////
-
-    debounce debounce_up (
-        .clk        (clk_5MHz),
-        .rst        (rst),
-        .d          (btn_h_raw),
-        .q          (btn_h_stb)
-        );
-        
-    debounce debounce_dn (
-        .clk        (clk_5MHz),
-        .rst        (rst),
-        .d          (btn_m_raw),
-        .q          (btn_m_stb)
-        );
+            en_1_60Hz,
+            alarm_on;
 
 //////////////////////////////////////////////////////
 //CLOCKS of various kinds
 ////////////////////////////////////////////////////// 
       
-    if(!tb)
-        clk_wiz_0 clk_wiz (
-            .clk_in1    (clk_100MHz),
-            .clk_out1   (clk_5MHz)        
-        );
-    else
-        assign clk_5MHz = clk_100MHz;
+    clk_wiz_0 clk_wiz (
+        .clk_in1    (clk_100MHz),
+        .clk_out1   (clk_5MHz)        
+    );
     
-    if(!tb)
-        count_to #(24, 5_000_000) en_1Hz_count (
-            .clk        (clk_5MHz),
-            .rst        (rst),
-            .en         (1'b1),
-            .shift_out  (en_1Hz)
-            );
-    else
-        count_to #(5, 20) en_1Hz_count (
-            .clk        (clk_5MHz),
-            .rst        (rst),
-            .en         (1'b1),
-            .shift_out  (en_1Hz)
-            );
+        
+    count_to #(24, 5_000_000) en_1Hz_count (
+        .clk        (clk_5MHz),
+        .rst        (rst),
+        .en         (1'b1),
+        .shift_out  (en_1Hz)
+        );
+        
+    count_to #(14, 10_000) en_500Hz_count (
+                .clk        (clk_5MHz),
+                .rst        (rst),
+                .en         (1'b1),
+                .shift_out  (en_500Hz)
+                );
                 
     count_to #(6, 59) count_seconds(
         .clk        (clk_5MHz),
@@ -101,7 +92,7 @@ module top#(
     clock_counter  rt_clock(
         .clk        (clk_5MHz),
         .rst        (rst),
-        .en         (en_1_60Hz & en_1Hz),
+        .en         (en_1Hz),// & en_1_60Hz ),
         .set        (set_time),
         .btn_h      (btn_h_stb),
         .btn_m      (btn_m_stb),
@@ -122,15 +113,33 @@ module top#(
 //LOGIC                                                 
 ////////////////////////////////////////////////////// 
 
-master_controller mc(
-    .d_rt           (d_rt),
-    .d_alarm        (d_alarm),
-    .en_alarm       (en_alarm),
-    .set_alarm      (set_alarm),
-    .alarm_on       (alarm_on),
-    .alarm_en       (alarm_en)
-    );
-
+    master_controller mc(
+        .clk            (clk_5MHz),
+        .rst            (rst),
+        .d_rt           (d_rt),
+        .d_alarm        (d_alarm),
+        .en_alarm       (en_alarm),
+        .set_alarm      (set_alarm),
+        .alarm_on       (alarm_on),
+        .alarm_en       (alarm_en)
+        );
+    
+    
+    debounce #(DEBOUNCE_BITS, DEBOUNCE_CYCLES)
+        debounce_up (
+        .clk        (clk_5MHz),
+        .rst        (rst),
+        .d          (btn_h_raw),
+        .q          (btn_h_stb)
+        );
+        
+    debounce #(DEBOUNCE_BITS, DEBOUNCE_CYCLES)
+        debounce_dn (
+        .clk        (clk_5MHz),
+        .rst        (rst),
+        .d          (btn_m_raw),
+        .q          (btn_m_stb)
+        );
 //////////////////////////////////////////////////////
 //DISPLAY
 ////////////////////////////////////////////////////// 
@@ -142,12 +151,12 @@ master_controller mc(
         .q          (d_display)
         );
         
-        assign pm = d_display[16];
+    assign pm = d_display[16];
         
     seg_driver #(4) sd(
         .clk        (clk_5MHz),
         .rst        (rst),
-        .en         (1'b1),
+        .en         (en_500Hz),
         .bcd        (d_display[15:0]),
         .p          (p_pattern),
         .an         (an),
@@ -157,8 +166,8 @@ master_controller mc(
     alarm_driver ad(
         .clk(clk_5MHz),
         .rst(rst),
-        .en(alarm_en),
-        .alarm_on(alarm_on)
+        .en(alarm_on & en_1Hz),
+        .alarm_on(alarm_led)
         );
-        
+
 endmodule

@@ -28,7 +28,7 @@ module tob_tb(
     wire [7:0] an, seg;
     wire pm, a_en, a_on;
     
-    top #(1)DUV (
+    top #(1, 20, 5)DUV (
         .clk_100MHz (clk),
         .rst        (rst),       
         .en_alarm   (en),  
@@ -40,7 +40,7 @@ module tob_tb(
         .seg        (seg), 
         .pm         (pm),        
         .alarm_en   (a_en),  
-        .alarm_on   (a_on)   
+        .alarm_led   (a_led)   
     );
     
     initial
@@ -61,5 +61,72 @@ module tob_tb(
     begin
         #1 rst = 1;
         #1 rst = 0;
+    end
+    
+    initial
+    begin
+        #20_000 set_time = 1; 
+        #5 btn_h = 1; 
+        #5 btn_h = 0; 
+        #100 btn_h = 1; 
+        #100 btn_h = 0; 
+        #100 btn_h = 1; 
+        #100 btn_h = 0; 
+        #100 btn_h = 1; 
+        #100 btn_h = 0;
+        
+        #5 btn_m = 1; 
+        #5 btn_m = 0; 
+        #100 btn_m = 1; 
+        #100 btn_m = 0; 
+        #100 btn_m = 1; 
+        #100 btn_m = 0; 
+        #100 btn_m = 1; 
+        #100 btn_m = 0;
+        
+        #100 set_time = 0;
+        
+        #100 en = 1; 
+        
+        #200 set_alarm = 1; 
+        #5 btn_h = 1; 
+        #5 btn_h = 0; 
+        #100 btn_h = 1; 
+        #100 btn_h = 0; 
+        #100 btn_h = 1; 
+        #100 btn_h = 0; 
+        #100 btn_h = 1; 
+        #100 btn_h = 0;
+        
+        #5 btn_m = 1; 
+        #5 btn_m = 0; 
+        #100 btn_m = 1; 
+        #100 btn_m = 0; 
+        #100 btn_m = 1; 
+        #100 btn_m = 0; 
+        #100 btn_m = 1; 
+        #100 btn_m = 0;
+        #100 btn_m = 1; 
+        #100 btn_m = 0; 
+        #100 btn_m = 1; 
+        #100 btn_m = 0; 
+        #100 btn_m = 1; 
+        #100 btn_m = 0;
+        #100 btn_m = 1; 
+        #100 btn_m = 0; 
+        #100 btn_m = 1; 
+        #100 btn_m = 0; 
+        #100 btn_m = 1; 
+        #100 btn_m = 0;
+        #100 btn_m = 1; 
+        #100 btn_m = 0; 
+        #100 btn_m = 1; 
+        #100 btn_m = 0; 
+        #100 btn_m = 1; 
+        #100 btn_m = 0;
+        #100 btn_m = 1; 
+        #100 btn_m = 0;
+        
+        #100 set_alarm = 0;
     end
 endmodule

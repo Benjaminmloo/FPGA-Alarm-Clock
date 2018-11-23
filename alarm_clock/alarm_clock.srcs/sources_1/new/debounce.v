@@ -45,7 +45,7 @@ module debounce #(
     begin
         count <= {COUNT_BITS{1'b0}};
          
-        if(d & d_prev)
+        if(~(d ^ d_prev))
             q <= d;
         else
             q <= q;

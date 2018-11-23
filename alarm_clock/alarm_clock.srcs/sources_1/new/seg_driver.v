@@ -43,7 +43,7 @@ module seg_driver #(
     always @ (posedge clk, posedge rst)
     if(rst)
         count <= 0; 
-    else if(count == NUM_SEG - 1)
+    else if(count == NUM_SEG)
         count <= 0;
     else
         count <= count + en;
