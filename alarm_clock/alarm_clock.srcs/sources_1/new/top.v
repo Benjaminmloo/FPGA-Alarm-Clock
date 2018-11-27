@@ -32,11 +32,15 @@ module top#(
     input   btn_m_raw,
     input   set_time,
     input   set_alarm,
+    input   audio_en,
+    
     output  [7:0] an,
     output  [7:0] seg,
     output  pm,
     output  alarm_en,
-    output  alarm_led
+    output  alarm_led,
+    output  [10:0] audio_out,
+    output  audio_pwm
     );
        
         
@@ -45,6 +49,7 @@ module top#(
 ////////////////////////////////////////////////////// 
     wire [7:0]      p_pattern = 8'b1111_1011;
     wire [4 * 4:0]  d_rt, d_alarm, d_display;
+                
     
     
     
@@ -54,12 +59,14 @@ module top#(
     wire    clk_5MHz,
             btn_h_stb,
             btn_m_stb,
+            en_500Hz,
             en_1Hz,
             en_1_60Hz,
-            alarm_on;
+            alarm_on
+            ;
 
 //////////////////////////////////////////////////////
-//CLOCKS of various kinds
+//CLOCKS and COUNTERS of various kinds
 ////////////////////////////////////////////////////// 
       
     clk_wiz_0 clk_wiz (
@@ -76,12 +83,12 @@ module top#(
         );
         
     count_to #(14, 10_000) en_500Hz_count (
-                .clk        (clk_5MHz),
-                .rst        (rst),
-                .en         (1'b1),
-                .shift_out  (en_500Hz)
-                );
-                
+       .clk         (clk_5MHz),
+       . rst        (rst),
+       . en         (1'b1),
+       . shift_out  (en_500Hz)
+       ) ;
+                 
     count_to #(6, 59) count_seconds(
         .clk        (clk_5MHz),
         .rst        (rst | set_time),
@@ -92,7 +99,7 @@ module top#(
     clock_counter  rt_clock(
         .clk        (clk_5MHz),
         .rst        (rst),
-        .en         (en_1Hz),// & en_1_60Hz ),
+        .en         (en_1Hz & ~set_alarm),// & en_1_60Hz ),
         .set        (set_time),
         .btn_h      (btn_h_stb),
         .btn_m      (btn_m_stb),
@@ -114,14 +121,14 @@ module top#(
 ////////////////////////////////////////////////////// 
 
     master_controller mc(
-        .clk            (clk_5MHz),
-        .rst            (rst),
-        .d_rt           (d_rt),
-        .d_alarm        (d_alarm),
-        .en_alarm       (en_alarm),
-        .set_alarm      (set_alarm),
-        .alarm_on       (alarm_on),
-        .alarm_en       (alarm_en)
+        .clk        (clk_5MHz),
+        .rst        (rst),
+        .d_rt       (d_rt),
+        .d_alarm    (d_alarm),
+        .en_alarm   (en_alarm),
+        .set_alarm  (set_alarm),
+        .alarm_on   (alarm_on),
+        .alarm_en   (alarm_en)
         );
     
     
@@ -164,10 +171,23 @@ module top#(
         );
         
     alarm_driver ad(
-        .clk(clk_5MHz),
-        .rst(rst),
-        .en(alarm_on & en_1Hz),
-        .alarm_on(alarm_led)
+        .clk        (clk_5MHz),
+        .rst        (rst),
+        .en         (alarm_on & en_1Hz),
+        .alarm_on   (alarm_led)
         );
-
+    
+    square_wave_gen swg(
+        .clk        (clk_100MHz),
+        .rst        (rst),
+        .en         (audio_en),
+        .audio      (audio_out)
+        );
+    
+    pwm_driver pwm_d(
+        .clk        (clk_100MHz),
+        .duty_in    (audio_out),
+        .pwm_out    (audio_pwm)
+    );
+    
 endmodule

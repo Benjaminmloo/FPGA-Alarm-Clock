@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date             : Fri Nov 23 16:08:51 2018
+| Date             : Tue Nov 27 18:45:46 2018
 | Host             : ME4166-10 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.184        |
+| Total On-Chip Power (W)  | 0.186        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.087        |
+| Dynamic (W)              | 0.088        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.2         |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |    <0.001 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |      331 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      149 |     63400 |            0.24 |
-|   CARRY4       |    <0.001 |       20 |     15850 |            0.13 |
-|   Register     |    <0.001 |      115 |    126800 |            0.09 |
-|   Others       |     0.000 |       14 |       --- |             --- |
-| Signals        |    <0.001 |      223 |       --- |             --- |
+| Clocks         |     0.001 |        5 |       --- |             --- |
+| Slice Logic    |    <0.001 |      476 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      210 |     63400 |            0.33 |
+|   Register     |    <0.001 |      176 |    126800 |            0.14 |
+|   CARRY4       |    <0.001 |       29 |     15850 |            0.18 |
+|   Others       |     0.000 |       18 |       --- |             --- |
+| Signals        |    <0.001 |      305 |       --- |             --- |
 | MMCM           |     0.086 |        1 |         6 |           16.67 |
-| I/O            |    <0.001 |       26 |       210 |           12.38 |
+| I/O            |    <0.001 |       39 |       210 |           18.57 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.184 |          |           |                 |
+| Total          |     0.186 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.016 |       0.000 |      0.015 |
+| Vccint    |       1.000 |     0.017 |       0.002 |      0.015 |
 | Vccaux    |       1.800 |     0.066 |       0.048 |      0.018 |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -125,13 +125,13 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+--------------------+---------------------------------+-----------------+
-| Clock              | Domain                          | Constraint (ns) |
-+--------------------+---------------------------------+-----------------+
-| clk_100MHz         | clk_100MHz                      |            10.0 |
-| clk_out1_clk_wiz_0 | clk_wiz/inst/clk_out1_clk_wiz_0 |           200.0 |
-| clkfbout_clk_wiz_0 | clk_wiz/inst/clkfbout_clk_wiz_0 |            50.0 |
-+--------------------+---------------------------------+-----------------+
++----------------------+---------------------------------+-----------------+
+| Clock                | Domain                          | Constraint (ns) |
++----------------------+---------------------------------+-----------------+
+| clk_out1_clk_wiz_0   | clk_wiz/inst/clk_out1_clk_wiz_0 |           200.0 |
+| clk_wiz/inst/clk_in1 | clk_100MHz_IBUF_BUFG            |            10.0 |
+| clkfbout_clk_wiz_0   | clk_wiz/inst/clkfbout_clk_wiz_0 |            50.0 |
++----------------------+---------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -143,7 +143,7 @@ Table of Contents
 +----------------------+-----------+
 | Name                 | Power (W) |
 +----------------------+-----------+
-| top                  |     0.087 |
+| top                  |     0.088 |
 |   ad                 |    <0.001 |
 |   alarm_reg          |    <0.001 |
 |     count_hours      |    <0.001 |
@@ -158,6 +158,7 @@ Table of Contents
 |   en_1Hz_count       |    <0.001 |
 |   en_500Hz_count     |    <0.001 |
 |   mc                 |    <0.001 |
+|   pwm_d              |    <0.001 |
 |   rt_clock           |    <0.001 |
 |     count_hours      |    <0.001 |
 |     count_minute_0   |    <0.001 |
@@ -165,6 +166,8 @@ Table of Contents
 |     increment_hour   |    <0.001 |
 |     increment_minute |    <0.001 |
 |   sd                 |    <0.001 |
+|   swg                |    <0.001 |
+|     _edge            |    <0.001 |
 +----------------------+-----------+
 
 

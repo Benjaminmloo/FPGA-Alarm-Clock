@@ -35,6 +35,7 @@ module pwm_driver(
     always @ (posedge clk)
     begin
         if(pwm_ramp == 0) current_duty <= duty_in;
+            
         pwm_ramp <= pwm_ramp + 1'b1;
         pwm_out <= (current_duty < pwm_ramp);
     end

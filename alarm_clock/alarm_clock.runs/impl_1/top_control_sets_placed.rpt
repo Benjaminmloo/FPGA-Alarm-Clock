@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date         : Fri Nov 23 16:08:01 2018
+| Date         : Tue Nov 27 18:44:55 2018
 | Host         : ME4166-10 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    13 |
-| Unused register locations in slices containing registers |    42 |
+| Number of unique control sets                            |    17 |
+| Unused register locations in slices containing registers |    48 |
 +----------------------------------------------------------+-------+
 
 
@@ -37,7 +37,7 @@ Table of Contents
 |      2 |            4 |
 |      8 |            6 |
 |     10 |            2 |
-|    16+ |            1 |
+|    16+ |            5 |
 +--------+--------------+
 
 
@@ -47,11 +47,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               0 |            0 |
-| No           | No                    | Yes                    |             154 |           20 |
-| No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              76 |           18 |
+| No           | No                    | No                     |              24 |            4 |
+| No           | No                    | Yes                    |             154 |           22 |
+| No           | Yes                   | No                     |              22 |            4 |
+| Yes          | No                    | No                     |              22 |            3 |
+| Yes          | No                    | Yes                    |             130 |           23 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -59,22 +59,26 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+------------------------+----------------------------------------+------------------+------------------+----------------+
-|      Clock Signal      |              Enable Signal             | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+------------------------+----------------------------------------+------------------+------------------+----------------+
-|  clk_wiz/inst/clk_out1 | debounce_dn/q_i_1__0_n_0               | rst_IBUF         |                1 |              2 |
-|  clk_wiz/inst/clk_out1 | debounce_dn/roll_over                  | rst_IBUF         |                1 |              2 |
-|  clk_wiz/inst/clk_out1 | debounce_up/q_i_1_n_0                  | rst_IBUF         |                1 |              2 |
-|  clk_wiz/inst/clk_out1 | debounce_up/roll_over                  | rst_IBUF         |                1 |              2 |
-|  clk_wiz/inst/clk_out1 | alarm_reg/count_minute_0/E[0]          | rst_IBUF         |                2 |              8 |
-|  clk_wiz/inst/clk_out1 | alarm_reg/increment_minute/m_reg[0][0] | rst_IBUF         |                1 |              8 |
-|  clk_wiz/inst/clk_out1 | rt_clock/increment_minute/E[0]         | rst_IBUF         |                1 |              8 |
-|  clk_wiz/inst/clk_out1 | en_1Hz_count/E[0]                      | rst_IBUF         |                1 |              8 |
-|  clk_wiz/inst/clk_out1 | set_alarm_IBUF                         | rst_IBUF         |                2 |              8 |
-|  clk_wiz/inst/clk_out1 | set_time_IBUF                          | rst_IBUF         |                2 |              8 |
-|  clk_wiz/inst/clk_out1 | alarm_reg/increment_hour/E[0]          | rst_IBUF         |                3 |             10 |
-|  clk_wiz/inst/clk_out1 | rt_clock/increment_hour/E[0]           | rst_IBUF         |                2 |             10 |
-|  clk_wiz/inst/clk_out1 |                                        | rst_IBUF         |               20 |            154 |
-+------------------------+----------------------------------------+------------------+------------------+----------------+
++------------------------+-----------------------------------------+------------------+------------------+----------------+
+|      Clock Signal      |              Enable Signal              | Set/Reset Signal | Slice Load Count | Bel Load Count |
++------------------------+-----------------------------------------+------------------+------------------+----------------+
+|  clk_wiz/inst/clk_out1 | debounce_dn/roll_over                   | rst_IBUF         |                1 |              2 |
+|  clk_wiz/inst/clk_out1 | debounce_dn/q_i_1__0_n_0                | rst_IBUF         |                1 |              2 |
+|  clk_wiz/inst/clk_out1 | debounce_up/q_i_1_n_0                   | rst_IBUF         |                1 |              2 |
+|  clk_wiz/inst/clk_out1 | debounce_up/roll_over                   | rst_IBUF         |                1 |              2 |
+|  clk_wiz/inst/clk_out1 | rt_clock/increment_minute/m_reg[3]_0[0] | rst_IBUF         |                2 |              8 |
+|  clk_wiz/inst/clk_out1 | rt_clock/increment_minute/m_reg[3][0]   | rst_IBUF         |                2 |              8 |
+|  clk_wiz/inst/clk_out1 | set_time_IBUF                           | rst_IBUF         |                2 |              8 |
+|  clk_wiz/inst/clk_out1 | set_alarm_IBUF                          | rst_IBUF         |                1 |              8 |
+|  clk_wiz/inst/clk_out1 | alarm_reg/count_minute_0/E[0]           | rst_IBUF         |                1 |              8 |
+|  clk_wiz/inst/clk_out1 | alarm_reg/increment_minute/m_reg[0][0]  | rst_IBUF         |                1 |              8 |
+|  clk_wiz/inst/clk_out1 | rt_clock/increment_minute/E[0]          | rst_IBUF         |                2 |             10 |
+|  clk_wiz/inst/clk_out1 | alarm_reg/increment_hour/E[0]           | rst_IBUF         |                1 |             10 |
+|  clk_100MHz_IBUF_BUFG  |                                         | swg/_edge/SR[0]  |                4 |             22 |
+|  clk_100MHz_IBUF_BUFG  | pwm_d/p_0_in__0                         |                  |                3 |             22 |
+|  clk_100MHz_IBUF_BUFG  |                                         |                  |                4 |             24 |
+|  clk_100MHz_IBUF_BUFG  | audio_en_IBUF                           | rst_IBUF         |                7 |             54 |
+|  clk_wiz/inst/clk_out1 |                                         | rst_IBUF         |               22 |            154 |
++------------------------+-----------------------------------------+------------------+------------------+----------------+
 
 
