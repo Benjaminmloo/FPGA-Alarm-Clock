@@ -24,6 +24,7 @@ module alarm_driver(
     input clk,
     input rst,
     input en,
+    input switch_edge,
     output reg alarm_on
     );
     
@@ -31,8 +32,10 @@ module alarm_driver(
     if (rst)
         alarm_on = 0;
     else if(en)
-        alarm_on = ~ alarm_on;
+    begin
+        if(switch_edge)
+            alarm_on = ~alarm_on;
+    end
     else
         alarm_on = 0;
-        
 endmodule

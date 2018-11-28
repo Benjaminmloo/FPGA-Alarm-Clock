@@ -38,6 +38,7 @@ module top#(
     output  [7:0] seg,
     output  pm,
     output  alarm_en,
+    output  alarm_on,
     output  alarm_led,
     output  [10:0] audio_out,
     output  audio_pwm
@@ -173,7 +174,8 @@ module top#(
     alarm_driver ad(
         .clk        (clk_5MHz),
         .rst        (rst),
-        .en         (alarm_on & en_1Hz),
+        .en         (alarm_on),
+        .switch_edge(en_1Hz),
         .alarm_on   (alarm_led)
         );
     

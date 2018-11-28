@@ -36,7 +36,7 @@ module square_wave_gen #(
     reg [27:0] count;
     wire [27:0] current_period;
         
-    count_to #(28, 10_000_000) pulse_10Hz( //pulse every 10 HZ
+    count_to #(28, 10_000) pulse_10Hz( //pulse every 10 HZ
             .clk        (clk), 
             .rst        (rst), 
             .en         (en), 
