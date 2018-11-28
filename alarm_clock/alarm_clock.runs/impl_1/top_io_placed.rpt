@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
----------------------------------------------------------------------------------------------------
-| Tool Version              : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date                      : Tue Nov 27 18:44:55 2018
-| Host                      : ME4166-10 running 64-bit major release  (build 9200)
+-------------------------------------------------------------------------------------------------
+| Tool Version              : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date                      : Tue Nov 27 22:59:32 2018
+| Host                      : Melchoir running 64-bit major release  (build 9200)
 | Command                   : report_io -file top_io_placed.rpt
 | Design                    : top
 | Device                    : xc7a100t
@@ -10,7 +10,7 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 | Package                   : csg324
 | Package Version           : FINAL 2012-07-17
 | Package Pin Delay Version : VERS. 2.0 2012-07-17
----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
 
 IO Information
 
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            39 |
+|            40 |
 +---------------+
 
 
@@ -352,7 +352,7 @@ Table of Contents
 | V9         |               | High Range | IO_L21N_T3_DQS_34            | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | V10        | audio_en      | High Range | IO_L21P_T3_DQS_14            | INPUT       | LVCMOS33    |      14 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | V11        | pm            | High Range | IO_L21N_T3_DQS_A06_D22_14    | OUTPUT      | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| V12        |               | High Range | IO_L20N_T3_A07_D23_14        | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| V12        | alarm_on      | High Range | IO_L20N_T3_A07_D23_14        | OUTPUT      | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | V13        |               |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | V14        |               | High Range | IO_L22N_T3_A04_D20_14        | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | V15        | audio_out[10] | High Range | IO_L16P_T2_CSI_B_14          | OUTPUT      | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
