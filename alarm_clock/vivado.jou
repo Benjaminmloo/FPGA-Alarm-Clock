@@ -1,54 +1,47 @@
 #-----------------------------------------------------------
-# Vivado v2018.2.1 (64-bit)
-# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
-# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
-# Start of session at: Tue Nov 27 17:34:09 2018
-# Process ID: 12108
-# Current directory: U:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2540 U:\win\ELEC3500\lab\lab_9\fpga_alarm_clock\alarm_clock\alarm_clock.xpr
-# Log file: U:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/vivado.log
-# Journal file: U:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock\vivado.jou
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Nov 27 19:03:02 2018
+# Process ID: 15720
+# Current directory: c:/Users/local.bloo/Documents/repos/fpga_alarm_clock/alarm_clock
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18524 C:\Users\local.bloo\Documents\repos\fpga_alarm_clock\alarm_clock\alarm_clock.xpr
+# Log file: c:/Users/local.bloo/Documents/repos/fpga_alarm_clock/alarm_clock/vivado.log
+# Journal file: c:/Users/local.bloo/Documents/repos/fpga_alarm_clock/alarm_clock\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project U:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.xpr
+open_project C:/Users/local.bloo/Documents/repos/fpga_alarm_clock/alarm_clock/alarm_clock.xpr
 update_compile_order -fileset sources_1
-close [ open U:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/wave_gen.v w ]
-add_files U:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/wave_gen.v
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-open_hw
-connect_hw_server
-open_hw_target
-set_property PROGRAM.FILE {U:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
-current_hw_device [get_hw_devices xc7a100t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {U:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-open_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {U:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-open_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {U:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-synth_design -rtl -name rtl_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/local.bloo/Documents/repos/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sim_1/new/audio_tb.v w ]
+add_files -fileset sim_1 C:/Users/local.bloo/Documents/repos/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sim_1/new/audio_tb.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top audio_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config C:/Users/local.bloo/Documents/repos/fpga_alarm_clock/alarm_clock/tob_tb_behav.wcfg
+source audio_tb.tcl
+run all
+restart
+run all
+restart
+run all
+save_wave_config {C:/Users/local.bloo/Documents/repos/fpga_alarm_clock/alarm_clock/tob_tb_behav.wcfg}
+relaunch_sim
+run all
+relaunch_sim
+run all
+relaunch_sim
+run all
+run all
+relaunch_sim
+run all

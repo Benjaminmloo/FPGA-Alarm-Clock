@@ -32,7 +32,7 @@ module square_wave_gen #(
     localparam num_clks_per_edge = clk_freq /(2 * des_freq);
     wire new_edge;
     
-    count_to #(27, 100_000_000)_edge(
+    count_to #(27, num_clks_per_edge)_edge(
         .clk        (clk), 
         .rst        (rst), 
         .en         (en), 
@@ -44,7 +44,5 @@ module square_wave_gen #(
             audio = 0;
         else if(en & new_edge)
             audio = ~audio;
-        else
-            audio = 0;
             
 endmodule

@@ -2,16 +2,8 @@
 2018.2
 Jun 14 2018
 20:41:02
-E:/Documents/xilinx/alarm_clock/alarm_clock.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
-E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sim_1/new/tob_tb.v,1542930728,verilog,,,,tob_tb,,,../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0,,,,,
-E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v,1542948419,verilog,,E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v,,count_to,,,../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0,,,,,
-E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_on.v,1542733138,verilog,,E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v,,alarm_driver,,,../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0,,,,,
-E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v,1542946470,verilog,,E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v,,clock_counter,,,../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0,,,,,
-E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v,1542415846,verilog,,E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v,,debounce,,,../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0,,,,,
-E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v,1542733751,verilog,,E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v,,display_mux,,,../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0,,,,,
-E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v,1542733721,verilog,,E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v,,hours_to_bcd_encoder,,,../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0,,,,,
-E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v,1542754922,verilog,,E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v,,increment_driver,,,../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0,,,,,
-E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v,1542733739,verilog,,E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v,,master_controller,,,../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0,,,,,
-E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v,1542733766,verilog,,E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v,,seg_driver,,,../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0,,,,,
-E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v,1542946898,verilog,,E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/new/top.v,,sequential_enable,,,../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0,,,,,
-E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sources_1/new/top.v,1542948537,verilog,,E:/Documents/xilinx/alarm_clock/alarm_clock.srcs/sim_1/new/tob_tb.v,,top,,,../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/local.bloo/Documents/repos/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim/glbl.v,1543273701,verilog,,,,glbl,,,,,,,,
+C:/Users/local.bloo/Documents/repos/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sim_1/new/audio_tb.v,1543364371,verilog,,,,audio_tb,,,../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/local.bloo/Documents/repos/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v,1543273701,verilog,,C:/Users/local.bloo/Documents/repos/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v,,count_to,,,../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/local.bloo/Documents/repos/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v,1543363329,verilog,,C:/Users/local.bloo/Documents/repos/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/wave_gen.v,,pwm_driver,,,../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/local.bloo/Documents/repos/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/wave_gen.v,1543365264,verilog,,C:/Users/local.bloo/Documents/repos/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sim_1/new/audio_tb.v,,square_wave_gen,,,../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0,,,,,
