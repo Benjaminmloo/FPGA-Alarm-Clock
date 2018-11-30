@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description: creates a pwm signal with the given duty cycle
+// Description: creates a pwm signal with the duty cyclegiven by 10bit binary input
 // 
 // Dependencies: 
 // 
@@ -34,9 +34,13 @@ module pwm_driver(
     
     always @ (posedge clk)
     begin
+        //if new cycle reset the duty
         if(pwm_ramp == 0) current_duty <= duty_in;
-            
+        
+        //increment cycle #    
         pwm_ramp <= pwm_ramp + 1'b1;
+        
+        //if the cycle # is less than the duty raise the output 
         pwm_out <= (current_duty < pwm_ramp);
     end
 endmodule

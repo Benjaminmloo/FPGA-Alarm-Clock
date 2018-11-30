@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description: 
+// Description: creates alarm output signal
 // 
 // Dependencies: 
 // 
@@ -34,7 +34,8 @@ module alarm_driver(
     else if(en)
     begin
         if(switch_edge)
-            alarm_on = ~alarm_on;
+            alarm_on = ~alarm_on; 
+            //if the alarm is triggered switch the output on and off every second
     end
     else
         alarm_on = 0;

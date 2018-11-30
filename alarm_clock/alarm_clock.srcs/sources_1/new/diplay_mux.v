@@ -8,7 +8,7 @@
 // Project Name: Alarm Clock
 // Target Devices: Nexys 4 DDR
 // Tool Versions: 
-// Description: 
+// Description: Simple mux to switch between inputs
 // 
 // Dependencies: 
 // 
@@ -18,11 +18,13 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module display_mux(
-    input [4 * 4:0] d_time,
-    input [4 * 4:0] d_alarm,
+module display_mux #(
+    parameter MUX_W = 4 * 4
+    )(
+    input [MUX_W:0] d_time,
+    input [MUX_W:0] d_alarm,
     input s,
-    output reg [4 * 4:0] q
+    output reg [MUX_W:0] q
     );
     
     always @ *

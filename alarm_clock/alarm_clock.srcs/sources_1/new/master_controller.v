@@ -9,7 +9,7 @@
 // Project Name: Alarm Clock
 // Target Devices: Nexys 4 DDR
 // Tool Versions: 
-// Description: 
+// Description: Syncronous FSM that determines when alarm should be enabled
 // 
 // Dependencies: 
 // 
@@ -22,8 +22,8 @@
 module master_controller(
     input clk,
     input rst,
-    input   [4 * 4:0] d_rt,
-    input   [4 * 4:0] d_alarm,
+    input   [4 * 8 - 1:0] d_rt,
+    input   [4 * 8 - 1:0] d_alarm,
     input   en_alarm,     //enable signle for the alarm
     input   set_alarm,
     output reg alarm_on,

@@ -9,7 +9,7 @@
 // Project Name: Alarm Clock
 // Target Devices: Nexys 4 DDR
 // Tool Versions: 
-// Description: 
+// Description: Encodes binary 24 hour values to 12 hour BCD values
 // 
 // Dependencies: 
 // 
@@ -24,6 +24,13 @@ module hours_to_bcd_encoder(
     input [4:0] h,
     output reg [8:0] bcd
     );
+    
+    //create a LUT to convert the binary input to 3 BCD digits  
+    //the input register count to 24 
+    //the output digits are as follows
+    //2: pm
+    //1: h1
+    //0: h0
     
     always @ * 
         case(h)

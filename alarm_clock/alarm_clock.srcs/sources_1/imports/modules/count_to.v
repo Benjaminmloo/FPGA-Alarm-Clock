@@ -33,8 +33,11 @@ module count_to
     );
     
     always @ (*)
-        shift_out = m == COUNT_TO;
-    
+        shift_out = m == COUNT_TO; 
+        //When the given value is reached the shift outsignal is raised 
+        //this can act as an enable signal as it will be lowered in the next clk edge
+        
+        
     always @ (posedge clk, posedge rst)
     begin
         if(rst)

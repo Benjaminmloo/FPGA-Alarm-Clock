@@ -9,8 +9,8 @@
 // Project Name: Alarm Clock
 // Target Devices: Nexys 4 DDR
 // Tool Versions: 
-// Description: 
-// 
+// Description: syncronous FSM that controls how a register increments
+// for every individual button press only one syncronous enable will be produced
 // Dependencies: 
 // 
 // Revision:
@@ -39,18 +39,18 @@ module increment_driver(
             
     always @ * 
         case(state)
-            S0: if(d)   state_n = S1;
+            S0: if(d)   state_n = S1; //wait for button press
                 else    state_n = S0;
-            S1: if(d)   state_n = S2;
+            S1: if(d)   state_n = S2; //the button has been pressed so a en is neede
                 else    state_n = S0;
-            S2: if(d)   state_n = S2;
+            S2: if(d)   state_n = S2;//the button has been pressed but no en is needed
                 else    state_n = S0;
             default: state_n = S0;
         endcase
         
     always @ * 
         case(state)
-            S1:q = 1;
+            S1:q = 1; //only rasie the enable in s1
             default: q = 0;
         endcase
 endmodule

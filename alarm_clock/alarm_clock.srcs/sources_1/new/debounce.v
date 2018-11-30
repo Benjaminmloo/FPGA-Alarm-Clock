@@ -9,7 +9,7 @@
 // Target Devices: Nexys 4 DDR
 // Tool Versions: 
 // Description: 
-// Debouncer for button input that count presses
+// Debounces button pressess
 //
 // Dependencies: 
 // 
@@ -29,22 +29,21 @@ module debounce #(
     );
     reg [COUNT_BITS - 1:0] count;
     reg d_prev;
+    wire cap;
     
-    wire roll_over;
-    
-    assign roll_over = count == CLKS_TO_COUNT; //this acts like the shift out of regular counter
-    
-    always @ (posedge clk, posedge rst)
-    if (rst)
-        begin
-            count <= {COUNT_BITS{1'b0}};
-            q <= 0;
-            d_prev <= 0;
-        end
-    else if(roll_over)
-    begin
-        count <= {COUNT_BITS{1'b0}};
-         
+    //counts the clks between samples
+    count_to #(COUNT_BITS, CLKS_TO_COUNT) cap_samp(
+        .clk        (clk),
+        .rst        (rst),
+        .en         (1'b1),
+        .shift_out  (cap)
+        );
+   
+   //if the two previous samples are the same
+   //The output is changed to the new value
+   //every edge update the samples
+   always @ (posedge cap) 
+    begin         
         if(~(d ^ d_prev))
             q <= d;
         else
@@ -52,7 +51,5 @@ module debounce #(
               
         d_prev <= d;
     end
-    else
-        count <= count + 1; 
     
 endmodule
