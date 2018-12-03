@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Tue Nov 27 23:00:25 2018
-| Host             : Melchoir running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+| Date             : Mon Dec  3 03:15:28 2018
+| Host             : Casper running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
 | Device           : xc7a100tcsg324-1
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.186        |
+| Total On-Chip Power (W)  | 0.185        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.088        |
@@ -52,17 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.001 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |      578 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      231 |     63400 |            0.36 |
-|   CARRY4       |    <0.001 |       53 |     15850 |            0.33 |
-|   Register     |    <0.001 |      233 |    126800 |            0.18 |
-|   Others       |     0.000 |       20 |       --- |             --- |
-| Signals        |    <0.001 |      423 |       --- |             --- |
+| Clocks         |     0.002 |        5 |       --- |             --- |
+| Slice Logic    |    <0.001 |    19920 |       --- |             --- |
+|   LUT as Logic |    <0.001 |    12953 |     63400 |           20.43 |
+|   CARRY4       |    <0.001 |       34 |     15850 |            0.21 |
+|   Register     |    <0.001 |      266 |    126800 |            0.21 |
+|   F7/F8 Muxes  |    <0.001 |     6564 |     63400 |           10.35 |
+|   Others       |     0.000 |       22 |       --- |             --- |
+| Signals        |    <0.001 |     6575 |       --- |             --- |
 | MMCM           |     0.086 |        1 |         6 |           16.67 |
 | I/O            |    <0.001 |       40 |       210 |           19.05 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.186 |          |           |                 |
+| Total          |     0.185 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -148,27 +149,28 @@ Table of Contents
 |   alarm_reg          |    <0.001 |
 |     count_hours      |    <0.001 |
 |     count_minute_0   |    <0.001 |
-|     count_minutes_1  |    <0.001 |
 |     increment_hour   |    <0.001 |
 |     increment_minute |    <0.001 |
 |   clk_wiz            |     0.086 |
 |     inst             |     0.086 |
 |   debounce_dn        |    <0.001 |
+|     cap_samp         |    <0.001 |
 |   debounce_up        |    <0.001 |
+|     cap_samp         |    <0.001 |
 |   en_1Hz_count       |    <0.001 |
-|   en_500Hz_count     |    <0.001 |
+|   en_1KHz_count      |    <0.001 |
 |   mc                 |    <0.001 |
 |   pwm_d              |    <0.001 |
+|   ra                 |     0.001 |
+|     addr_inc         |     0.001 |
+|     inc_en           |    <0.001 |
 |   rt_clock           |    <0.001 |
 |     count_hours      |    <0.001 |
 |     count_minute_0   |    <0.001 |
-|     count_minutes_1  |    <0.001 |
 |     increment_hour   |    <0.001 |
 |     increment_minute |    <0.001 |
 |   sd                 |    <0.001 |
-|   swg                |     0.001 |
-|     frequency        |    <0.001 |
-|     pulse_10Hz       |    <0.001 |
+|     disp_ptr_inc     |    <0.001 |
 +----------------------+-----------+
 
 
