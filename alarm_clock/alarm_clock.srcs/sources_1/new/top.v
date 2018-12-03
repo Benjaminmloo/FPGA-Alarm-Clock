@@ -185,14 +185,21 @@ module top#(
         .switch_edge(en_1Hz),
         .alarm_on   (alarm_led)
         );
+        
+    read_audio #(16) ra (
+        .clk(clk_100MHz),
+        .rst(rst),
+        .en(audio_en | alarm_led),
+        .audio(audio_out)
+        );
     
     //Generates a square wave signal for the pwm driver
-    square_wave_gen swg(
+    /*square_wave_gen swg(
         .clk        (clk_100MHz),
         .rst        (rst),
         .en         (audio_en | alarm_led), //Audio can be turned on with switch or with the alarm display signal
         .audio      (audio_out)
-        );
+        );*/
         
     //Drives pwm out put 
     pwm_driver pwm_d(
