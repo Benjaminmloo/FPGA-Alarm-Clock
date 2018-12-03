@@ -23,21 +23,25 @@
 module audio_tb(
 
     );
+    localparam AUDIO_W = 8;
     reg clk;
     reg rst;
     reg audio_en;
     
-    wire [10:0] audio_out;
+    wire [AUDIO_W - 1:0] audio_out;
     wire audio_pwm;
     
-    square_wave_gen swg(
+    reg [AUDIO_W - 1:0] audio_data [2 ** AUDIO_W - 1:0];
+           
+    
+    read_audio #(AUDIO_W, 1) ra(
         .clk        (clk),
         .rst        (rst),
         .en         (audio_en),
         .audio      (audio_out)
         );
     
-    pwm_driver pwm_d(
+    pwm_driver #(AUDIO_W) pwm_d(
         .clk        (clk),
         .duty_in    (audio_out),
         .pwm_out    (audio_pwm)
@@ -45,6 +49,7 @@ module audio_tb(
         
     initial
     begin
+        $readmemh("music_16b.rom", audio_data);
         clk = 0;
         rst = 0;
         audio_en = 0;

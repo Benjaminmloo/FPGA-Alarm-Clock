@@ -23,24 +23,32 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module pwm_driver(
+module pwm_driver#(
+    parameter AUDIO_W = 8
+    )(
     input clk,
-    input [10:0] duty_in,
+    input rst,
+    input [AUDIO_W - 1:0] duty_in,
     output reg pwm_out
     );
     
-    reg [10:0] current_duty = 0;
-    reg [10:0] pwm_ramp = 0;
+    reg [AUDIO_W - 1:0] current_duty = 0;
+    reg [AUDIO_W - 1:0] pwm_ramp = 0;
     
-    always @ (posedge clk)
+    always @ (posedge clk, posedge rst)
     begin
-        //if new cycle reset the duty
-        if(pwm_ramp == 0) current_duty <= duty_in;
-        
-        //increment cycle #    
-        pwm_ramp <= pwm_ramp + 1'b1;
-        
-        //if the cycle # is less than the duty raise the output 
-        pwm_out <= (current_duty < pwm_ramp);
+        if(rst)
+            pwm_ramp <= 0;
+        else
+        begin
+            //if new cycle reset the duty
+            if(pwm_ramp == 0) current_duty <= duty_in;
+            
+            //increment cycle #    
+            pwm_ramp <= pwm_ramp + 1'b1;
+            
+            //if the cycle # is less than the duty raise the output 
+            pwm_out <= (current_duty < pwm_ramp);
+        end
     end
 endmodule

@@ -22,6 +22,7 @@
 
 module top#(
     parameter tb = 0,
+    parameter AUDIO_FROM_FILE = 1,
     parameter DEBOUNCE_CYCLES = 50_000,
     parameter DEBOUNCE_BITS = 16
     )(
@@ -33,6 +34,7 @@ module top#(
     input   set_time,
     input   set_alarm,
     input   audio_en,
+    input   run_on_sec,
     
     output  [7:0] an,
     output  [7:0] seg,
@@ -40,20 +42,22 @@ module top#(
     output  alarm_en,
     output  alarm_on,
     output  alarm_led,
-    output  [10:0] audio_out,
+    output  audio_led,
     output  audio_pwm
     );
 //////////////////////////////////////////////////////
 //LOCAL PARAMETERS
 
 ////////////////////////////////////////////////////// 
-    parameter DISP_W = 4*8 - 1;
+    localparam DISPL_W = 4*8;
+    localparam AUDIO_W = 8;
         
 //////////////////////////////////////////////////////
 //BUSSES
 ////////////////////////////////////////////////////// 
     wire [7:0]      p_pattern = 8'b1110_1111;
-    wire [DISP_W:0]  d_rt, d_alarm, d_display;
+    wire [DISPL_W - 1:0]  d_rt, d_alarm, d_display;
+    wire [AUDIO_W - 1:0] audio_data;
                 
 //////////////////////////////////////////////////////
 //WIRES
@@ -102,7 +106,7 @@ module top#(
     clock_counter  rt_clock(
         .clk        (clk_5MHz),
         .rst        (rst),
-        .en         (en_1Hz & ~set_alarm),// & en_1_60Hz ),
+        .en         (en_1Hz & (run_on_sec | en_1_60Hz & ~run_on_sec)),// allows switching between second increment or minute 
         .set        (set_time),
         .btn_h      (btn_h_stb),
         .btn_m      (btn_m_stb),
@@ -156,7 +160,7 @@ module top#(
 //DISPLAY
 ////////////////////////////////////////////////////// 
     //mux to dchoose which register bank to display
-    display_mux #(DISP_W) dm(
+    display_mux #(DISPL_W - 1) dm(
         .d_time     (d_rt),
         .d_alarm    (d_alarm),
         .s          (set_alarm),
@@ -186,25 +190,32 @@ module top#(
         .alarm_on   (alarm_led)
         );
         
-    read_audio #(16) ra (
-        .clk(clk_100MHz),
-        .rst(rst),
-        .en(audio_en | alarm_led),
-        .audio(audio_out)
-        );
+    if(AUDIO_FROM_FILE)
+    begin:from_file
+        read_audio #(AUDIO_W) ra (
+            .clk        (clk_100MHz),
+            .rst        (rst),
+            .en         (audio_en | alarm_led),
+            .audio      (audio_data)
+            );
+    end
+    else
+    begin:sqr_wave
+        square_wave_gen swg(
+            .clk        (clk_100MHz),
+            .rst        (rst),
+            .en         (audio_en | alarm_led), //Audio can be turned on with switch or with the alarm display signal
+            .audio      (audio_data)
+            );
+    end
     
-    //Generates a square wave signal for the pwm driver
-    /*square_wave_gen swg(
-        .clk        (clk_100MHz),
-        .rst        (rst),
-        .en         (audio_en | alarm_led), //Audio can be turned on with switch or with the alarm display signal
-        .audio      (audio_out)
-        );*/
+    assign audio_led = audio_data [0];
         
     //Drives pwm out put 
-    pwm_driver pwm_d(
+    pwm_driver #(AUDIO_W) pwm_d(
         .clk        (clk_100MHz),
-        .duty_in    (audio_out),
+        .rst        (rst),
+        .duty_in    (audio_data),
         .pwm_out    (audio_pwm)
     );
     
