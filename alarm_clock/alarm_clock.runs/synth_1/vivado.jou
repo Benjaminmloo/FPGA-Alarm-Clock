@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
-# Vivado v2018.2.2 (64-bit)
-# SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
-# IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
-# Start of session at: Tue Dec  4 04:27:12 2018
-# Process ID: 17460
-# Current directory: E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Tue Dec  4 18:40:19 2018
+# Process ID: 26944
+# Current directory: W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/top.vds
-# Journal file: E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1\vivado.jou
+# Log file: W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/top.vds
+# Journal file: W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source top.tcl -notrace

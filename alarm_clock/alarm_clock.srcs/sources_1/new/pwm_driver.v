@@ -31,9 +31,10 @@ module pwm_driver#(
     input [AUDIO_W - 1:0] duty_in,
     output reg pwm_out
     );
+    localparam PWM_W = 8;
     
     reg [AUDIO_W - 1:0] current_duty = 0;
-    reg [AUDIO_W - 1:0] pwm_ramp = 0;
+    reg [PWM_W - 1:0] pwm_ramp = 0;
     
     always @ (posedge clk, posedge rst)
     begin
@@ -46,13 +47,19 @@ module pwm_driver#(
         else
         begin
             //if new cycle reset the duty
-            if(pwm_ramp == 0) current_duty <= duty_in;
-            
+            if(AUDIO_W >= 11)
+            begin
+                if(pwm_ramp == 0) current_duty <= duty_in[AUDIO_W - 1:AUDIO_W - PWM_W]; //if the input data is too big cut off some the bits
+            end
+            else
+            begin
+                if(pwm_ramp == 0) current_duty <= duty_in; //if the input data is too small add a few 0s  to the end
+            end
             //increment cycle #    
             pwm_ramp <= pwm_ramp + 1'b1;
             
             //if the cycle # is less than the duty raise the output 
-            pwm_out <= (current_duty < pwm_ramp);
+            pwm_out <= ({current_duty, {(PWM_W - AUDIO_W){1'b0}}}< pwm_ramp);
         end
     end
 endmodule

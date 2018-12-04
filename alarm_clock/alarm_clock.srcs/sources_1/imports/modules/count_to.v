@@ -22,13 +22,13 @@
 
 module count_to
     #(
-    parameter COUNT_WIDTH = 4,
+    parameter COUNT_W = 4,
     parameter COUNT_TO = 4'D9
     )(
     input clk,
     input rst,
     input en,
-    output reg [COUNT_WIDTH - 1:0] m,
+    output reg [COUNT_W - 1:0] m,
     output reg shift_out
     );
     
@@ -41,11 +41,11 @@ module count_to
     always @ (posedge clk, posedge rst)
     begin
         if(rst)
-            m = {(COUNT_WIDTH){1'b0}};
+            m = {(COUNT_W){1'b0}};
         else
             if(en)
                 if(shift_out)
-                    m = {(COUNT_WIDTH){1'b0}};
+                    m = {(COUNT_W){1'b0}};
                 else
                     m = m + 1;
     end

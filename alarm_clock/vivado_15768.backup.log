@@ -1,0 +1,1362 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.2 (64-bit)
+# SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
+# IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
+# Start of session at: Tue Dec  4 02:28:30 2018
+# Process ID: 15768
+# Current directory: e:/Documents/xilinx/fpga_alarm_clock/alarm_clock
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7364 E:\Documents\xilinx\fpga_alarm_clock\alarm_clock\alarm_clock.xpr
+# Log file: e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/vivado.log
+# Journal file: e:/Documents/xilinx/fpga_alarm_clock/alarm_clock\vivado.jou
+#-----------------------------------------------------------
+Sourcing tcl script 'C:/Users/bloo/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+start_gui
+open_project E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.xpr
+WARNING: [Board 49-91] Board repository path 's:/Xilinx/boards/new/board_files' does not exist, it will not be used to search board files.
+INFO: [Project 1-313] Project file moved from 'W:/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock' since last save.
+Scanning sources...
+Finished scanning sources
+CRITICAL WARNING: [Board 49-67] The board_part definition was not found for digilentinc.com:nexys4_ddr:part0:1.1. This can happen sometimes when you use custom board part. You can resolve this issue by setting 'board.repoPaths' parameter, pointing to the location of custom board files. Valid board_part values can be retrieved with the 'get_board_parts' Tcl command.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'S:/Xilinx/Vivado/2018.2/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'clk_wiz_0' is locked:
+* This IP has board specific outputs. Current project board 'unset' and the board 'digilentinc.com:nexys4_ddr:part0:1.1' used to customize the IP 'clk_wiz_0' do not match.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 834.582 ; gain = 130.781
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: top
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 928.902 ; gain = 18.688
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+	Parameter tb bound to: 0 - type: integer 
+	Parameter AUDIO_FROM_FILE bound to: 1 - type: integer 
+	Parameter DEBOUNCE_CYCLES bound to: 50000 - type: integer 
+	Parameter DEBOUNCE_BITS bound to: 16 - type: integer 
+	Parameter DISPL_W bound to: 32 - type: integer 
+	Parameter AUDIO_W bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'read_audio' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:22]
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+	Parameter tb bound to: 0 - type: integer 
+	Parameter CLK_FRQ bound to: 100000000 - type: integer 
+	Parameter SMP_RATE bound to: 44100 - type: integer 
+	Parameter CLK_PER_SMP bound to: 2267 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'music_8b.rom' is read successfully [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:74]
+INFO: [Synth 8-6157] synthesizing module 'count_to' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter COUNT_TO bound to: 2267 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to' (1#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'inc_en' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:80]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 8 - type: integer 
+	Parameter COUNT_TO bound to: 255 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (1#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'addr_inc' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:87]
+INFO: [Synth 8-6155] done synthesizing module 'read_audio' (2#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:22]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/.Xil/Vivado-15768-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (3#1) [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/.Xil/Vivado-15768-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 24 - type: integer 
+	Parameter COUNT_TO bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:82]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 14 - type: integer 
+	Parameter COUNT_TO bound to: 5000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1KHz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:90]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter COUNT_TO bound to: 59 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_seconds' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:98]
+INFO: [Synth 8-6157] synthesizing module 'clock_counter' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'sequential_enable' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v:25]
+	Parameter NUM_EN bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sequential_enable' (4#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v:25]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized4' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter COUNT_TO bound to: 23 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized4' (4#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:61]
+INFO: [Synth 8-6157] synthesizing module 'increment_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+	Parameter S0 bound to: 2'b00 
+	Parameter S1 bound to: 2'b01 
+	Parameter S2 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (5#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hours_to_bcd_encoder' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (6#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mins_to_bcd_encoder' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mins_to_bcd_encoder' (7#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (8#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'master_controller' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+	Parameter S0 bound to: 0 - type: integer 
+	Parameter S1 bound to: 1 - type: integer 
+	Parameter S2 bound to: 2 - type: integer 
+	Parameter S3 bound to: 3 - type: integer 
+INFO: [Synth 8-226] default block is never used [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'master_controller' (9#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+	Parameter COUNT_BITS bound to: 16 - type: integer 
+	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized5' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 16 - type: integer 
+	Parameter COUNT_TO bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized5' (9#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'cap_samp' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (10#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'display_mux' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+	Parameter MUX_W bound to: 31 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'display_mux' (11#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6157] synthesizing module 'seg_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+	Parameter NUM_SEG bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized6' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 3 - type: integer 
+	Parameter COUNT_TO bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized6' (11#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'disp_ptr_inc' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (12#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+INFO: [Synth 8-6157] synthesizing module 'alarm_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_on.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'alarm_driver' (13#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_on.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pwm_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:26]
+	Parameter AUDIO_W bound to: 8 - type: integer 
+WARNING: [Synth 8-5788] Register current_duty_reg in module pwm_driver is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:45]
+WARNING: [Synth 8-5788] Register pwm_out_reg in module pwm_driver is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'pwm_driver' (14#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'top' (15#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1073.293 ; gain = 163.078
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1073.293 ; gain = 163.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1073.293 ; gain = 163.078
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 1439.398 ; gain = 529.184
+56 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 1439.398 ; gain = 529.184
+close_design
+open_run impl_1
+CRITICAL WARNING: [Board 49-67] The board_part definition was not found for digilentinc.com:nexys4_ddr:part0:1.1. This can happen sometimes when you use custom board part. You can resolve this issue by setting 'board.repoPaths' parameter, pointing to the location of custom board files. Valid board_part values can be retrieved with the 'get_board_parts' Tcl command.
+INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'clk_wiz/clk_in1' is not directly connected to top level port. Synthesis is ignored for w:/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf but preserved for implementation. [w:/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf:275]
+INFO: [Constraints 18-5114] Cannot read file, software build IDs are not compatible.
+  File : E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/impl_1/top_routed/top.xbdc
+Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/impl_1/top_routed/top_board.xdc]
+Finished Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/impl_1/top_routed/top_board.xdc]
+Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/impl_1/top_routed/top_early.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1980.660 ; gain = 500.965
+Finished Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/impl_1/top_routed/top_early.xdc]
+Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/impl_1/top_routed/top.xdc]
+Finished Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/impl_1/top_routed/top.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 1980.840 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 1980.840 ; gain = 0.000
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 1980.840 ; gain = 501.145
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+CRITICAL WARNING: [Board 49-67] The board_part definition was not found for digilentinc.com:nexys4_ddr:part0:1.1. This can happen sometimes when you use custom board part. You can resolve this issue by setting 'board.repoPaths' parameter, pointing to the location of custom board files. Valid board_part values can be retrieved with the 'get_board_parts' Tcl command.
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 34 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-35] Removing redundant IBUF, clk_wiz/inst/clkin1_ibufg, from the path connected to top-level port: clk_100MHz 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'clk_wiz/clk_in1' is not directly connected to top level port. Synthesis is ignored for e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf but preserved for implementation. [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf:275]
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Tue Dec  4 02:38:04 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/runme.log
+refresh_design
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 34 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-35] Removing redundant IBUF, clk_wiz/inst/clkin1_ibufg, from the path connected to top-level port: clk_100MHz 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'clk_wiz/clk_in1' is not directly connected to top level port. Synthesis is ignored for e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf but preserved for implementation. [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf:275]
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2196.672 ; gain = 38.770
+close_design
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: top
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2196.672 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+	Parameter tb bound to: 0 - type: integer 
+	Parameter AUDIO_FROM_FILE bound to: 1 - type: integer 
+	Parameter DEBOUNCE_CYCLES bound to: 50000 - type: integer 
+	Parameter DEBOUNCE_BITS bound to: 16 - type: integer 
+	Parameter DISPL_W bound to: 32 - type: integer 
+	Parameter AUDIO_W bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'read_audio' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:22]
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+	Parameter tb bound to: 0 - type: integer 
+	Parameter CLK_FRQ bound to: 100000000 - type: integer 
+	Parameter SMP_RATE bound to: 44100 - type: integer 
+	Parameter CLK_PER_SMP bound to: 2267 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'music_8b.rom' is read successfully [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:74]
+INFO: [Synth 8-6157] synthesizing module 'count_to' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter COUNT_TO bound to: 2267 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to' (1#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'inc_en' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:80]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 8 - type: integer 
+	Parameter COUNT_TO bound to: 255 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (1#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'addr_inc' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:87]
+INFO: [Synth 8-6155] done synthesizing module 'read_audio' (2#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:22]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/.Xil/Vivado-15768-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (3#1) [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/.Xil/Vivado-15768-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 24 - type: integer 
+	Parameter COUNT_TO bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:82]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 14 - type: integer 
+	Parameter COUNT_TO bound to: 5000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1KHz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:90]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter COUNT_TO bound to: 59 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_seconds' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:98]
+INFO: [Synth 8-6157] synthesizing module 'clock_counter' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'sequential_enable' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v:25]
+	Parameter NUM_EN bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sequential_enable' (4#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v:25]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized4' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter COUNT_TO bound to: 23 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized4' (4#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:61]
+INFO: [Synth 8-6157] synthesizing module 'increment_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+	Parameter S0 bound to: 2'b00 
+	Parameter S1 bound to: 2'b01 
+	Parameter S2 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (5#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hours_to_bcd_encoder' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (6#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mins_to_bcd_encoder' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mins_to_bcd_encoder' (7#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (8#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'master_controller' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+	Parameter S0 bound to: 0 - type: integer 
+	Parameter S1 bound to: 1 - type: integer 
+	Parameter S2 bound to: 2 - type: integer 
+	Parameter S3 bound to: 3 - type: integer 
+INFO: [Synth 8-226] default block is never used [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'master_controller' (9#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+	Parameter COUNT_BITS bound to: 16 - type: integer 
+	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized5' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 16 - type: integer 
+	Parameter COUNT_TO bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized5' (9#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'cap_samp' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (10#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'display_mux' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+	Parameter MUX_W bound to: 31 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'display_mux' (11#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6157] synthesizing module 'seg_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+	Parameter NUM_SEG bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized6' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 3 - type: integer 
+	Parameter COUNT_TO bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized6' (11#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'disp_ptr_inc' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (12#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+INFO: [Synth 8-6157] synthesizing module 'alarm_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_on.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'alarm_driver' (13#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_on.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pwm_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:26]
+	Parameter AUDIO_W bound to: 8 - type: integer 
+WARNING: [Synth 8-5788] Register current_duty_reg in module pwm_driver is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:45]
+WARNING: [Synth 8-5788] Register pwm_out_reg in module pwm_driver is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'pwm_driver' (14#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'top' (15#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2196.672 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2196.672 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2196.672 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 2269.512 ; gain = 72.840
+55 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 2269.512 ; gain = 72.840
+current_design impl_1
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 34 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-35] Removing redundant IBUF, clk_wiz/inst/clkin1_ibufg, from the path connected to top-level port: clk_100MHz 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'clk_wiz/clk_in1' is not directly connected to top level port. Synthesis is ignored for e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf but preserved for implementation. [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf:275]
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+upgrade_ip -srcset clk_wiz_0 -vlnv xilinx.com:ip:clk_wiz:6.0 [get_ips  clk_wiz_0] -log ip_upgrade.log
+Upgrading 'clk_wiz_0'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/clk_wiz_0_synth_1
+
+INFO: [Project 1-386] Moving file 'E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' from fileset 'clk_wiz_0' to fileset 'sources_1'.
+INFO: [IP_Flow 19-3420] Updated clk_wiz_0 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips clk_wiz_0] -no_script -sync -force -quiet
+update_compile_order -fileset sources_1
+close_design
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+[Tue Dec  4 02:51:21 2018] Launched clk_wiz_0_synth_1...
+Run output will be captured here: E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/clk_wiz_0_synth_1/runme.log
+[Tue Dec  4 02:51:21 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 34 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-35] Removing redundant IBUF, clk_wiz/inst/clkin1_ibufg, from the path connected to top-level port: clk_100MHz 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'clk_wiz/clk_in1' is not directly connected to top level port. Synthesis is ignored for e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf but preserved for implementation. [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf:276]
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'audio_led'; it is not accessible from the fabric routing.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Tue Dec  4 03:06:18 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/runme.log
+close_design
+close_design
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2475.922 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+	Parameter tb bound to: 0 - type: integer 
+	Parameter AUDIO_FROM_FILE bound to: 1 - type: integer 
+	Parameter DEBOUNCE_CYCLES bound to: 50000 - type: integer 
+	Parameter DEBOUNCE_BITS bound to: 16 - type: integer 
+	Parameter DISPL_W bound to: 32 - type: integer 
+	Parameter AUDIO_W bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'read_audio' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:22]
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+	Parameter tb bound to: 0 - type: integer 
+	Parameter CLK_FRQ bound to: 100000000 - type: integer 
+	Parameter SMP_RATE bound to: 44100 - type: integer 
+	Parameter CLK_PER_SMP bound to: 2267 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'music_8b.rom' is read successfully [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:74]
+INFO: [Synth 8-6157] synthesizing module 'count_to' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter COUNT_TO bound to: 2267 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to' (1#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'inc_en' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:80]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 8 - type: integer 
+	Parameter COUNT_TO bound to: 255 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (1#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'addr_inc' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:87]
+INFO: [Synth 8-6155] done synthesizing module 'read_audio' (2#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:22]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/.Xil/Vivado-15768-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (3#1) [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/.Xil/Vivado-15768-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 24 - type: integer 
+	Parameter COUNT_TO bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:82]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 14 - type: integer 
+	Parameter COUNT_TO bound to: 5000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1KHz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:90]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter COUNT_TO bound to: 59 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_seconds' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:98]
+INFO: [Synth 8-6157] synthesizing module 'clock_counter' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'sequential_enable' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v:25]
+	Parameter NUM_EN bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sequential_enable' (4#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v:25]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized4' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter COUNT_TO bound to: 23 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized4' (4#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:61]
+INFO: [Synth 8-6157] synthesizing module 'increment_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+	Parameter S0 bound to: 2'b00 
+	Parameter S1 bound to: 2'b01 
+	Parameter S2 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (5#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hours_to_bcd_encoder' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (6#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mins_to_bcd_encoder' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mins_to_bcd_encoder' (7#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (8#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'master_controller' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+	Parameter S0 bound to: 0 - type: integer 
+	Parameter S1 bound to: 1 - type: integer 
+	Parameter S2 bound to: 2 - type: integer 
+	Parameter S3 bound to: 3 - type: integer 
+INFO: [Synth 8-226] default block is never used [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'master_controller' (9#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+	Parameter COUNT_BITS bound to: 16 - type: integer 
+	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized5' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 16 - type: integer 
+	Parameter COUNT_TO bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized5' (9#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'cap_samp' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (10#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'display_mux' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+	Parameter MUX_W bound to: 31 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'display_mux' (11#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6157] synthesizing module 'seg_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+	Parameter NUM_SEG bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized6' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 3 - type: integer 
+	Parameter COUNT_TO bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized6' (11#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'disp_ptr_inc' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (12#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+INFO: [Synth 8-6157] synthesizing module 'alarm_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_on.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'alarm_driver' (13#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_on.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pwm_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:26]
+	Parameter AUDIO_W bound to: 8 - type: integer 
+WARNING: [Synth 8-5788] Register current_duty_reg in module pwm_driver is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:45]
+WARNING: [Synth 8-5788] Register pwm_out_reg in module pwm_driver is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'pwm_driver' (14#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'top' (15#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2475.922 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2475.922 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2475.922 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 2475.922 ; gain = 0.000
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 34 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-35] Removing redundant IBUF, clk_wiz/inst/clkin1_ibufg, from the path connected to top-level port: clk_100MHz 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'clk_wiz/clk_in1' is not directly connected to top level port. Synthesis is ignored for e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf but preserved for implementation. [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf:276]
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+current_design rtl_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Tue Dec  4 03:20:37 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2475.922 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+	Parameter tb bound to: 0 - type: integer 
+	Parameter AUDIO_FROM_FILE bound to: 1 - type: integer 
+	Parameter DEBOUNCE_CYCLES bound to: 50000 - type: integer 
+	Parameter DEBOUNCE_BITS bound to: 16 - type: integer 
+	Parameter DISPL_W bound to: 32 - type: integer 
+	Parameter AUDIO_W bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'read_audio' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:22]
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+	Parameter tb bound to: 0 - type: integer 
+	Parameter CLK_FRQ bound to: 100000000 - type: integer 
+	Parameter SMP_RATE bound to: 44100 - type: integer 
+	Parameter CLK_PER_SMP bound to: 2267 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'music_8b.rom' is read successfully [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:74]
+INFO: [Synth 8-6157] synthesizing module 'count_to' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter COUNT_TO bound to: 2267 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to' (1#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'inc_en' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:80]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 8 - type: integer 
+	Parameter COUNT_TO bound to: 255 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (1#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'addr_inc' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:87]
+INFO: [Synth 8-6155] done synthesizing module 'read_audio' (2#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:22]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/.Xil/Vivado-15768-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (3#1) [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/.Xil/Vivado-15768-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 24 - type: integer 
+	Parameter COUNT_TO bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:82]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 14 - type: integer 
+	Parameter COUNT_TO bound to: 5000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1KHz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:90]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter COUNT_TO bound to: 59 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_seconds' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:98]
+INFO: [Synth 8-6157] synthesizing module 'clock_counter' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'sequential_enable' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v:25]
+	Parameter NUM_EN bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sequential_enable' (4#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v:25]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized4' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter COUNT_TO bound to: 23 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized4' (4#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:61]
+INFO: [Synth 8-6157] synthesizing module 'increment_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+	Parameter S0 bound to: 2'b00 
+	Parameter S1 bound to: 2'b01 
+	Parameter S2 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (5#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hours_to_bcd_encoder' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (6#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mins_to_bcd_encoder' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mins_to_bcd_encoder' (7#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (8#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'master_controller' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+	Parameter S0 bound to: 0 - type: integer 
+	Parameter S1 bound to: 1 - type: integer 
+	Parameter S2 bound to: 2 - type: integer 
+	Parameter S3 bound to: 3 - type: integer 
+INFO: [Synth 8-226] default block is never used [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'master_controller' (9#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+	Parameter COUNT_BITS bound to: 16 - type: integer 
+	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized5' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 16 - type: integer 
+	Parameter COUNT_TO bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized5' (9#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'cap_samp' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (10#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'display_mux' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+	Parameter MUX_W bound to: 31 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'display_mux' (11#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6157] synthesizing module 'seg_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+	Parameter NUM_SEG bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized6' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 3 - type: integer 
+	Parameter COUNT_TO bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized6' (11#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'disp_ptr_inc' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (12#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+INFO: [Synth 8-6157] synthesizing module 'alarm_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_on.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'alarm_driver' (13#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_on.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pwm_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:26]
+	Parameter AUDIO_W bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pwm_driver' (14#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'top' (15#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2526.336 ; gain = 50.414
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2526.336 ; gain = 50.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2526.336 ; gain = 50.414
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 2615.355 ; gain = 139.434
+current_design synth_1
+refresh_design
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 34 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-35] Removing redundant IBUF, clk_wiz/inst/clkin1_ibufg, from the path connected to top-level port: clk_100MHz 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'clk_wiz/clk_in1' is not directly connected to top level port. Synthesis is ignored for e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf but preserved for implementation. [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf:276]
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 2622.977 ; gain = 7.621
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Tue Dec  4 03:47:03 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/runme.log
+current_design rtl_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2622.977 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+	Parameter tb bound to: 0 - type: integer 
+	Parameter AUDIO_FROM_FILE bound to: 1 - type: integer 
+	Parameter DEBOUNCE_CYCLES bound to: 50000 - type: integer 
+	Parameter DEBOUNCE_BITS bound to: 16 - type: integer 
+	Parameter DISPL_W bound to: 32 - type: integer 
+	Parameter AUDIO_W bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'read_audio' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:22]
+	Parameter BIT_WIDTH bound to: 16 - type: integer 
+	Parameter tb bound to: 0 - type: integer 
+	Parameter CLK_FRQ bound to: 100000000 - type: integer 
+	Parameter SMP_RATE bound to: 44100 - type: integer 
+	Parameter CLK_PER_SMP bound to: 2267 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'music_16b.rom' is read successfully [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:71]
+INFO: [Synth 8-6157] synthesizing module 'count_to' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter COUNT_TO bound to: 2267 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to' (1#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'inc_en' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:80]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 16 - type: integer 
+	Parameter COUNT_TO bound to: 65535 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (1#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'addr_inc' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:87]
+INFO: [Synth 8-6155] done synthesizing module 'read_audio' (2#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:22]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/.Xil/Vivado-15768-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (3#1) [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/.Xil/Vivado-15768-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 24 - type: integer 
+	Parameter COUNT_TO bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:82]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 14 - type: integer 
+	Parameter COUNT_TO bound to: 5000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1KHz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:90]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter COUNT_TO bound to: 59 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_seconds' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:98]
+INFO: [Synth 8-6157] synthesizing module 'clock_counter' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'sequential_enable' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v:25]
+	Parameter NUM_EN bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sequential_enable' (4#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v:25]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized4' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter COUNT_TO bound to: 23 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized4' (4#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:61]
+INFO: [Synth 8-6157] synthesizing module 'increment_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+	Parameter S0 bound to: 2'b00 
+	Parameter S1 bound to: 2'b01 
+	Parameter S2 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (5#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hours_to_bcd_encoder' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (6#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mins_to_bcd_encoder' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mins_to_bcd_encoder' (7#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (8#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'master_controller' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+	Parameter S0 bound to: 0 - type: integer 
+	Parameter S1 bound to: 1 - type: integer 
+	Parameter S2 bound to: 2 - type: integer 
+	Parameter S3 bound to: 3 - type: integer 
+INFO: [Synth 8-226] default block is never used [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'master_controller' (9#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+	Parameter COUNT_BITS bound to: 16 - type: integer 
+	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized5' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 16 - type: integer 
+	Parameter COUNT_TO bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized5' (9#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'cap_samp' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (10#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'display_mux' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+	Parameter MUX_W bound to: 31 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'display_mux' (11#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6157] synthesizing module 'seg_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+	Parameter NUM_SEG bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized6' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 3 - type: integer 
+	Parameter COUNT_TO bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized6' (11#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'disp_ptr_inc' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (12#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+INFO: [Synth 8-6157] synthesizing module 'alarm_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_on.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'alarm_driver' (13#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_on.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pwm_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:26]
+	Parameter AUDIO_W bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pwm_driver' (14#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'top' (15#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2622.977 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2622.977 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2622.977 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2657.617 ; gain = 34.641
+current_design synth_1
+refresh_design
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 8335 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'top' is not ideal for floorplanning, since the cellview 'count_to__parameterized0' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-35] Removing redundant IBUF, clk_wiz/inst/clkin1_ibufg, from the path connected to top-level port: clk_100MHz 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'clk_wiz/clk_in1' is not directly connected to top level port. Synthesis is ignored for e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf but preserved for implementation. [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf:276]
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 2676.129 ; gain = 18.512
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Tue Dec  4 04:00:43 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/runme.log
+refresh_design
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-35] Removing redundant IBUF, clk_wiz/inst/clkin1_ibufg, from the path connected to top-level port: clk_100MHz 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'clk_wiz/clk_in1' is not directly connected to top level port. Synthesis is ignored for e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf but preserved for implementation. [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf:276]
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 2679.512 ; gain = 3.383
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Tue Dec  4 04:07:17 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/runme.log
+refresh_design
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-35] Removing redundant IBUF, clk_wiz/inst/clkin1_ibufg, from the path connected to top-level port: clk_100MHz 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'clk_wiz/clk_in1' is not directly connected to top level port. Synthesis is ignored for e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf but preserved for implementation. [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf:276]
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 2681.656 ; gain = 2.145
+current_design rtl_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2681.656 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+	Parameter tb bound to: 0 - type: integer 
+	Parameter AUDIO_FROM_FILE bound to: 1 - type: integer 
+	Parameter DEBOUNCE_CYCLES bound to: 50000 - type: integer 
+	Parameter DEBOUNCE_BITS bound to: 16 - type: integer 
+	Parameter DISPL_W bound to: 32 - type: integer 
+	Parameter AUDIO_W bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'read_audio' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:22]
+	Parameter BIT_WIDTH bound to: 16 - type: integer 
+	Parameter tb bound to: 0 - type: integer 
+	Parameter CLK_FRQ bound to: 100000000 - type: integer 
+	Parameter SMP_RATE bound to: 44100 - type: integer 
+	Parameter CLK_PER_SMP bound to: 2267 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'music_16b.rom' is read successfully [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:68]
+INFO: [Synth 8-6157] synthesizing module 'count_to' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter COUNT_TO bound to: 2267 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to' (1#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'inc_en' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:104]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 16 - type: integer 
+	Parameter COUNT_TO bound to: 65535 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (1#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'addr_inc' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:111]
+WARNING: [Synth 8-3848] Net audio in module/entity read_audio does not have driver. [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'read_audio' (2#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:22]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/.Xil/Vivado-15768-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (3#1) [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/.Xil/Vivado-15768-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 24 - type: integer 
+	Parameter COUNT_TO bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:82]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 14 - type: integer 
+	Parameter COUNT_TO bound to: 5000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1KHz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:90]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter COUNT_TO bound to: 59 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_seconds' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:98]
+INFO: [Synth 8-6157] synthesizing module 'clock_counter' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'sequential_enable' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v:25]
+	Parameter NUM_EN bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sequential_enable' (4#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v:25]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized4' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter COUNT_TO bound to: 23 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized4' (4#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:61]
+INFO: [Synth 8-6157] synthesizing module 'increment_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+	Parameter S0 bound to: 2'b00 
+	Parameter S1 bound to: 2'b01 
+	Parameter S2 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (5#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hours_to_bcd_encoder' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (6#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mins_to_bcd_encoder' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mins_to_bcd_encoder' (7#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (8#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'master_controller' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+	Parameter S0 bound to: 0 - type: integer 
+	Parameter S1 bound to: 1 - type: integer 
+	Parameter S2 bound to: 2 - type: integer 
+	Parameter S3 bound to: 3 - type: integer 
+INFO: [Synth 8-226] default block is never used [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'master_controller' (9#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+	Parameter COUNT_BITS bound to: 16 - type: integer 
+	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized5' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 16 - type: integer 
+	Parameter COUNT_TO bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized5' (9#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'cap_samp' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (10#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'display_mux' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+	Parameter MUX_W bound to: 31 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'display_mux' (11#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6157] synthesizing module 'seg_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+	Parameter NUM_SEG bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized6' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 3 - type: integer 
+	Parameter COUNT_TO bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized6' (11#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'disp_ptr_inc' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (12#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+INFO: [Synth 8-6157] synthesizing module 'alarm_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_on.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'alarm_driver' (13#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_on.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pwm_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:26]
+	Parameter AUDIO_W bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pwm_driver' (14#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'top' (15#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+WARNING: [Synth 8-3331] design read_audio has unconnected port audio[15]
+WARNING: [Synth 8-3331] design read_audio has unconnected port audio[14]
+WARNING: [Synth 8-3331] design read_audio has unconnected port audio[13]
+WARNING: [Synth 8-3331] design read_audio has unconnected port audio[12]
+WARNING: [Synth 8-3331] design read_audio has unconnected port audio[11]
+WARNING: [Synth 8-3331] design read_audio has unconnected port audio[10]
+WARNING: [Synth 8-3331] design read_audio has unconnected port audio[9]
+WARNING: [Synth 8-3331] design read_audio has unconnected port audio[8]
+WARNING: [Synth 8-3331] design read_audio has unconnected port audio[7]
+WARNING: [Synth 8-3331] design read_audio has unconnected port audio[6]
+WARNING: [Synth 8-3331] design read_audio has unconnected port audio[5]
+WARNING: [Synth 8-3331] design read_audio has unconnected port audio[4]
+WARNING: [Synth 8-3331] design read_audio has unconnected port audio[3]
+WARNING: [Synth 8-3331] design read_audio has unconnected port audio[2]
+WARNING: [Synth 8-3331] design read_audio has unconnected port audio[1]
+WARNING: [Synth 8-3331] design read_audio has unconnected port audio[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2681.656 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2681.656 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2681.656 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 1 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 2681.656 ; gain = 0.000
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2681.656 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+	Parameter tb bound to: 0 - type: integer 
+	Parameter AUDIO_FROM_FILE bound to: 1 - type: integer 
+	Parameter DEBOUNCE_CYCLES bound to: 50000 - type: integer 
+	Parameter DEBOUNCE_BITS bound to: 16 - type: integer 
+	Parameter DISPL_W bound to: 32 - type: integer 
+	Parameter AUDIO_W bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'read_audio' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:22]
+	Parameter BIT_WIDTH bound to: 16 - type: integer 
+	Parameter tb bound to: 0 - type: integer 
+	Parameter CLK_FRQ bound to: 100000000 - type: integer 
+	Parameter SMP_RATE bound to: 44100 - type: integer 
+	Parameter CLK_PER_SMP bound to: 2267 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'music_16b.rom' is read successfully [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:68]
+INFO: [Synth 8-6157] synthesizing module 'count_to' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter COUNT_TO bound to: 2267 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to' (1#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'inc_en' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:105]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 16 - type: integer 
+	Parameter COUNT_TO bound to: 65535 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (1#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'addr_inc' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:112]
+INFO: [Synth 8-6155] done synthesizing module 'read_audio' (2#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:22]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/.Xil/Vivado-15768-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (3#1) [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/.Xil/Vivado-15768-Casper/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 24 - type: integer 
+	Parameter COUNT_TO bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:82]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 14 - type: integer 
+	Parameter COUNT_TO bound to: 5000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1KHz_count' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:90]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter COUNT_TO bound to: 59 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (3#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_seconds' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:98]
+INFO: [Synth 8-6157] synthesizing module 'clock_counter' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'sequential_enable' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v:25]
+	Parameter NUM_EN bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sequential_enable' (4#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v:25]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized4' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter COUNT_TO bound to: 23 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized4' (4#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:61]
+INFO: [Synth 8-6157] synthesizing module 'increment_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+	Parameter S0 bound to: 2'b00 
+	Parameter S1 bound to: 2'b01 
+	Parameter S2 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (5#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hours_to_bcd_encoder' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (6#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mins_to_bcd_encoder' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mins_to_bcd_encoder' (7#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (8#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'master_controller' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+	Parameter S0 bound to: 0 - type: integer 
+	Parameter S1 bound to: 1 - type: integer 
+	Parameter S2 bound to: 2 - type: integer 
+	Parameter S3 bound to: 3 - type: integer 
+INFO: [Synth 8-226] default block is never used [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'master_controller' (9#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+	Parameter COUNT_BITS bound to: 16 - type: integer 
+	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized5' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 16 - type: integer 
+	Parameter COUNT_TO bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized5' (9#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'cap_samp' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (10#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'display_mux' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+	Parameter MUX_W bound to: 31 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'display_mux' (11#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6157] synthesizing module 'seg_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+	Parameter NUM_SEG bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized6' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_WIDTH bound to: 3 - type: integer 
+	Parameter COUNT_TO bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized6' (11#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'disp_ptr_inc' of module 'count_to' requires 5 connections, but only 4 given [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (12#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+INFO: [Synth 8-6157] synthesizing module 'alarm_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_on.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'alarm_driver' (13#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_on.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pwm_driver' [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:26]
+	Parameter AUDIO_W bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pwm_driver' (14#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'top' (15#1) [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2681.656 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2681.656 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2681.656 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 2710.879 ; gain = 29.223
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Tue Dec  4 04:27:09 2018] Launched synth_1...
+Run output will be captured here: E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/runme.log
+current_design synth_1
+refresh_design
+INFO: [Project 1-454] Reading design checkpoint 'e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 8335 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'top' is not ideal for floorplanning, since the cellview 'count_to__parameterized0' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-35] Removing redundant IBUF, clk_wiz/inst/clkin1_ibufg, from the path connected to top-level port: clk_100MHz 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'clk_wiz/clk_in1' is not directly connected to top level port. Synthesis is ignored for e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf but preserved for implementation. [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0.edf:276]
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [e:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 2727.820 ; gain = 16.941
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Dec  4 12:33:12 2018...

@@ -50,12 +50,14 @@ module top#(
 
 ////////////////////////////////////////////////////// 
     localparam DISPL_W = 4*8;
-    localparam AUDIO_W = 16;
+    localparam AUDIO_W = 8;
         
 //////////////////////////////////////////////////////
 //BUSSES
 ////////////////////////////////////////////////////// 
-    wire [7:0]      p_pattern = 8'b1110_1111;
+    wire clk_delim;
+    wire [7:0]      p_pattern = {3'b111, clk_delim , 4'b1111};
+    wire [5:0]      sec_reg;
     wire [DISPL_W - 1:0]  d_rt, d_alarm, d_display;
     wire [AUDIO_W - 1:0] audio_data;
                 
@@ -99,6 +101,7 @@ module top#(
         .clk        (clk_5MHz),
         .rst        (rst | set_time),
         .en         (en_1Hz),
+        .m          (sec_reg),
         .shift_out  (en_1_60Hz)
         );
     
@@ -127,7 +130,7 @@ module top#(
 //////////////////////////////////////////////////////    
 //LOGIC                                                 
 ////////////////////////////////////////////////////// 
-    
+    assign clk_delim = sec_reg[0];
     //controller for the alarm
     master_controller mc(
         .clk        (clk_5MHz),

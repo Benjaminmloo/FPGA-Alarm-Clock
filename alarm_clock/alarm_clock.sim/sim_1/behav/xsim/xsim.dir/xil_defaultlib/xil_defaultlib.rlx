@@ -2,8 +2,8 @@
 2018.2
 Jul 26 2018
 19:36:16
-W:/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim/glbl.v,1543004355,verilog,,,,glbl,,,,,,,,
-W:/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sim_1/new/audio_tb.v,1543875071,verilog,,,,audio_tb,,,../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0,,,,,
-W:/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v,1543602506,verilog,,W:/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v,,count_to,,,../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0,,,,,
-W:/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v,1543874774,verilog,,W:/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v,,pwm_driver,,,../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0,,,,,
-W:/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v,1543875549,verilog,,W:/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sim_1/new/audio_tb.v,,read_audio,,,../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0,,,,,
+W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim/glbl.v,1543004355,verilog,,,,glbl,,,,,,,,
+W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sim_1/new/audio_tb.v,1543875071,verilog,,,,audio_tb,,,,,,,,
+W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v,1543965643,verilog,,W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v,,count_to,,,,,,,,
+W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v,1543966811,verilog,,W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v,,pwm_driver,,,,,,,,
+W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v,1543965653,verilog,,W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sim_1/new/audio_tb.v,,read_audio,,,,,,,,

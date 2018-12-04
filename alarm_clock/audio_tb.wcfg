@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="126666180000fs"></ZoomStartTime>
-      <ZoomEndTime time="144490190915fs"></ZoomEndTime>
-      <Cursor1Time time="201000000000fs"></Cursor1Time>
+      <ZoomStartTime time="4380420000fs"></ZoomStartTime>
+      <ZoomEndTime time="10966023113fs"></ZoomEndTime>
+      <Cursor1Time time="11000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="130"></ValueColumnWidth>
+      <ValueColumnWidth column_width="126"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="11" />
+   <WVObjectSize size="12" />
    <wvobject fp_name="/audio_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -62,7 +62,11 @@
       <obj_property name="ObjectShortName">pwm_ramp[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/audio_tb/ra/addr" type="array">
-      <obj_property name="ElementShortName">addr[7:0]</obj_property>
-      <obj_property name="ObjectShortName">addr[7:0]</obj_property>
+      <obj_property name="ElementShortName">addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/audio_tb/ra/inc_en/m" type="array">
+      <obj_property name="ElementShortName">m[11:0]</obj_property>
+      <obj_property name="ObjectShortName">m[11:0]</obj_property>
    </wvobject>
 </wave_config>
