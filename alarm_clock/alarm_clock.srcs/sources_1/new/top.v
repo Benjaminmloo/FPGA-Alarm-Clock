@@ -50,7 +50,7 @@ module top#(
 
 ////////////////////////////////////////////////////// 
     localparam DISPL_W = 4*8;
-    localparam AUDIO_W = 8;
+    localparam AUDIO_W = 16;
         
 //////////////////////////////////////////////////////
 //BUSSES
@@ -189,26 +189,26 @@ module top#(
         .switch_edge(en_1Hz),
         .alarm_on   (alarm_led)
         );
-        
-    if(AUDIO_FROM_FILE)
-    begin:from_file
-        read_audio #(AUDIO_W) ra (
-            .clk        (clk_100MHz),
-            .rst        (rst),
-            .en         (audio_en | alarm_led),
-            .audio      (audio_data)
-            );
-    end
-    else
-    begin:sqr_wave
-        square_wave_gen swg(
-            .clk        (clk_100MHz),
-            .rst        (rst),
-            .en         (audio_en | alarm_led), //Audio can be turned on with switch or with the alarm display signal
-            .audio      (audio_data)
-            );
-    end
-    
+    generate
+        if(AUDIO_FROM_FILE)
+        begin:from_file
+            read_audio #(AUDIO_W) ra (
+                .clk        (clk_100MHz),
+                .rst        (rst),
+                .en         (audio_en | alarm_led),
+                .audio      (audio_data)
+                );
+        end
+        else
+        begin:sqr_wave
+            square_wave_gen swg(
+                .clk        (clk_100MHz),
+                .rst        (rst),
+                .en         (audio_en | alarm_led), //Audio can be turned on with switch or with the alarm display signal
+                .audio      (audio_data)
+                );
+        end
+    endgenerate
     assign audio_led = audio_data [0];
         
     //Drives pwm out put 

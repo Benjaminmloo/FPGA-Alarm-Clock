@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
--- Date        : Fri Nov 23 15:23:26 2018
--- Host        : ME4166-10 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top clk_wiz_0 -prefix
---               clk_wiz_0_ clk_wiz_0_stub.vhdl
+-- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+-- Date        : Tue Dec  4 02:52:02 2018
+-- Host        : Casper running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub
+--               E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.vhdl
 -- Design      : clk_wiz_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1

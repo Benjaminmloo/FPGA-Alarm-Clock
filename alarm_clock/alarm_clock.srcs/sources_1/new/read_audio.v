@@ -36,7 +36,7 @@ module read_audio #(
     wire [BIT_WIDTH -1:0] addr;
     wire en_inc;
         
-        
+    generate    
     if(tb)
     begin
         wire [BIT_WIDTH - 1:0] audio_data [15:0];
@@ -61,19 +61,44 @@ module read_audio #(
         assign audio = audio_data[addr[3:0]];
     end
     else
-    begin
-        reg [BIT_WIDTH - 1:0] audio_data [2 ** BIT_WIDTH - 1:0];
-        
-        assign audio = audio_data[addr];
-        
+    begin                
         if(BIT_WIDTH == 16)
         begin
+            reg [BIT_WIDTH - 1:0] audio_data [2 ** BIT_WIDTH - 1:0];
             initial $readmemh("music_16b.rom", audio_data);
+            assign audio = audio_data[addr];
         end
         else if(BIT_WIDTH == 8)
+        begin
+            reg [BIT_WIDTH - 1:0] audio_data [2 ** BIT_WIDTH - 1:0];
             initial $readmemh("music_8b.rom", audio_data);
+            assign audio = audio_data[addr];
+        end
+        else
+        begin
+            wire [BIT_WIDTH - 1:0] audio_data [15:0];
+            
+            assign audio_data[0] =  {16'h0000};
+            assign audio_data[1] =  {16'h1111};
+            assign audio_data[2] =  {16'h2222};
+            assign audio_data[3] =  {16'h3333};
+            assign audio_data[4] =  {16'h4444};
+            assign audio_data[5] =  {16'h5555};
+            assign audio_data[6] =  {16'h6666};
+            assign audio_data[7] =  {16'h7777};
+            assign audio_data[8] =  {16'h8888};
+            assign audio_data[9] =  {16'h9999};
+            assign audio_data[10] =  {16'hAAAA};
+            assign audio_data[11] =  {16'hBBBB};
+            assign audio_data[12] =  {16'hCCCC};
+            assign audio_data[13] =  {16'hDDDD};
+            assign audio_data[14] =  {16'hEEEE};
+            assign audio_data[15] =  {16'hFFFF};
+            
+            assign audio = audio_data[addr[3:0]];
+        end
     end
-           
+    endgenerate       
            
     
     

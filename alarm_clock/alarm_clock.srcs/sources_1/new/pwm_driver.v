@@ -38,7 +38,11 @@ module pwm_driver#(
     always @ (posedge clk, posedge rst)
     begin
         if(rst)
+        begin
             pwm_ramp <= 0;
+            current_duty <= 0;
+            pwm_out <= 0;
+        end
         else
         begin
             //if new cycle reset the duty

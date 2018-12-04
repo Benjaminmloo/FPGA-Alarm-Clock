@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:W:/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc rfile:../../../alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:E:/Documents/xilinx/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc rfile:../../../alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { clk_100MHz }]; #IO_L12P_T1_MRCC_35 Sch=clk100mhz
 set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]
