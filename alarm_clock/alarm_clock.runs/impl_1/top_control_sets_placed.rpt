@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date         : Tue Dec  4 18:44:00 2018
+| Date         : Tue Dec  4 22:54:42 2018
 | Host         : Guillaume running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -24,7 +24,7 @@ Table of Contents
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
 | Number of unique control sets                            |    16 |
-| Unused register locations in slices containing registers |    54 |
+| Unused register locations in slices containing registers |    58 |
 +----------------------------------------------------------+-------+
 
 
@@ -52,7 +52,7 @@ Table of Contents
 | No           | No                    | Yes                    |             170 |           24 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               4 |            2 |
-| Yes          | No                    | Yes                    |             360 |           81 |
+| Yes          | No                    | Yes                    |             364 |           84 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -63,12 +63,12 @@ Table of Contents
 +-----------------------------+----------------------------------------+--------------------+------------------+----------------+
 |         Clock Signal        |              Enable Signal             |  Set/Reset Signal  | Slice Load Count | Bel Load Count |
 +-----------------------------+----------------------------------------+--------------------+------------------+----------------+
-|  debounce_dn/cap_samp/q_reg |                                        |                    |                1 |              2 |
-|  debounce_dn/cap_samp/q_reg | debounce_dn/q_i_1__0_n_0               |                    |                1 |              2 |
 |  debounce_up/cap_samp/q_reg |                                        |                    |                1 |              2 |
 |  debounce_up/cap_samp/q_reg | debounce_up/q_i_1_n_0                  |                    |                1 |              2 |
-|  clk_wiz/inst/clk_out1      | set_alarm_IBUF                         | rst_IBUF           |                2 |              8 |
-|  clk_wiz/inst/clk_out1      | set_time_IBUF                          | rst_IBUF           |                2 |              8 |
+|  debounce_dn/cap_samp/q_reg |                                        |                    |                1 |              2 |
+|  debounce_dn/cap_samp/q_reg | debounce_dn/q_i_1__0_n_0               |                    |                1 |              2 |
+|  clk_wiz/inst/clk_out1      | set_alarm_IBUF                         | rst_IBUF           |                1 |              8 |
+|  clk_wiz/inst/clk_out1      | set_time_IBUF                          | rst_IBUF           |                1 |              8 |
 |  clk_wiz/inst/clk_out1      | alarm_reg/increment_minute/E[0]        | rst_IBUF           |                2 |             10 |
 |  clk_wiz/inst/clk_out1      | rt_clock/increment_hour/E[0]           | rst_IBUF           |                2 |             10 |
 |  clk_wiz/inst/clk_out1      | alarm_reg/increment_minute/m_reg[0][0] | rst_IBUF           |                2 |             12 |
@@ -78,7 +78,7 @@ Table of Contents
 |  clk_100MHz_IBUF_BUFG       |                                        | rst_IBUF           |                3 |             18 |
 |  clk_100MHz_IBUF_BUFG       | ad/m_reg[11]                           | rst_IBUF           |                3 |             24 |
 |  clk_wiz/inst/clk_out1      |                                        | rst_IBUF           |               21 |            152 |
-|  clk_100MHz_IBUF_BUFG       | from_file.ra/inc_en/m_reg[15]          | rst_IBUF           |               56 |            248 |
+|  clk_100MHz_IBUF_BUFG       | from_file.ra/inc_en/m_reg[15]          | rst_IBUF           |               61 |            252 |
 +-----------------------------+----------------------------------------+--------------------+------------------+----------------+
 
 

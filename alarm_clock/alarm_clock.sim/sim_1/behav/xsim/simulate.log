@@ -1,3 +1,4 @@
 Vivado Simulator 2018.2
 Time resolution is 1 ps
-WARNING: File music_16b.rom referenced on W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sim_1/new/audio_tb.v at line 52 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: Data truncated while reading Datafile: music_8b_amp.rom, while loading at index: 46831
+WARNING: Too many words specified in data file music_8b_amp.rom

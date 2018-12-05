@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 26996 
+INFO: Helper process launched with PID 11296 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 460.133 ; gain = 97.684
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 460.770 ; gain = 98.098
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
 	Parameter tb bound to: 0 - type: integer 
@@ -33,7 +33,7 @@ INFO: [Synth 8-6157] synthesizing module 'read_audio' [W:/win/ELEC3500/lab/lab_9
 	Parameter CLK_PER_SMP bound to: 2267 - type: integer 
 	Parameter ADDR_W bound to: 16 - type: integer 
 	Parameter NUM_SMP bound to: 65536 - type: integer 
-INFO: [Synth 8-3876] $readmem data file 'music_8b.rom' is read successfully [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:77]
+INFO: [Synth 8-3876] $readmem data file 'music_8b_amp.rom' is read successfully [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:77]
 INFO: [Synth 8-6157] synthesizing module 'count_to' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
 	Parameter COUNT_W bound to: 12 - type: integer 
 	Parameter COUNT_TO bound to: 2267 - type: integer 
@@ -45,18 +45,18 @@ INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [W:/win/ELEC
 INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (1#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
 WARNING: [Synth 8-350] instance 'addr_inc' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:115]
 INFO: [Synth 8-6155] done synthesizing module 'read_audio' (2#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:22]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/.Xil/Vivado-26944-Guillaume/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (3#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/.Xil/Vivado-26944-Guillaume/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/.Xil/Vivado-19712-Guillaume/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (3#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/.Xil/Vivado-19712-Guillaume/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
 	Parameter COUNT_W bound to: 24 - type: integer 
 	Parameter COUNT_TO bound to: 5000000 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
-WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:84]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:85]
 INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
 	Parameter COUNT_W bound to: 14 - type: integer 
 	Parameter COUNT_TO bound to: 5000 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
-WARNING: [Synth 8-350] instance 'en_1KHz_count' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:92]
+WARNING: [Synth 8-350] instance 'en_1KHz_count' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:93]
 INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
 	Parameter COUNT_W bound to: 6 - type: integer 
 	Parameter COUNT_TO bound to: 59 - type: integer 
@@ -107,16 +107,16 @@ INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized6' [W:/win/ELEC
 INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized6' (11#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
 WARNING: [Synth 8-350] instance 'disp_ptr_inc' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:44]
 INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (12#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
-INFO: [Synth 8-6157] synthesizing module 'alarm_driver' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_on.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'alarm_driver' (13#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_on.v:23]
+INFO: [Synth 8-6157] synthesizing module 'alarm_driver' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_driver.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'alarm_driver' (13#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_driver.v:23]
 INFO: [Synth 8-6157] synthesizing module 'pwm_driver' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:26]
 	Parameter AUDIO_W bound to: 8 - type: integer 
 	Parameter PWM_W bound to: 8 - type: integer 
-WARNING: [Synth 8-693] zero replication count - replication ignored [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:62]
 INFO: [Synth 8-6155] done synthesizing module 'pwm_driver' (14#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:26]
 INFO: [Synth 8-6155] done synthesizing module 'top' (15#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+WARNING: [Synth 8-3917] design top has port audio_sd driven by constant 1
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 609.133 ; gain = 246.684
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 609.180 ; gain = 246.508
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -129,10 +129,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 609.133 ; gain = 246.684
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 609.180 ; gain = 246.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 609.133 ; gain = 246.684
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 609.180 ; gain = 246.508
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -150,16 +150,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 940.707 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 941.055 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:27 . Memory (MB): peak = 940.707 ; gain = 578.258
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 941.055 ; gain = 578.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:27 . Memory (MB): peak = 940.707 ; gain = 578.258
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 941.055 ; gain = 578.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -168,7 +168,7 @@ Applied set_property IO_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  w:/
 Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  w:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for clk_wiz. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:27 . Memory (MB): peak = 940.707 ; gain = 578.258
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 941.055 ; gain = 578.383
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'increment_driver'
 INFO: [Synth 8-5544] ROM "q" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -196,7 +196,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'master_controller'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 940.707 ; gain = 578.258
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:34 . Memory (MB): peak = 941.055 ; gain = 578.383
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -324,8 +324,9 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5546] ROM "pwm_d/current_duty" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design top has port audio_sd driven by constant 1
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:27 ; elapsed = 00:01:50 . Memory (MB): peak = 1870.055 ; gain = 1507.605
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:38 ; elapsed = 00:01:59 . Memory (MB): peak = 2251.465 ; gain = 1888.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -357,13 +358,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_wiz/clk_out1' to pin 'clk_wiz/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:33 ; elapsed = 00:01:57 . Memory (MB): peak = 1870.055 ; gain = 1507.605
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:44 ; elapsed = 00:02:06 . Memory (MB): peak = 2251.465 ; gain = 1888.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:35 ; elapsed = 00:01:59 . Memory (MB): peak = 1870.055 ; gain = 1507.605
+Finished Timing Optimization : Time (s): cpu = 00:01:46 ; elapsed = 00:02:08 . Memory (MB): peak = 2251.465 ; gain = 1888.793
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -375,7 +376,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:37 ; elapsed = 00:02:01 . Memory (MB): peak = 1870.055 ; gain = 1507.605
+Finished Technology Mapping : Time (s): cpu = 00:01:49 ; elapsed = 00:02:11 . Memory (MB): peak = 2251.465 ; gain = 1888.793
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -399,7 +400,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:39 ; elapsed = 00:02:03 . Memory (MB): peak = 1870.055 ; gain = 1507.605
+Finished IO Insertion : Time (s): cpu = 00:01:50 ; elapsed = 00:02:12 . Memory (MB): peak = 2251.465 ; gain = 1888.793
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -412,7 +413,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:39 ; elapsed = 00:02:03 . Memory (MB): peak = 1870.055 ; gain = 1507.605
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:50 ; elapsed = 00:02:12 . Memory (MB): peak = 2251.465 ; gain = 1888.793
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -424,25 +425,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:40 ; elapsed = 00:02:04 . Memory (MB): peak = 1870.055 ; gain = 1507.605
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:51 ; elapsed = 00:02:13 . Memory (MB): peak = 2251.465 ; gain = 1888.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:40 ; elapsed = 00:02:04 . Memory (MB): peak = 1870.055 ; gain = 1507.605
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:51 ; elapsed = 00:02:13 . Memory (MB): peak = 2251.465 ; gain = 1888.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:40 ; elapsed = 00:02:04 . Memory (MB): peak = 1870.055 ; gain = 1507.605
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:51 ; elapsed = 00:02:14 . Memory (MB): peak = 2251.465 ; gain = 1888.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:40 ; elapsed = 00:02:04 . Memory (MB): peak = 1870.055 ; gain = 1507.605
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:51 ; elapsed = 00:02:14 . Memory (MB): peak = 2251.465 ; gain = 1888.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -462,24 +463,24 @@ Report Cell Usage:
 |1     |clk_wiz_0 |     1|
 |2     |CARRY4    |    32|
 |3     |LUT1      |     6|
-|4     |LUT2      |   256|
-|5     |LUT3      |   110|
-|6     |LUT4      |   418|
-|7     |LUT5      |   960|
-|8     |LUT6      |  7260|
-|9     |MUXF7     |  3159|
-|10    |MUXF8     |   182|
-|11    |FDCE      |   265|
+|4     |LUT2      |   246|
+|5     |LUT3      |    85|
+|6     |LUT4      |   290|
+|7     |LUT5      |   671|
+|8     |LUT6      |  7854|
+|9     |MUXF7     |  3560|
+|10    |MUXF8     |   176|
+|11    |FDCE      |   267|
 |12    |FDRE      |     4|
 |13    |IBUF      |     8|
-|14    |OBUF      |    22|
+|14    |OBUF      |    23|
 +------+----------+------+
 
 Report Instance Areas: 
 +------+---------------------+---------------------------+------+
 |      |Instance             |Module                     |Cells |
 +------+---------------------+---------------------------+------+
-|1     |top                  |                           | 12683|
+|1     |top                  |                           | 13223|
 |2     |  ad                 |alarm_driver               |     2|
 |3     |  alarm_reg          |clock_counter              |    50|
 |4     |    count_hours      |count_to__parameterized4_5 |    18|
@@ -493,8 +494,8 @@ Report Instance Areas:
 |12    |    cap_samp         |count_to__parameterized5   |    41|
 |13    |  en_1Hz_count       |count_to__parameterized1   |    61|
 |14    |  en_1KHz_count      |count_to__parameterized2   |    36|
-|15    |  \from_file.ra      |read_audio                 | 12264|
-|16    |    addr_inc         |count_to__parameterized0   | 12233|
+|15    |  \from_file.ra      |read_audio                 | 12803|
+|16    |    addr_inc         |count_to__parameterized0   | 12772|
 |17    |    inc_en           |count_to                   |    31|
 |18    |  mc                 |master_controller          |     8|
 |19    |  pwm_d              |pwm_driver                 |    37|
@@ -507,13 +508,13 @@ Report Instance Areas:
 |26    |    disp_ptr_inc     |count_to__parameterized6   |    39|
 +------+---------------------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:40 ; elapsed = 00:02:04 . Memory (MB): peak = 1870.055 ; gain = 1507.605
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:51 ; elapsed = 00:02:14 . Memory (MB): peak = 2251.465 ; gain = 1888.793
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:31 ; elapsed = 00:01:53 . Memory (MB): peak = 1870.055 ; gain = 1176.031
-Synthesis Optimization Complete : Time (s): cpu = 00:01:40 ; elapsed = 00:02:04 . Memory (MB): peak = 1870.055 ; gain = 1507.605
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:42 ; elapsed = 00:02:03 . Memory (MB): peak = 2251.465 ; gain = 1556.918
+Synthesis Optimization Complete : Time (s): cpu = 00:01:51 ; elapsed = 00:02:14 . Memory (MB): peak = 2251.465 ; gain = 1888.793
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 3381 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 3776 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'top' is not ideal for floorplanning, since the cellview 'count_to__parameterized0' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -523,12 +524,12 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-72 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+72 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:44 ; elapsed = 00:02:10 . Memory (MB): peak = 1870.055 ; gain = 1519.074
+synth_design: Time (s): cpu = 00:01:55 ; elapsed = 00:02:19 . Memory (MB): peak = 2251.465 ; gain = 1900.266
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/top.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1870.055 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 2251.465 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.252 . Memory (MB): peak = 1870.055 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Dec  4 18:42:45 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.262 . Memory (MB): peak = 2251.465 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Dec  4 22:53:26 2018...

@@ -1,6 +1,7 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  --include "../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0" \
-"../../../../alarm_clock.srcs/sources_1/new/alarm_on.v" \
+"../../../../alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v" \
+"../../../../alarm_clock.srcs/sources_1/new/alarm_driver.v" \
 "../../../../alarm_clock.srcs/sources_1/new/clock_counter.v" \
 "../../../../alarm_clock.srcs/sources_1/imports/modules/count_to.v" \
 "../../../../alarm_clock.srcs/sources_1/new/debounce.v" \
@@ -8,6 +9,10 @@ verilog xil_defaultlib  --include "../../../../alarm_clock.srcs/sources_1/ip/clk
 "../../../../alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v" \
 "../../../../alarm_clock.srcs/sources_1/new/increment_driver.v" \
 "../../../../alarm_clock.srcs/sources_1/new/master_controller.v" \
+"../../../../alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v" \
+"../../../../alarm_clock.srcs/sources_1/new/pwm_driver.v" \
+"../../../../alarm_clock.srcs/sources_1/new/read_audio.v" \
+"../../../../alarm_clock.srcs/sources_1/new/scan_square_wave_gen.v" \
 "../../../../alarm_clock.srcs/sources_1/new/seg_driver.v" \
 "../../../../alarm_clock.srcs/sources_1/new/sequential_enable.v" \
 "../../../../alarm_clock.srcs/sources_1/new/top.v" \

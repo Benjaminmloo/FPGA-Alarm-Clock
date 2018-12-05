@@ -34,7 +34,7 @@ module audio_tb(
     reg [AUDIO_W - 1:0] audio_data [2 ** AUDIO_W - 1:0];
            
     
-    read_audio #(AUDIO_W, 1) ra(
+    read_audio #(AUDIO_W, 0) ra(
         .clk        (clk),
         .rst        (rst),
         .en         (audio_en),
@@ -49,7 +49,7 @@ module audio_tb(
         
     initial
     begin
-        $readmemh("music_16b.rom", audio_data);
+        $readmemh("music_8b_amp.rom", audio_data);
         clk = 0;
         rst = 0;
         audio_en = 0;

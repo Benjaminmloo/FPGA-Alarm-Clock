@@ -74,7 +74,7 @@ module read_audio #(
         else if(BIT_W == 8)
         begin
             reg [BIT_W - 1:0] audio_data [NUM_SMP - 1:0];
-            initial $readmemh("music_8b.rom", audio_data);
+            initial $readmemh("music_8b_amp.rom", audio_data);
             assign audio = audio_data[addr];
         end
         else

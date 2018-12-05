@@ -3,66 +3,57 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="audio_tb_behav.wdb" id="1">
+      <db_ref path="tob_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="audio_tb" />
             <top_module name="glbl" />
+            <top_module name="tob_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="126666180000fs"></ZoomStartTime>
-      <ZoomEndTime time="144490190915fs"></ZoomEndTime>
-      <Cursor1Time time="201000000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="4809015593001fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="130"></ValueColumnWidth>
+      <ValueColumnWidth column_width="126"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="11" />
-   <wvobject fp_name="/audio_tb/clk" type="logic">
+   <WVObjectSize size="9" />
+   <wvobject fp_name="/tob_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/audio_tb/rst" type="logic">
+   <wvobject fp_name="/tob_tb/rst" type="logic">
       <obj_property name="ElementShortName">rst</obj_property>
       <obj_property name="ObjectShortName">rst</obj_property>
    </wvobject>
-   <wvobject fp_name="/audio_tb/audio_en" type="logic">
-      <obj_property name="ElementShortName">audio_en</obj_property>
-      <obj_property name="ObjectShortName">audio_en</obj_property>
+   <wvobject fp_name="/tob_tb/en" type="logic">
+      <obj_property name="ElementShortName">en</obj_property>
+      <obj_property name="ObjectShortName">en</obj_property>
    </wvobject>
-   <wvobject fp_name="/audio_tb/audio_out" type="array">
-      <obj_property name="ElementShortName">audio_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">audio_out[7:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+   <wvobject fp_name="/tob_tb/btn_h" type="logic">
+      <obj_property name="ElementShortName">btn_h</obj_property>
+      <obj_property name="ObjectShortName">btn_h</obj_property>
    </wvobject>
-   <wvobject fp_name="/audio_tb/audio_pwm" type="logic">
-      <obj_property name="ElementShortName">audio_pwm</obj_property>
-      <obj_property name="ObjectShortName">audio_pwm</obj_property>
+   <wvobject fp_name="/tob_tb/btn_m" type="logic">
+      <obj_property name="ElementShortName">btn_m</obj_property>
+      <obj_property name="ObjectShortName">btn_m</obj_property>
    </wvobject>
-   <wvobject fp_name="/audio_tb/pwm_d/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
+   <wvobject fp_name="/tob_tb/set_time" type="logic">
+      <obj_property name="ElementShortName">set_time</obj_property>
+      <obj_property name="ObjectShortName">set_time</obj_property>
    </wvobject>
-   <wvobject fp_name="/audio_tb/pwm_d/duty_in" type="array">
-      <obj_property name="ElementShortName">duty_in[7:0]</obj_property>
-      <obj_property name="ObjectShortName">duty_in[7:0]</obj_property>
+   <wvobject fp_name="/tob_tb/set_alarm" type="logic">
+      <obj_property name="ElementShortName">set_alarm</obj_property>
+      <obj_property name="ObjectShortName">set_alarm</obj_property>
    </wvobject>
-   <wvobject fp_name="/audio_tb/pwm_d/pwm_out" type="logic">
-      <obj_property name="ElementShortName">pwm_out</obj_property>
-      <obj_property name="ObjectShortName">pwm_out</obj_property>
+   <wvobject fp_name="/tob_tb/seg" type="array">
+      <obj_property name="ElementShortName">seg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">seg[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/audio_tb/pwm_d/current_duty" type="array">
-      <obj_property name="ElementShortName">current_duty[7:0]</obj_property>
-      <obj_property name="ObjectShortName">current_duty[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/audio_tb/pwm_d/pwm_ramp" type="array">
-      <obj_property name="ElementShortName">pwm_ramp[7:0]</obj_property>
-      <obj_property name="ObjectShortName">pwm_ramp[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/audio_tb/ra/addr" type="array">
-      <obj_property name="ElementShortName">addr[7:0]</obj_property>
-      <obj_property name="ObjectShortName">addr[7:0]</obj_property>
+   <wvobject fp_name="/tob_tb/DUV/clk_5MHz" type="logic">
+      <obj_property name="ElementShortName">clk_5MHz</obj_property>
+      <obj_property name="ObjectShortName">clk_5MHz</obj_property>
    </wvobject>
 </wave_config>

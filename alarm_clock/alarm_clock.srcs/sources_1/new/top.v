@@ -43,7 +43,8 @@ module top#(
     output  alarm_on,
     output  alarm_led,
     output  audio_led,
-    output  audio_pwm
+    output  audio_pwm,
+    output  audio_sd
     );
 //////////////////////////////////////////////////////
 //LOCAL PARAMETERS
@@ -207,12 +208,13 @@ module top#(
             square_wave_gen swg(
                 .clk        (clk_100MHz),
                 .rst        (rst),
-                .en         (audio_en | alarm_led), //Audio can be turned on with switch or with the alarm display signal
+                .en         (audio_en | alarm_on), //Audio can be turned on with switch or with the alarm display signal
                 .audio      (audio_data)
                 );
         end
     endgenerate
     assign audio_led = audio_data [0];
+    assign audio_sd = 1;
         
     //Drives pwm out put 
     pwm_driver #(AUDIO_W) pwm_d(

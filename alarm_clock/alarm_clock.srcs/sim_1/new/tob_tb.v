@@ -36,6 +36,9 @@ module tob_tb(
         .btn_m_raw  (btn_m), 
         .set_time   (set_time),  
         .set_alarm  (set_alarm), 
+        .audio_en   (audio_en),  
+        .run_on_sec (run_on_sec), 
+        
         .an         (an),  
         .seg        (seg), 
         .pm         (pm),        
@@ -54,7 +57,7 @@ module tob_tb(
         set_alarm = 0;
         
         forever
-            #1 clk = ~clk;
+            #10 clk = ~clk;
     end
     
     initial
