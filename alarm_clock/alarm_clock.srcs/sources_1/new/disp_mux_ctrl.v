@@ -21,20 +21,16 @@
 
 
 module disp_mux_ctrl(
-    input en_2Hz,
     input set_alarm,
     input set_timer,
     input run_timer,
     
     output [1:0] s
     );
-    reg [1:0] active, set, next_set, current;
+    reg [1:0] active, set;
     reg clk_2Hz;
     
     localparam DC = 0, DA = 1, DT = 2;
-    
-    always @ (posedge en_2Hz)
-        clk_2Hz = ~clk_2Hz;
     
     always @ *
         if(run_timer)
@@ -50,11 +46,5 @@ module disp_mux_ctrl(
         else
             set = active;
             
-    always @ *
-        if(clk_2Hz)
-            current = set;
-        else
-            current = active;
-            
-    assign s = current;
+    assign s = set;
 endmodule

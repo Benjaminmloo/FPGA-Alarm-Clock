@@ -148,7 +148,7 @@ module top#(
         .clk        (clk_5MHz),
         .rst        (rst),
         .en         (run_timer),
-        .ld_rq      (set_alarm),
+        .ld_rq      (set_timer),
         .btn_m      (btn_h_stb),
         .btn_s      (btn_m_stb),
         .d          (d_timer)
