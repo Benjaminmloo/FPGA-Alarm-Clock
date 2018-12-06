@@ -50,7 +50,7 @@ module clock_counter (
 
     //increment when enabled normally and not when in set mode
     
-    count_to #(6, 59) count_minute_0(
+    count_to #(6, 59) count_minute(
         .clk        (clk),
         .rst        (rst),
         .en         (counter_en[0]), 

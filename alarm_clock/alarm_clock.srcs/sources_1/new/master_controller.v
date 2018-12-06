@@ -20,12 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module master_controller(
-    input clk,
-    input rst,
-    input   [4 * 8 - 1:0] d_rt,
+    input   clk,
+    input   rst,
+    input   [4 * 8 - 1:0] d_clk,
     input   [4 * 8 - 1:0] d_alarm,
     input   en_alarm,     //enable signle for the alarm
     input   set_alarm,
+    
     output reg alarm_on,
     output  alarm_en    //signal indicating if the alarm is enabled
     );
@@ -36,7 +37,7 @@ module master_controller(
     wire trigger;
     
     assign alarm_en = en_alarm & ~set_alarm;
-    assign trigger = d_rt == d_alarm;
+    assign trigger = d_clk == d_alarm;
     
     always @ (posedge clk, posedge rst)
         if(rst)

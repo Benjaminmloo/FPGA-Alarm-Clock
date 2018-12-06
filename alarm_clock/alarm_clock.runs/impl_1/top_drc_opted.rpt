@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date         : Tue Dec  4 22:54:15 2018
-| Host         : Guillaume running 64-bit major release  (build 9200)
+| Date         : Wed Dec  5 22:41:56 2018
+| Host         : Milliken running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
 | Design       : top
 | Device       : xc7a100tcsg324-1
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 3
+             Violations found: 4
 +-------------+----------+-------------------------------------------------------------+------------+
 | Rule        | Severity | Description                                                 | Violations |
 +-------------+----------+-------------------------------------------------------------+------------+
 | CFGBVS-1    | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1          |
-| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 2          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 3          |
 +-------------+----------+-------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -60,6 +60,13 @@ Non-Optimal connections which could lead to hold violations
 A LUT debounce_up/cap_samp/d_prev_i_1 is driving clock pin of 2 cells. This could lead to large hold time violations. First few involved cells are:
     debounce_up/d_prev_reg {FDRE}
     debounce_up/q_reg {FDRE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#3 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT en_2Hz_count/clk_2Hz_i_2 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    dmc/clk_2Hz_reg {FDRE}
 
 Related violations: <none>
 

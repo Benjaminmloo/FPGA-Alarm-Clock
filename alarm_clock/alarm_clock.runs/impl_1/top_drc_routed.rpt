@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date         : Tue Dec  4 22:55:43 2018
-| Host         : Guillaume running 64-bit major release  (build 9200)
+| Date         : Wed Dec  5 22:43:39 2018
+| Host         : Milliken running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
 | Design       : top
 | Device       : xc7a100tcsg324-1
@@ -24,13 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 5
+             Violations found: 19
 +-------------+----------+-------------------------------------------------------------+------------+
 | Rule        | Severity | Description                                                 | Violations |
 +-------------+----------+-------------------------------------------------------------+------------+
 | CFGBVS-1    | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1          |
-| PDRC-153    | Warning  | Gated clock check                                           | 2          |
-| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 2          |
+| PDRC-153    | Warning  | Gated clock check                                           | 15         |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 3          |
 +-------------+----------+-------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -58,6 +58,71 @@ Gated clock check
 Net debounce_up/cap_samp/q_reg is a gated clock net sourced by a combinational pin debounce_up/cap_samp/d_prev_i_1/O, cell debounce_up/cap_samp/d_prev_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
+PDRC-153#3 Warning
+Gated clock check  
+Net en_2Hz_count/clk_2Hz_reg is a gated clock net sourced by a combinational pin en_2Hz_count/clk_2Hz_i_2/O, cell en_2Hz_count/clk_2Hz_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net timer_reg/ini_reg_min/m_reg[0]_P is a gated clock net sourced by a combinational pin timer_reg/ini_reg_min/m_reg[0]_LDC_i_1__0/O, cell timer_reg/ini_reg_min/m_reg[0]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net timer_reg/ini_reg_min/m_reg[1]_P is a gated clock net sourced by a combinational pin timer_reg/ini_reg_min/m_reg[1]_LDC_i_1__0/O, cell timer_reg/ini_reg_min/m_reg[1]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net timer_reg/ini_reg_min/m_reg[2]_P is a gated clock net sourced by a combinational pin timer_reg/ini_reg_min/m_reg[2]_LDC_i_1__0/O, cell timer_reg/ini_reg_min/m_reg[2]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net timer_reg/ini_reg_min/m_reg[3]_P is a gated clock net sourced by a combinational pin timer_reg/ini_reg_min/m_reg[3]_LDC_i_1__0/O, cell timer_reg/ini_reg_min/m_reg[3]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net timer_reg/ini_reg_min/m_reg[4]_P is a gated clock net sourced by a combinational pin timer_reg/ini_reg_min/m_reg[4]_LDC_i_1__0/O, cell timer_reg/ini_reg_min/m_reg[4]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#9 Warning
+Gated clock check  
+Net timer_reg/ini_reg_min/m_reg[5]_P is a gated clock net sourced by a combinational pin timer_reg/ini_reg_min/m_reg[5]_LDC_i_1__0/O, cell timer_reg/ini_reg_min/m_reg[5]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#10 Warning
+Gated clock check  
+Net timer_reg/ini_reg_sec/m_reg[0]_P is a gated clock net sourced by a combinational pin timer_reg/ini_reg_sec/m_reg[0]_LDC_i_1/O, cell timer_reg/ini_reg_sec/m_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#11 Warning
+Gated clock check  
+Net timer_reg/ini_reg_sec/m_reg[1]_P is a gated clock net sourced by a combinational pin timer_reg/ini_reg_sec/m_reg[1]_LDC_i_1/O, cell timer_reg/ini_reg_sec/m_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#12 Warning
+Gated clock check  
+Net timer_reg/ini_reg_sec/m_reg[2]_P is a gated clock net sourced by a combinational pin timer_reg/ini_reg_sec/m_reg[2]_LDC_i_1/O, cell timer_reg/ini_reg_sec/m_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#13 Warning
+Gated clock check  
+Net timer_reg/ini_reg_sec/m_reg[3]_P is a gated clock net sourced by a combinational pin timer_reg/ini_reg_sec/m_reg[3]_LDC_i_1/O, cell timer_reg/ini_reg_sec/m_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#14 Warning
+Gated clock check  
+Net timer_reg/ini_reg_sec/m_reg[4]_P is a gated clock net sourced by a combinational pin timer_reg/ini_reg_sec/m_reg[4]_LDC_i_1/O, cell timer_reg/ini_reg_sec/m_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#15 Warning
+Gated clock check  
+Net timer_reg/ini_reg_sec/m_reg[5]_P is a gated clock net sourced by a combinational pin timer_reg/ini_reg_sec/m_reg[5]_LDC_i_1/O, cell timer_reg/ini_reg_sec/m_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
 PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
 A LUT debounce_dn/cap_samp/d_prev_i_1__0 is driving clock pin of 2 cells. This could lead to large hold time violations. First few involved cells are:
@@ -71,6 +136,13 @@ Non-Optimal connections which could lead to hold violations
 A LUT debounce_up/cap_samp/d_prev_i_1 is driving clock pin of 2 cells. This could lead to large hold time violations. First few involved cells are:
     debounce_up/d_prev_reg {FDRE}
     debounce_up/q_reg {FDRE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#3 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT en_2Hz_count/clk_2Hz_i_2 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    dmc/clk_2Hz_reg {FDRE}
 
 Related violations: <none>
 

@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date             : Tue Dec  4 22:55:50 2018
-| Host             : Guillaume running 64-bit major release  (build 9200)
+| Date             : Wed Dec  5 22:43:46 2018
+| Host             : Milliken running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
 | Device           : xc7a100tcsg324-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.187        |
+| Total On-Chip Power (W)  | 0.188        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.090        |
+| Dynamic (W)              | 0.091        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.1         |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.003 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |    13214 |       --- |             --- |
-|   LUT as Logic |    <0.001 |     8913 |     63400 |           14.06 |
-|   CARRY4       |    <0.001 |       32 |     15850 |            0.20 |
-|   Register     |    <0.001 |      271 |    126800 |            0.21 |
-|   F7/F8 Muxes  |    <0.001 |     3720 |     63400 |            5.87 |
-|   Others       |     0.000 |       23 |       --- |             --- |
-| Signals        |    <0.001 |     5522 |       --- |             --- |
+| Slice Logic    |    <0.001 |    13443 |       --- |             --- |
+|   LUT as Logic |    <0.001 |     9001 |     63400 |           14.20 |
+|   CARRY4       |    <0.001 |       36 |     15850 |            0.23 |
+|   Register     |    <0.001 |      357 |    126800 |            0.28 |
+|   F7/F8 Muxes  |    <0.001 |     3717 |     63400 |            5.86 |
+|   Others       |     0.000 |       29 |       --- |             --- |
+| Signals        |    <0.001 |     5758 |       --- |             --- |
 | MMCM           |     0.086 |        1 |         6 |           16.67 |
-| I/O            |    <0.001 |       32 |       210 |           15.24 |
+| I/O            |     0.001 |       36 |       210 |           17.14 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.187 |          |           |                 |
+| Total          |     0.188 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -144,11 +144,11 @@ Table of Contents
 +----------------------+-----------+
 | Name                 | Power (W) |
 +----------------------+-----------+
-| top                  |     0.090 |
+| top                  |     0.091 |
 |   ad                 |    <0.001 |
 |   alarm_reg          |    <0.001 |
 |     count_hours      |    <0.001 |
-|     count_minute_0   |    <0.001 |
+|     count_minute     |    <0.001 |
 |     increment_hour   |    <0.001 |
 |     increment_minute |    <0.001 |
 |   clk_wiz            |     0.086 |
@@ -158,8 +158,10 @@ Table of Contents
 |     cap_samp         |    <0.001 |
 |   debounce_up        |    <0.001 |
 |     cap_samp         |    <0.001 |
+|   dmc                |    <0.001 |
 |   en_1Hz_count       |    <0.001 |
-|   en_1KHz_count      |    <0.001 |
+|   en_1kHz_count      |    <0.001 |
+|   en_2Hz_count       |    <0.001 |
 |   from_file.ra       |     0.003 |
 |     addr_inc         |     0.002 |
 |     inc_en           |    <0.001 |
@@ -167,11 +169,22 @@ Table of Contents
 |   pwm_d              |    <0.001 |
 |   rt_clock           |    <0.001 |
 |     count_hours      |    <0.001 |
-|     count_minute_0   |    <0.001 |
+|     count_minute     |    <0.001 |
 |     increment_hour   |    <0.001 |
 |     increment_minute |    <0.001 |
 |   sd                 |    <0.001 |
 |     disp_ptr_inc     |    <0.001 |
+|   timer_reg          |    <0.001 |
+|     dec_min          |    <0.001 |
+|     dec_msec_0       |    <0.001 |
+|     dec_msec_1       |    <0.001 |
+|     dec_msec_2       |    <0.001 |
+|     dec_sec          |    <0.001 |
+|     en_1kHz_count    |    <0.001 |
+|     increment_min    |    <0.001 |
+|     increment_sec    |    <0.001 |
+|     ini_reg_min      |    <0.001 |
+|     ini_reg_sec      |    <0.001 |
 +----------------------+-----------+
 
 

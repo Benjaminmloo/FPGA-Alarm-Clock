@@ -1,0 +1,474 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Wed Dec  5 10:27:04 2018
+# Process ID: 4760
+# Current directory: W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10316 W:\win\ELEC3500\lab\lab_9\fpga_alarm_clock\alarm_clock\alarm_clock.xpr
+# Log file: W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/vivado.log
+# Journal file: W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 898.645 ; gain = 146.586
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.2.1
+  **** Build date : Jul 26 2018-19:38:10
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A8AEA7A
+set_property PROGRAM.FILE {W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+close [ open W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/count_from.v w ]
+add_files W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/count_from.v
+close [ open W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v w ]
+add_files W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: top
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 1849.613 ; gain = 117.664
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+	Parameter tb bound to: 0 - type: integer 
+	Parameter AUDIO_FROM_FILE bound to: 1 - type: integer 
+	Parameter DEBOUNCE_CYCLES bound to: 50000 - type: integer 
+	Parameter DEBOUNCE_BITS bound to: 16 - type: integer 
+	Parameter DISPL_W bound to: 32 - type: integer 
+	Parameter AUDIO_W bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'read_audio' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:22]
+	Parameter BIT_W bound to: 8 - type: integer 
+	Parameter tb bound to: 0 - type: integer 
+	Parameter CLK_FRQ bound to: 100000000 - type: integer 
+	Parameter SMP_RATE bound to: 44100 - type: integer 
+	Parameter CLK_PER_SMP bound to: 2267 - type: integer 
+	Parameter ADDR_W bound to: 16 - type: integer 
+	Parameter NUM_SMP bound to: 65536 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'music_8b_amp.rom' is read successfully [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:77]
+INFO: [Synth 8-6157] synthesizing module 'count_to' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_W bound to: 12 - type: integer 
+	Parameter COUNT_TO bound to: 2267 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to' (1#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'inc_en' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:108]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_W bound to: 16 - type: integer 
+	Parameter COUNT_TO bound to: 65535 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (1#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'addr_inc' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:115]
+INFO: [Synth 8-6155] done synthesizing module 'read_audio' (2#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:22]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/.Xil/Vivado-4760-Milliken/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (3#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/.Xil/Vivado-4760-Milliken/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_W bound to: 24 - type: integer 
+	Parameter COUNT_TO bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (3#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:85]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_W bound to: 14 - type: integer 
+	Parameter COUNT_TO bound to: 5000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (3#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1KHz_count' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:93]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_W bound to: 6 - type: integer 
+	Parameter COUNT_TO bound to: 59 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (3#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clock_counter' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'sequential_enable' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v:25]
+	Parameter NUM_EN bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sequential_enable' (4#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v:25]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized4' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_W bound to: 5 - type: integer 
+	Parameter COUNT_TO bound to: 23 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized4' (4#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:61]
+INFO: [Synth 8-6157] synthesizing module 'increment_driver' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+	Parameter S0 bound to: 2'b00 
+	Parameter S1 bound to: 2'b01 
+	Parameter S2 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (5#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hours_to_bcd_encoder' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (6#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mins_to_bcd_encoder' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mins_to_bcd_encoder' (7#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (8#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'master_controller' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+	Parameter S0 bound to: 0 - type: integer 
+	Parameter S1 bound to: 1 - type: integer 
+	Parameter S2 bound to: 2 - type: integer 
+	Parameter S3 bound to: 3 - type: integer 
+INFO: [Synth 8-226] default block is never used [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'master_controller' (9#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/master_controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+	Parameter COUNT_BITS bound to: 16 - type: integer 
+	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized5' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_W bound to: 16 - type: integer 
+	Parameter COUNT_TO bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized5' (9#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'cap_samp' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (10#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'display_mux' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+	Parameter MUX_W bound to: 31 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'display_mux' (11#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6157] synthesizing module 'seg_driver' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+	Parameter NUM_SEG bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized6' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+	Parameter COUNT_W bound to: 3 - type: integer 
+	Parameter COUNT_TO bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized6' (11#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'disp_ptr_inc' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (12#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+INFO: [Synth 8-6157] synthesizing module 'alarm_driver' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_driver.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'alarm_driver' (13#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pwm_driver' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:26]
+	Parameter AUDIO_W bound to: 8 - type: integer 
+	Parameter PWM_W bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pwm_driver' (14#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'top' (15#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+WARNING: [Synth 8-3917] design top has port audio_sd driven by constant 1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1990.613 ; gain = 258.664
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1990.613 ; gain = 258.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1990.613 ; gain = 258.664
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'w:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 1 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [w:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [w:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [w:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [w:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [w:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 2332.086 ; gain = 600.137
+57 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 2332.086 ; gain = 602.051
+close [ open W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/dec_en.v w ]
+add_files W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/dec_en.v
+update_compile_order -fileset sources_1
+close [ open W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/msecs_to_bcd_encoder.v w ]
+add_files W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/msecs_to_bcd_encoder.v
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/msecs_to_bcd_encoder.v] -no_script -reset -force -quiet
+remove_files  W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/msecs_to_bcd_encoder.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sim_1/new/timer_tb.v w ]
+add_files -fileset sim_1 W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sim_1/new/timer_tb.v
+update_compile_order -fileset sim_1
+set_property top timer_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'timer_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim/music_16b.rom'
+INFO: [SIM-utils-43] Exported 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim/music_8b.rom'
+INFO: [SIM-utils-43] Exported 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim/music_8b_amp.rom'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj timer_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/count_from.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module count_from
+INFO: [VRFC 10-2263] Analyzing Verilog file "W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/dec_en.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dec_en
+INFO: [VRFC 10-2263] Analyzing Verilog file "W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module timer
+INFO: [VRFC 10-2263] Analyzing Verilog file "W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sim_1/new/timer_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module timer_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 3f18837b42b14a6ca7f31567d0a225ed --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot timer_tb_behav xil_defaultlib.timer_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-426] cannot find port start on this module [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sim_1/new/timer_tb.v:42]
+ERROR: [VRFC 10-2063] Module <count_to> not found while processing module instance <en_1kHz_count> [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v:71]
+ERROR: [VRFC 10-2063] Module <dec_en> not found while processing module instance <de> [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v:78]
+ERROR: [VRFC 10-2063] Module <increment_driver> not found while processing module instance <increment_sec> [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v:94]
+ERROR: [VRFC 10-2063] Module <count_from> not found while processing module instance <dec_msec_0> [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v:113]
+ERROR: [VRFC 10-2063] Module <mins_to_bcd_encoder> not found while processing module instance <m_bcd_encoder> [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v:190]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 2332.086 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'timer_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim/music_16b.rom'
+INFO: [SIM-utils-43] Exported 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim/music_8b.rom'
+INFO: [SIM-utils-43] Exported 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim/music_8b_amp.rom'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj timer_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/count_from.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module count_from
+INFO: [VRFC 10-2263] Analyzing Verilog file "W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module count_to
+INFO: [VRFC 10-2263] Analyzing Verilog file "W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/dec_en.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dec_en
+INFO: [VRFC 10-2263] Analyzing Verilog file "W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module increment_driver
+INFO: [VRFC 10-2263] Analyzing Verilog file "W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mins_to_bcd_encoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module timer
+INFO: [VRFC 10-2263] Analyzing Verilog file "W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sim_1/new/timer_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module timer_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 3f18837b42b14a6ca7f31567d0a225ed --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot timer_tb_behav xil_defaultlib.timer_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 3 for port empty [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v:79]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 3 for port dec [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v:82]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 4 for port ld_m [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v:118]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 4 for port ld_m [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v:128]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 4 for port ld_m [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v:137]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.count_to(COUNT_W=17,COUNT_TO=100...
+Compiling module xil_defaultlib.dec_en_default
+Compiling module xil_defaultlib.increment_driver
+Compiling module xil_defaultlib.count_from(MAX_VAL=9)
+Compiling module xil_defaultlib.count_from(COUNT_W=6)
+Compiling module xil_defaultlib.count_to(COUNT_W=6,COUNT_TO=59)
+Compiling module xil_defaultlib.mins_to_bcd_encoder
+Compiling module xil_defaultlib.timer
+Compiling module xil_defaultlib.timer_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot timer_tb_behav
+
+****** Webtalk v2018.2.1 (64-bit)
+  **** SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+  **** IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim/xsim.dir/timer_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim/xsim.dir/timer_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Dec  5 16:46:26 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Dec  5 16:46:26 2018...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 2332.086 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '14' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "timer_tb_behav -key {Behavioral:sim_1:Functional:timer_tb} -tclbatch {timer_tb.tcl} -view {W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/tob_tb_behav.wcfg} -view {W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/audio_tb.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/tob_tb_behav.wcfg
+WARNING: Simulation object /tob_tb/clk was not found in the design.
+WARNING: Simulation object /tob_tb/rst was not found in the design.
+WARNING: Simulation object /tob_tb/en was not found in the design.
+WARNING: Simulation object /tob_tb/btn_h was not found in the design.
+WARNING: Simulation object /tob_tb/btn_m was not found in the design.
+WARNING: Simulation object /tob_tb/set_time was not found in the design.
+WARNING: Simulation object /tob_tb/set_alarm was not found in the design.
+WARNING: Simulation object /tob_tb/seg was not found in the design.
+WARNING: Simulation object /tob_tb/DUV/clk_5MHz was not found in the design.
+open_wave_config W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/audio_tb.wcfg
+WARNING: Simulation object /audio_tb/clk was not found in the design.
+WARNING: Simulation object /audio_tb/rst was not found in the design.
+WARNING: Simulation object /audio_tb/audio_en was not found in the design.
+WARNING: Simulation object /audio_tb/audio_out was not found in the design.
+WARNING: Simulation object /audio_tb/audio_pwm was not found in the design.
+WARNING: Simulation object /audio_tb/pwm_d/clk was not found in the design.
+WARNING: Simulation object /audio_tb/pwm_d/duty_in was not found in the design.
+WARNING: Simulation object /audio_tb/pwm_d/pwm_out was not found in the design.
+WARNING: Simulation object /audio_tb/pwm_d/current_duty was not found in the design.
+WARNING: Simulation object /audio_tb/pwm_d/pwm_ramp was not found in the design.
+WARNING: Simulation object /audio_tb/ra/addr was not found in the design.
+WARNING: Simulation object /audio_tb/ra/inc_en/m was not found in the design.
+source timer_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'timer_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:28 . Memory (MB): peak = 2338.910 ; gain = 6.824
+current_wave_config {audio_tb.wcfg}
+audio_tb.wcfg
+add_wave {{/timer_tb/rst}} 
+current_wave_config {audio_tb.wcfg}
+audio_tb.wcfg
+add_wave {{/timer_tb/en}} 
+current_wave_config {audio_tb.wcfg}
+audio_tb.wcfg
+add_wave {{/timer_tb/ld}} 
+current_wave_config {audio_tb.wcfg}
+audio_tb.wcfg
+add_wave {{/timer_tb/btn_s}} 
+current_wave_config {audio_tb.wcfg}
+audio_tb.wcfg
+add_wave {{/timer_tb/btn_m}} 
+current_wave_config {audio_tb.wcfg}
+audio_tb.wcfg
+add_wave {{/timer_tb/d}} 
+save_wave_config {W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/timer_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/timer_tb_behav.wcfg
+set_property xsim.view {W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/tob_tb_behav.wcfg W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/audio_tb.wcfg W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/audio_tb.wcfg W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/timer_tb_behav.wcfg} [get_filesets sim_1]
+relaunch_sim
+suspend_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 2339.996 ; gain = 0.000
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'timer_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim/music_16b.rom'
+INFO: [SIM-utils-43] Exported 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim/music_8b.rom'
+INFO: [SIM-utils-43] Exported 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim/music_8b_amp.rom'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj timer_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/count_from.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module count_from
+INFO: [VRFC 10-2263] Analyzing Verilog file "W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module count_to
+INFO: [VRFC 10-2263] Analyzing Verilog file "W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/dec_en.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dec_en
+INFO: [VRFC 10-2263] Analyzing Verilog file "W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module increment_driver
+INFO: [VRFC 10-2263] Analyzing Verilog file "W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mins_to_bcd_encoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module timer
+INFO: [VRFC 10-2263] Analyzing Verilog file "W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sim_1/new/timer_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module timer_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 2339.996 ; gain = 0.000
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 3f18837b42b14a6ca7f31567d0a225ed --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot timer_tb_behav xil_defaultlib.timer_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 3 for port empty [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v:79]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 3 for port dec [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v:82]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 4 for port ld_m [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v:118]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 4 for port ld_m [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v:128]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 4 for port ld_m [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v:137]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.count_to(COUNT_W=17,COUNT_TO=100...
+Compiling module xil_defaultlib.dec_en_default
+Compiling module xil_defaultlib.increment_driver
+Compiling module xil_defaultlib.count_from(MAX_VAL=9)
+Compiling module xil_defaultlib.count_from(COUNT_W=6)
+Compiling module xil_defaultlib.count_to(COUNT_W=6,COUNT_TO=59)
+Compiling module xil_defaultlib.mins_to_bcd_encoder
+Compiling module xil_defaultlib.timer
+Compiling module xil_defaultlib.timer_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot timer_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2339.996 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 2339.996 ; gain = 0.000
