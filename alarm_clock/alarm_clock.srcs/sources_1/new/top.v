@@ -171,7 +171,6 @@ module top#(
         );
         
     disp_mux_ctrl dmc(
-        .en_2Hz     (en_2Hz),
         .set_alarm  (set_alarm),
         .set_timer  (set_timer),
         .run_timer  (run_timer),
