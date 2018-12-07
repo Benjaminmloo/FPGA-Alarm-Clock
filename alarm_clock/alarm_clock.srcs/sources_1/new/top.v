@@ -60,7 +60,7 @@ module top#(
 //BUSSES
 ////////////////////////////////////////////////////// 
     wire clk_delim;
-    wire [7:0]      p_pattern = {3'b111, clk_delim , 4'b1111};
+    wire [7:0]      p_display;
     wire [5:0]      sec_reg;
     wire [DISPL_W - 1:0]  d_clk, d_alarm, d_display, d_timer;
     wire [AUDIO_W - 1:0] audio_data;
@@ -76,7 +76,8 @@ module top#(
             en_1Hz,
             en_2Hz,
             en_500Hz,
-            en_20kHz
+            en_20kHz,
+            timer_done
             ;
 
 //////////////////////////////////////////////////////
@@ -151,26 +152,30 @@ module top#(
         .ld_rq      (set_timer),
         .btn_m      (btn_h_stb),
         .btn_s      (btn_m_stb),
-        .d          (d_timer)
+        .d          (d_timer),
+        .done       (timer_done)
         );
 
 //////////////////////////////////////////////////////    
 //LOGIC                                                 
 ////////////////////////////////////////////////////// 
-    assign clk_delim = sec_reg[0];
     //controller for the alarm
-    master_controller mc(
+    alarm_controller ac(
         .clk        (clk_5MHz),
         .rst        (rst),
         .d_clk      (d_clk),
         .d_alarm    (d_alarm),
         .en_alarm   (en_alarm),
         .set_alarm  (set_alarm),
+        .timer_done (timer_done),
         .alarm_on   (alarm_on),
         .alarm_en   (alarm_en)
         );
         
     disp_mux_ctrl dmc(
+        .clk        (clk_5MHz),
+        .rst        (rst),
+        .set_time   (set_time),
         .set_alarm  (set_alarm),
         .set_timer  (set_timer),
         .run_timer  (run_timer),
@@ -202,7 +207,9 @@ module top#(
         .d_alarm    (d_alarm),
         .d_timer    (d_timer),
         .s          (s),
-        .q          (d_display)
+        .blink      (sec_reg[0]),
+        .d          (d_display),
+        .p          (p_display)            
         );
     
     //Display if it is pm on an LED
@@ -214,7 +221,7 @@ module top#(
         .rst        (rst),
         .en         (en_1kHz),
         .bcd        (d_display),
-        .p          (p_pattern),
+        .p          (p_display),
         .an         (an),
         .seg        (seg)        
         );
@@ -231,10 +238,10 @@ module top#(
     generate
         if(AUDIO_FROM_FILE)
         begin:from_file
-            read_audio #(AUDIO_W) ra (
+            read_audio #(AUDIO_W, 3, 0) ra (
                 .clk        (clk_100MHz),
                 .rst        (rst),
-                .en         (audio_en | alarm_led),
+                .en         (audio_en | alarm_on),
                 .audio      (audio_data)
                 );
         end

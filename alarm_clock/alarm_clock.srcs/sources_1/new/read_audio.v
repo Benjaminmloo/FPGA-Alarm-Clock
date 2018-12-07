@@ -21,6 +21,9 @@
 
 module read_audio #(
     parameter BIT_W = 8,
+    parameter DATA_SET = 0, 
+    //1 - LUT very short loop (my od man loop)
+    //2 - BRAM 30s loop (matches)
     parameter tb = 0
     )(
     input clk,
@@ -30,18 +33,35 @@ module read_audio #(
     );
     
     localparam CLK_FRQ = 100_000_000;
-    localparam SMP_RATE = 44_100;
-    localparam CLK_PER_SMP = CLK_FRQ / SMP_RATE;
+    localparam SMP_RATE =   (DATA_SET == 1) ? 44_100:
+                            (DATA_SET == 2) ? 16_000:
+                            (DATA_SET == 3) ? 8_000:
+                            8_000;
     
-    localparam ADDR_W = 16;
-    localparam NUM_SMP = 2 ** ADDR_W;
+    localparam ADDR_W =     (DATA_SET == 1) ? 16:
+                            (DATA_SET == 2) ? 19:
+                            (DATA_SET == 3) ? 20:
+                            32;
+        
+    localparam DCTR_W =     (DATA_SET == 1) ? 12:
+                            (DATA_SET == 2) ? 13:
+                            (DATA_SET == 2) ? 14:
+                            14;
+    
+    localparam NUM_SMP =    (DATA_SET == 1) ? 2 ** 16:
+                            (DATA_SET == 2) ? 284_304:
+                            (DATA_SET == 3) ? 552_960:
+                            2**16;
+                            
+    
+    localparam CLK_PER_SMP = CLK_FRQ / SMP_RATE;
     
     wire [ADDR_W - 1:0] addr;
     wire en_inc;
         
     generate    
     if(tb)
-    begin
+    begin:test_data
         wire [BIT_W - 1:0] audio_data [15:0];
         
         assign audio_data[0] =  {16'h0000};
@@ -64,21 +84,42 @@ module read_audio #(
         assign audio = audio_data[addr[3:0]];
     end
     else
-    begin                
-        if(BIT_W == 16)
-        begin
-            reg [BIT_W - 1:0] audio_data [NUM_SMP - 1:0];
-            initial $readmemh("music_16b.rom", audio_data);
-            assign audio = audio_data[addr];
+    begin:real_data
+        if(DATA_SET == 1)
+        begin:LUT                
+            if(BIT_W == 16)
+            begin
+                reg [BIT_W - 1:0] audio_data [NUM_SMP - 1:0];
+                initial $readmemh("music_16b.rom", audio_data);
+                assign audio = audio_data[addr];
+            end
+            else if(BIT_W == 8)
+            begin
+                reg [BIT_W - 1:0] audio_data [NUM_SMP - 1:0];
+                initial $readmemh("music_8b_amp.rom", audio_data);
+                assign audio = audio_data[addr];
+            end
         end
-        else if(BIT_W == 8)
-        begin
-            reg [BIT_W - 1:0] audio_data [NUM_SMP - 1:0];
-            initial $readmemh("music_8b_amp.rom", audio_data);
-            assign audio = audio_data[addr];
+        else if(DATA_SET == 2)
+        begin:BRAM
+            bram_matches matches_data (
+                .clka(clk),    // input wire clka
+                .ena(en),      // input wire ena
+                .addra(addr),  // input wire [18 : 0] addra
+                .douta(audio)  // output wire [7 : 0] douta
+                );
+        end
+        else if(DATA_SET == 3)
+        begin:BRAM
+            bram_hey hey_data (
+                .clka(clk),    // input wire clka
+                .ena(en),      // input wire ena
+                .addra(addr),  // input wire [18 : 0] addra
+                .douta(audio)  // output wire [7 : 0] douta
+                );
         end
         else
-        begin
+        begin:test
             wire [BIT_W - 1:0] audio_data [15:0];
             
             assign audio_data[0] =  {16'h0000};
@@ -105,7 +146,7 @@ module read_audio #(
            
     
     
-    count_to #(12, CLK_PER_SMP) inc_en(
+    count_to #(DCTR_W, CLK_PER_SMP) dctr(
             .clk(clk),
             .rst(rst),
             .en(en),

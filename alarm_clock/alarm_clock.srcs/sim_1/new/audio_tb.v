@@ -34,7 +34,7 @@ module audio_tb(
     reg [AUDIO_W - 1:0] audio_data [2 ** AUDIO_W - 1:0];
            
     
-    read_audio #(AUDIO_W, 0) ra(
+    read_audio #(AUDIO_W, 2,  0) ra(
         .clk        (clk),
         .rst        (rst),
         .en         (audio_en),

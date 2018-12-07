@@ -5,7 +5,7 @@
 // 
 // Create Date: 12/03/2018 03:07:34 PM
 // Design Name: 
-// Module Name: master_controller_tb
+// Module Name: alarm_controller_tb
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module master_controller_tb(
+module alarm_controller_tb(
 
     );
 endmodule

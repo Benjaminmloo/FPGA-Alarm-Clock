@@ -27,7 +27,8 @@ module timer(
     input ld_rq,
     input btn_s,
     input btn_m,
-    output [4 * 8 - 1:0] d
+    output [4 * 8 - 1:0] d,
+    output done
     );
     
     localparam DIGIT_CNTR_W  = 4;
@@ -208,5 +209,6 @@ module timer(
     //the display format is as follows
     //{a/p, , h1, h0. m1, m0, , }
     assign d = {4'b0, min_bcd, sec_bcd, msec_m[2], msec_m[1], msec_m[0]};
+    assign done = ~&d & en;
             
 endmodule
