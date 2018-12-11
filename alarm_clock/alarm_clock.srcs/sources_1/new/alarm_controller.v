@@ -22,29 +22,21 @@
 module alarm_controller(
     input   clk,
     input   rst,
-    input   [4 * 8 - 1:0] d_clk,
-    input   [4 * 8 - 1:0] d_alarm,
-    input   timer_done,
-    input   en_alarm,     //enable signle for the alarm
-    input   set_alarm,
+    input   en,
+    input   trigger,
     
-    output reg alarm_on,
-    output  alarm_en    //signal indicating if the alarm is enabled
+    output  reg alarm_on
     );
     parameter S0 = 0, S1 = 1, S2 = 2, S3 = 3;
     
     reg [1:0] state, state_next;
     
-    wire trigger;
-    
-    assign alarm_en = en_alarm & ~set_alarm;
-    assign trigger = d_clk == d_alarm | timer_done;
     
     always @ (posedge clk, posedge rst)
         if(rst)
-            state = S0;
+            state <= S0;
         else
-            state = state_next;
+            state <= state_next;
             
     always @ *
         case(state)
@@ -54,17 +46,17 @@ module alarm_controller(
     
     always @ * 
         case(state)
-            S0: if(!alarm_en)       //disabled alarm - only do something if alarm is enabled
+            S0: if(!en)       //disabled alarm - only do something if alarm is enabled
                     state_next = S0;
                 else
                     state_next = S1;
-            S1: if(!alarm_en)       //enabled alarm - waits for trigger or to be turned off
+            S1: if(!en)       //enabled alarm - waits for trigger or to be turned off
                     state_next = S0;
                 else if(trigger)
                     state_next = S2;
                 else
                     state_next = S1;
-            S2: if(!alarm_en)       //triggered alarm - continues until disabled 
+            S2: if(!en)       //triggered alarm - continues until disabled 
                     if(trigger)
                         state_next = S3;
                     else
@@ -74,7 +66,7 @@ module alarm_controller(
             S3: if(trigger)         //disabled triggered - prevents the alarm from going on twice for the same trigger
                     state_next = S3;
                 else
-                    if(alarm_en)
+                    if(en)
                         state_next = S1;
                     else
                         state_next = S0;

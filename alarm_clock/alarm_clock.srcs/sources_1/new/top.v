@@ -23,31 +23,29 @@
 module top#(
     parameter tb = 0,
     parameter AUDIO_FROM_FILE = 1,
+    parameter AUDIO_S = 4,
+    parameter USE_PDM = 1,
     parameter DEBOUNCE_CYCLES = 50_000,
     parameter DEBOUNCE_BITS = 16
     )(
     input   clk_100MHz,
     input   rst,
     input   en_alarm,
-    input   btn_h_raw,
-    input   btn_m_raw,
-    input   set_time,
-    input   set_alarm,
-    input   set_timer,
+    input   btnu_raw,
+    input   btnd_raw,
+    input   btnl,
+    input   btnr,
+    input   btnc,
     input   audio_en,
+    input   timer_en,
     input   run_timer,
     input   run_on_sec,
     
     output  [7:0] an,
     output  [7:0] seg,
-    output  [1:0] s,
-    output  pm,
-    output  alarm_en,
-    output  alarm_on,
-    output  alarm_led,
-    output  audio_led,
-    output  audio_pwm,
-    output  audio_sd
+    output  audio_out,
+    output  audio_sd,
+    output  [15:0] led_audio_meter
     );
 //////////////////////////////////////////////////////
 //LOCAL PARAMETERS
@@ -55,29 +53,38 @@ module top#(
 ////////////////////////////////////////////////////// 
     localparam DISPL_W = 4*8;
     localparam AUDIO_W = 8;
+    
+    genvar i;
         
 //////////////////////////////////////////////////////
 //BUSSES
 ////////////////////////////////////////////////////// 
     wire clk_delim;
-    wire [7:0]      p_display;
-    wire [5:0]      sec_reg;
-    wire [DISPL_W - 1:0]  d_clk, d_alarm, d_display, d_timer;
-    wire [AUDIO_W - 1:0] audio_data;
-    //wire [1:0] s;
+    wire [7:0]              p_display;
+    wire [5:0]              sec_reg;
+    wire [DISPL_W - 1:0]    d_clk, 
+                            d_alarm, 
+                            d_display, 
+                            d_timer;
+                            
+    wire [AUDIO_W - 1:0]    audio_data;
+    wire [1:0]              s;
                 
 //////////////////////////////////////////////////////
 //WIRES
 ////////////////////////////////////////////////////// 
     wire    clk_5MHz,
-            btn_h_stb,
-            btn_m_stb,
+            btnu_stb,
+            btnd_stb,
             en_1_60Hz,
             en_1Hz,
-            en_2Hz,
             en_500Hz,
+            en_1kHz,
             en_20kHz,
-            timer_done
+            timer_trig,
+            time_alarm_on,
+            timer_alarm_on,
+            alarm_on
             ;
 
 //////////////////////////////////////////////////////
@@ -104,19 +111,11 @@ module top#(
        . en         (1'b1),
        . shift_out  (en_1kHz)
        ) ;
-       
-   //raises enable signal 20000 times second
-    count_to #(9, 249) en_2Hz_count (
-       .clk         (clk_5MHz),
-       . rst        (rst),
-       . en         (en_1kHz),
-       . shift_out  (en_2Hz)
-       ) ;
-    
+         
     //raises enable signal every minute           
     count_to #(6, 59) count_seconds(
         .clk        (clk_5MHz),
-        .rst        (rst | set_time),
+        .rst        (rst | btnl),
         .en         (en_1Hz),
         .m          (sec_reg),
         .shift_out  (en_1_60Hz)
@@ -127,9 +126,9 @@ module top#(
         .clk        (clk_5MHz),
         .rst        (rst),
         .en         (en_1Hz & (run_on_sec | en_1_60Hz & ~run_on_sec)),// allows switching between second increment or minute 
-        .set        (set_time),
-        .btn_h      (btn_h_stb),
-        .btn_m      (btn_m_stb),
+        .set        (btnl),
+        .btn_hr     (btnu_stb),
+        .btn_mn     (btnd_stb),
         .d          (d_clk)
         );
     
@@ -138,47 +137,47 @@ module top#(
         .clk        (clk_5MHz),
         .rst        (rst),
         .en         (1'b0),
-        .set        (set_alarm),
-        .btn_h      (btn_h_stb),
-        .btn_m      (btn_m_stb),
+        .set        (btnr),
+        .btn_hr     (btnu_stb),
+        .btn_mn     (btnd_stb),
         .d          (d_alarm)
         );
         
     //Register bank that stores the alarm time
-    timer  timer_reg(
+    timer  t(
         .clk        (clk_5MHz),
         .rst        (rst),
-        .en         (run_timer),
-        .ld_rq      (set_timer),
-        .btn_m      (btn_h_stb),
-        .btn_s      (btn_m_stb),
+        .en         (timer_en),
+        .ld_rq      (btnc),
+        .btn_min    (btnu_stb),
+        .btn_sec    (btnd_stb),
+        .start      (run_timer),
+        
         .d          (d_timer),
-        .done       (timer_done)
+        .trigger    (timer_trig)
         );
 
+        
 //////////////////////////////////////////////////////    
 //LOGIC                                                 
 ////////////////////////////////////////////////////// 
     //controller for the alarm
-    alarm_controller ac(
+    alarm_controller time_alarm(
         .clk        (clk_5MHz),
         .rst        (rst),
-        .d_clk      (d_clk),
-        .d_alarm    (d_alarm),
-        .en_alarm   (en_alarm),
-        .set_alarm  (set_alarm),
-        .timer_done (timer_done),
-        .alarm_on   (alarm_on),
-        .alarm_en   (alarm_en)
+        .en         (en_alarm & ~btnr),
+        .trigger    (d_clk == d_alarm),
+        .alarm_on   (time_alarm_on)
         );
+                
+    assign alarm_on = time_alarm_on | timer_trig; // alarm turn on if any possible alarm is set off. 
         
     disp_mux_ctrl dmc(
         .clk        (clk_5MHz),
         .rst        (rst),
-        .set_time   (set_time),
-        .set_alarm  (set_alarm),
-        .set_timer  (set_timer),
-        .run_timer  (run_timer),
+        .set_time   (btnl),
+        .set_alarm  (btnr),
+        .timer_en   (timer_en),
         .s          (s)
         );
     
@@ -187,17 +186,18 @@ module top#(
         debounce_up (
         .clk        (clk_5MHz),
         .rst        (rst),
-        .d          (btn_h_raw),
-        .q          (btn_h_stb)
+        .d          (btnu_raw),
+        .q          (btnu_stb)
         );
         
     debounce #(DEBOUNCE_BITS, DEBOUNCE_CYCLES)
         debounce_dn (
         .clk        (clk_5MHz),
         .rst        (rst),
-        .d          (btn_m_raw),
-        .q          (btn_m_stb)
+        .d          (btnd_raw),
+        .q          (btnd_stb)
         );
+        
 //////////////////////////////////////////////////////
 //DISPLAY
 ////////////////////////////////////////////////////// 
@@ -211,9 +211,16 @@ module top#(
         .d          (d_display),
         .p          (p_display)            
         );
-    
-    //Display if it is pm on an LED
-    assign pm = d_display[28];
+        
+    led_driver led_d(
+        .audio_data (audio_data),
+        .led_out    (led_audio_meter[15:8])
+        );
+        
+    for(i = 0; i < 8; i = i + 1)
+    begin:repeat_leds
+         assign led_audio_meter[i] = led_audio_meter [15 - i];
+    end
     
     //Drives the seven segment display with the current register bank data  
     seg_driver #(8) sd(
@@ -225,20 +232,11 @@ module top#(
         .an         (an),
         .seg        (seg)        
         );
-    
-    //Drives the Alarm out put (raises LED high and low when alarm is triggered)
-    alarm_driver ad(
-        .clk        (clk_5MHz),
-        .rst        (rst),
-        .en         (alarm_on),
-        .switch_edge(en_1Hz),
-        .alarm_on   (alarm_led)
-        );
-        
+            
     generate
         if(AUDIO_FROM_FILE)
         begin:from_file
-            read_audio #(AUDIO_W, 3, 0) ra (
+            read_audio #(AUDIO_W, AUDIO_S, 0) ra (
                 .clk        (clk_100MHz),
                 .rst        (rst),
                 .en         (audio_en | alarm_on),
@@ -255,15 +253,30 @@ module top#(
                 );
         end
     endgenerate
-    assign audio_led = audio_data [0];
+    
     assign audio_sd = 1;
-        
-    //Drives pwm out put 
-    pwm_driver #(AUDIO_W) pwm_d(
-        .clk        (clk_100MHz),
-        .rst        (rst),
-        .duty_in    (audio_data),
-        .pwm_out    (audio_pwm)
-    );
+    
+    generate
+        if(USE_PDM)
+        begin:pdm
+            //Drives pwm out put 
+            pdm_driver #(AUDIO_W) pdm_d(
+                .clk            (clk_100MHz),
+                .rst            (rst),
+                .duty_in        (audio_data),
+                .audio_out      (audio_out)
+                );
+        end
+        else
+        begin:pwm
+            //Drives pwm out put 
+            pwm_driver #(AUDIO_W) pwm_d(
+                .clk            (clk_100MHz),
+                .rst            (rst),
+                .duty_in        (audio_data),
+                .audio_out      (audio_out)
+                );
+        end
+    endgenerate
     
 endmodule

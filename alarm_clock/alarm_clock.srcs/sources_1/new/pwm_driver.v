@@ -29,7 +29,7 @@ module pwm_driver#(
     input clk,
     input rst,
     input [AUDIO_W - 1:0] duty_in,
-    output reg pwm_out
+    output reg audio_out
     );
     localparam PWM_W = 8;
     
@@ -42,7 +42,7 @@ module pwm_driver#(
         begin
             pwm_ramp <= 0;
             current_duty <= 0;
-            pwm_out <= 0;
+            audio_out <= 0;
         end
         else
         begin
@@ -60,7 +60,7 @@ module pwm_driver#(
             pwm_ramp <= pwm_ramp + 1'b1;
             
             //if the cycle # is less than the duty raise the output 
-            pwm_out <= (current_duty < pwm_ramp);
+            audio_out <= (current_duty < pwm_ramp);
         end
     end
 endmodule

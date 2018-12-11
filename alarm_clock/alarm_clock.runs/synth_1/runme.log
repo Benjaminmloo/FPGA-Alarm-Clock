@@ -14,149 +14,158 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 29884 
+INFO: Helper process launched with PID 6272 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 449.078 ; gain = 100.359
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 448.129 ; gain = 100.031
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
 	Parameter tb bound to: 0 - type: integer 
 	Parameter AUDIO_FROM_FILE bound to: 1 - type: integer 
+	Parameter AUDIO_S bound to: 4 - type: integer 
+	Parameter USE_PDM bound to: 1 - type: integer 
 	Parameter DEBOUNCE_CYCLES bound to: 50000 - type: integer 
 	Parameter DEBOUNCE_BITS bound to: 16 - type: integer 
 	Parameter DISPL_W bound to: 32 - type: integer 
 	Parameter AUDIO_W bound to: 8 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'read_audio' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:22]
 	Parameter BIT_W bound to: 8 - type: integer 
-	Parameter DATA_SET bound to: 3 - type: integer 
+	Parameter DATA_SET bound to: 4 - type: integer 
 	Parameter tb bound to: 0 - type: integer 
 	Parameter CLK_FRQ bound to: 100000000 - type: integer 
-	Parameter SMP_RATE bound to: 8000 - type: integer 
+	Parameter SMP_RATE bound to: 16000 - type: integer 
 	Parameter ADDR_W bound to: 20 - type: integer 
 	Parameter DCTR_W bound to: 14 - type: integer 
-	Parameter NUM_SMP bound to: 552960 - type: integer 
-	Parameter CLK_PER_SMP bound to: 12500 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'bram_hey' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/.Xil/Vivado-27976-Milliken/realtime/bram_hey_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'bram_hey' (1#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/.Xil/Vivado-27976-Milliken/realtime/bram_hey_stub.v:6]
+	Parameter NUM_SMP bound to: 510560 - type: integer 
+	Parameter CLK_PER_SMP bound to: 6250 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'bram_dreams' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/.Xil/Vivado-7120-Mullikan/realtime/bram_dreams_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bram_dreams' (1#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/.Xil/Vivado-7120-Mullikan/realtime/bram_dreams_stub.v:6]
+WARNING: [Synth 8-689] width (20) of port connection 'addra' does not match port width (19) of module 'bram_dreams' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:130]
 INFO: [Synth 8-6157] synthesizing module 'count_to' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
 	Parameter COUNT_W bound to: 14 - type: integer 
-	Parameter COUNT_TO bound to: 12500 - type: integer 
+	Parameter COUNT_TO bound to: 6250 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'count_to' (2#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
-WARNING: [Synth 8-350] instance 'dctr' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:149]
+WARNING: [Synth 8-350] instance 'dctr' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:162]
 INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized0' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
 	Parameter COUNT_W bound to: 20 - type: integer 
-	Parameter COUNT_TO bound to: 552959 - type: integer 
+	Parameter COUNT_TO bound to: 510559 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized0' (2#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
-WARNING: [Synth 8-350] instance 'addr_inc' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:156]
+WARNING: [Synth 8-350] instance 'addr_inc' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:169]
 INFO: [Synth 8-6155] done synthesizing module 'read_audio' (3#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v:22]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/.Xil/Vivado-27976-Milliken/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (4#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/.Xil/Vivado-27976-Milliken/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'pdm_driver' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pdm_driver.v:26]
+	Parameter NBITS bound to: 8 - type: integer 
+	Parameter MAX bound to: 255 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pdm_driver' (4#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pdm_driver.v:26]
+WARNING: [Synth 8-350] instance 'pdm_d' of module 'pdm_driver' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:263]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/.Xil/Vivado-7120-Mullikan/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (5#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/.Xil/Vivado-7120-Mullikan/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized1' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
 	Parameter COUNT_W bound to: 24 - type: integer 
 	Parameter COUNT_TO bound to: 4999999 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (4#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
-WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:93]
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized1' (5#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1Hz_count' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:100]
 INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized2' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
 	Parameter COUNT_W bound to: 13 - type: integer 
 	Parameter COUNT_TO bound to: 4999 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (4#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
-WARNING: [Synth 8-350] instance 'en_1kHz_count' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:101]
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized2' (5#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1kHz_count' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:108]
 INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized3' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
-	Parameter COUNT_W bound to: 9 - type: integer 
-	Parameter COUNT_TO bound to: 249 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (4#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
-WARNING: [Synth 8-350] instance 'en_2Hz_count' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:109]
-INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized4' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
 	Parameter COUNT_W bound to: 6 - type: integer 
 	Parameter COUNT_TO bound to: 59 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized4' (4#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized3' (5#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
 INFO: [Synth 8-6157] synthesizing module 'clock_counter' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
 INFO: [Synth 8-6157] synthesizing module 'sequential_enable' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v:25]
 	Parameter NUM_EN bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'sequential_enable' (5#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v:25]
-INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized5' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sequential_enable' (6#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/sequential_enable.v:25]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized4' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
 	Parameter COUNT_W bound to: 5 - type: integer 
 	Parameter COUNT_TO bound to: 23 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized5' (5#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized4' (6#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
 WARNING: [Synth 8-350] instance 'count_hours' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:61]
 INFO: [Synth 8-6157] synthesizing module 'increment_driver' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
 	Parameter S0 bound to: 2'b00 
 	Parameter S1 bound to: 2'b01 
 	Parameter S2 bound to: 2'b10 
-INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (6#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'increment_driver' (7#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v:23]
 INFO: [Synth 8-6157] synthesizing module 'hours_to_bcd_encoder' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (7#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hours_to_bcd_encoder' (8#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v:23]
 INFO: [Synth 8-6157] synthesizing module 'mins_to_bcd_encoder' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'mins_to_bcd_encoder' (8#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (9#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'mins_to_bcd_encoder' (9#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (10#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v:22]
 INFO: [Synth 8-6157] synthesizing module 'timer' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v:23]
 	Parameter DIGIT_CNTR_W bound to: 4 - type: integer 
 	Parameter SEC_CNTR_W bound to: 6 - type: integer 
 	Parameter MIN_CNTR_W bound to: 6 - type: integer 
 	Parameter MSEC_RST_M bound to: 0 - type: integer 
 	Parameter MSEC_MAX_M bound to: 9 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized6' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6157] synthesizing module 'timer_control' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer_control.v:23]
+	Parameter S0 bound to: 0 - type: integer 
+	Parameter S1 bound to: 1 - type: integer 
+	Parameter S2 bound to: 2 - type: integer 
+	Parameter S3 bound to: 3 - type: integer 
+	Parameter S4 bound to: 4 - type: integer 
+	Parameter S5 bound to: 5 - type: integer 
+	Parameter S6 bound to: 6 - type: integer 
+	Parameter S7 bound to: 7 - type: integer 
+INFO: [Synth 8-226] default block is never used [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer_control.v:41]
+INFO: [Synth 8-6155] done synthesizing module 'timer_control' (11#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer_control.v:23]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized5' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
 	Parameter COUNT_W bound to: 13 - type: integer 
 	Parameter COUNT_TO bound to: 5000 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized6' (9#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
-WARNING: [Synth 8-350] instance 'en_1kHz_count' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v:77]
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized5' (11#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+WARNING: [Synth 8-350] instance 'en_1kHz_count' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v:95]
 INFO: [Synth 8-6157] synthesizing module 'dec_en' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/dec_en.v:23]
 	Parameter NUM_DIGITS bound to: 5 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'dec_en' (10#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/dec_en.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'dec_en' (12#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/dec_en.v:23]
 INFO: [Synth 8-6157] synthesizing module 'count_from' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/count_from.v:23]
 	Parameter COUNT_W bound to: 4 - type: integer 
 	Parameter MAX_VAL bound to: 9 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'count_from' (11#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/count_from.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'count_from' (13#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/count_from.v:23]
 INFO: [Synth 8-6157] synthesizing module 'count_from__parameterized0' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/count_from.v:23]
 	Parameter COUNT_W bound to: 6 - type: integer 
 	Parameter MAX_VAL bound to: 59 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'count_from__parameterized0' (11#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/count_from.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'timer' (12#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'count_from__parameterized0' (13#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/count_from.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'timer' (14#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/timer.v:23]
 INFO: [Synth 8-6157] synthesizing module 'alarm_controller' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_controller.v:22]
 	Parameter S0 bound to: 0 - type: integer 
 	Parameter S1 bound to: 1 - type: integer 
 	Parameter S2 bound to: 2 - type: integer 
 	Parameter S3 bound to: 3 - type: integer 
-INFO: [Synth 8-226] default block is never used [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_controller.v:56]
-INFO: [Synth 8-6155] done synthesizing module 'alarm_controller' (13#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_controller.v:22]
+INFO: [Synth 8-226] default block is never used [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_controller.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'alarm_controller' (15#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_controller.v:22]
 INFO: [Synth 8-6157] synthesizing module 'disp_mux_ctrl' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/disp_mux_ctrl.v:23]
 	Parameter S0 bound to: 0 - type: integer 
 	Parameter S1 bound to: 1 - type: integer 
 	Parameter S2 bound to: 2 - type: integer 
-	Parameter S3 bound to: 3 - type: integer 
-	Parameter DC bound to: 0 - type: integer 
-	Parameter DA bound to: 1 - type: integer 
-	Parameter DT bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'disp_mux_ctrl' (14#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/disp_mux_ctrl.v:23]
+	Parameter DC bound to: 2'b00 
+	Parameter DA bound to: 2'b01 
+	Parameter DT bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'disp_mux_ctrl' (16#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/disp_mux_ctrl.v:23]
 INFO: [Synth 8-6157] synthesizing module 'debounce' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
 	Parameter COUNT_BITS bound to: 16 - type: integer 
 	Parameter CLKS_TO_COUNT bound to: 50000 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized7' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized6' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
 	Parameter COUNT_W bound to: 16 - type: integer 
 	Parameter COUNT_TO bound to: 50000 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized7' (14#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized6' (16#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
 WARNING: [Synth 8-350] instance 'cap_samp' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:35]
-INFO: [Synth 8-6155] done synthesizing module 'debounce' (15#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (17#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/debounce.v:21]
 INFO: [Synth 8-6157] synthesizing module 'display_mux' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
 	Parameter MUX_W bound to: 31 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'display_mux' (16#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'display_mux' (18#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/diplay_mux.v:21]
+INFO: [Synth 8-6157] synthesizing module 'led_driver' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/led_driver.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'led_driver' (19#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/led_driver.v:23]
 INFO: [Synth 8-6157] synthesizing module 'seg_driver' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
 	Parameter NUM_SEG bound to: 8 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized8' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6157] synthesizing module 'count_to__parameterized7' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
 	Parameter COUNT_W bound to: 3 - type: integer 
 	Parameter COUNT_TO bound to: 7 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized8' (16#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'count_to__parameterized7' (19#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/imports/modules/count_to.v:23]
 WARNING: [Synth 8-350] instance 'disp_ptr_inc' of module 'count_to' requires 5 connections, but only 4 given [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:44]
-INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (17#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
-INFO: [Synth 8-6157] synthesizing module 'alarm_driver' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_driver.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'alarm_driver' (18#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_driver.v:23]
-INFO: [Synth 8-6157] synthesizing module 'pwm_driver' [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:26]
-	Parameter AUDIO_W bound to: 8 - type: integer 
-	Parameter PWM_W bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'pwm_driver' (19#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v:26]
-INFO: [Synth 8-6155] done synthesizing module 'top' (20#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'seg_driver' (20#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/seg_driver.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'top' (21#1) [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/top.v:23]
 WARNING: [Synth 8-3917] design top has port audio_sd driven by constant 1
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 503.945 ; gain = 155.227
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 502.605 ; gain = 154.508
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -169,10 +178,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 503.945 ; gain = 155.227
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 502.605 ; gain = 154.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 503.945 ; gain = 155.227
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 502.605 ; gain = 154.508
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -181,8 +190,8 @@ Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [w:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz'
 Finished Parsing XDC File [w:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz'
-Parsing XDC File [w:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/bram_hey/bram_hey/bram_hey_in_context.xdc] for cell 'from_file.ra/real_data.BRAM.hey_data'
-Finished Parsing XDC File [w:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/bram_hey/bram_hey/bram_hey_in_context.xdc] for cell 'from_file.ra/real_data.BRAM.hey_data'
+Parsing XDC File [w:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/bram_dreams/bram_dreams/bram_dreams_in_context.xdc] for cell 'from_file.ra/real_data.DREAMS.dreams_data'
+Finished Parsing XDC File [w:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/bram_dreams/bram_dreams/bram_dreams_in_context.xdc] for cell 'from_file.ra/real_data.DREAMS.dreams_data'
 Parsing XDC File [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
 Finished Parsing XDC File [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/constrs_1/imports/lab9_3_3/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
@@ -192,17 +201,17 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 859.445 ; gain = 0.000
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'from_file.ra/real_data.BRAM.hey_data' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 860.078 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'from_file.ra/real_data.DREAMS.dreams_data' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 859.445 ; gain = 510.727
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 860.078 ; gain = 511.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 859.445 ; gain = 510.727
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 860.078 ; gain = 511.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -210,18 +219,26 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property IO_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  w:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  w:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for clk_wiz. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \from_file.ra /\real_data.BRAM.hey_data . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \from_file.ra /\real_data.DREAMS.dreams_data . (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 859.445 ; gain = 510.727
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 860.078 ; gain = 511.980
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'increment_driver'
 INFO: [Synth 8-5544] ROM "q" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "state_n" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "state_n" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'timer_control'
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'alarm_controller'
 INFO: [Synth 8-5544] ROM "alarm_on" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "current_duty" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "led_out0" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -233,6 +250,19 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
+                      S0 |                              001 |                              000
+                      S1 |                              010 |                              001
+                      S2 |                              111 |                              010
+                      S3 |                              110 |                              011
+                      S6 |                              011 |                              110
+                      S4 |                              100 |                              100
+                      S7 |                              000 |                              111
+                      S5 |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'timer_control'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
                       S0 |                               00 |                               00
                       S1 |                               01 |                               01
                       S2 |                               10 |                               10
@@ -240,7 +270,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'alarm_controller'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:25 . Memory (MB): peak = 859.445 ; gain = 510.727
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 860.078 ; gain = 511.980
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -253,8 +283,7 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      9 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 2     
 	   2 Input      6 Bit       Adders := 7     
 	   2 Input      5 Bit       Adders := 2     
 	   2 Input      4 Bit       Adders := 3     
@@ -262,29 +291,30 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input      1 Bit         XORs := 2     
 +---Registers : 
-	                9 Bit    Registers := 1     
-	                8 Bit    Registers := 2     
+	                8 Bit    Registers := 4     
 	                6 Bit    Registers := 7     
 	                5 Bit    Registers := 2     
 	                4 Bit    Registers := 3     
-	                3 Bit    Registers := 2     
-	                1 Bit    Registers := 6     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
 +---Muxes : 
 	   3 Input     32 Bit        Muxes := 1     
-	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
 	   3 Input      8 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 1     
 	   8 Input      8 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 15    
 	   2 Input      5 Bit        Muxes := 2     
 	   2 Input      4 Bit        Muxes := 15    
 	   8 Input      4 Bit        Muxes := 1     
+	  28 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
 	   3 Input      2 Bit        Muxes := 6     
-	   2 Input      2 Bit        Muxes := 26    
-	   4 Input      2 Bit        Muxes := 3     
-	   6 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 9     
+	   2 Input      2 Bit        Muxes := 25    
+	   4 Input      2 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -292,15 +322,16 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module count_to__parameterized3 
+Module pdm_driver 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      9 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 2     
 +---Registers : 
-	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input      9 Bit        Muxes := 1     
-Module count_to__parameterized4 
+	   2 Input      8 Bit        Muxes := 1     
+Module count_to__parameterized3 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      6 Bit       Adders := 1     
@@ -308,7 +339,7 @@ Detailed RTL Component Info :
 	                6 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      6 Bit        Muxes := 1     
-Module count_to__parameterized5 
+Module count_to__parameterized4 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      5 Bit       Adders := 1     
@@ -322,6 +353,10 @@ Detailed RTL Component Info :
 	   3 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+Module timer_control 
+Detailed RTL Component Info : 
++---Muxes : 
+	  28 Input      3 Bit        Muxes := 1     
 Module count_from 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -347,11 +382,10 @@ Detailed RTL Component Info :
 Module disp_mux_ctrl 
 Detailed RTL Component Info : 
 +---Registers : 
-	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
 +---Muxes : 
-	   4 Input      2 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 1     
-	   6 Input      2 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
 Module debounce 
 Detailed RTL Component Info : 
 +---XORs : 
@@ -363,7 +397,11 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   3 Input     32 Bit        Muxes := 1     
 	   3 Input      8 Bit        Muxes := 1     
-Module count_to__parameterized8 
+Module led_driver 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module count_to__parameterized7 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      3 Bit       Adders := 1     
@@ -377,21 +415,6 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit        Muxes := 1     
 	   8 Input      8 Bit        Muxes := 1     
 	   8 Input      4 Bit        Muxes := 1     
-Module alarm_driver 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module pwm_driver 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 2     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -408,12 +431,10 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5546] ROM "pwm_d/current_duty" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "led_d/led_out0" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3917] design top has port audio_sd driven by constant 1
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dmc/state_reg[2] )
-WARNING: [Synth 8-3332] Sequential element (dmc/state_reg[2]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:30 . Memory (MB): peak = 859.445 ; gain = 510.727
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 860.078 ; gain = 511.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -426,8 +447,8 @@ ROM:
 |mins_to_bcd_encoder | bcd                         | 64x8          | LUT            | 
 |top                 | alarm_reg/m_bcd_encoder/bcd | 64x8          | LUT            | 
 |top                 | rt_clock/m_bcd_encoder/bcd  | 64x8          | LUT            | 
-|top                 | timer_reg/s_bcd_encoder/bcd | 64x8          | LUT            | 
-|top                 | timer_reg/m_bcd_encoder/bcd | 64x8          | LUT            | 
+|top                 | t/s_bcd_encoder/bcd         | 64x8          | LUT            | 
+|top                 | t/m_bcd_encoder/bcd         | 64x8          | LUT            | 
 +--------------------+-----------------------------+---------------+----------------+
 
 ---------------------------------------------------------------------------------
@@ -445,13 +466,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_wiz/clk_out1' to pin 'clk_wiz/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 859.445 ; gain = 510.727
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 860.078 ; gain = 511.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 892.344 ; gain = 543.625
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 897.594 ; gain = 549.496
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -463,7 +484,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:40 . Memory (MB): peak = 892.344 ; gain = 543.625
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 898.602 ; gain = 550.504
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -487,7 +508,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:41 . Memory (MB): peak = 892.344 ; gain = 543.625
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 898.602 ; gain = 550.504
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -500,7 +521,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:41 . Memory (MB): peak = 892.344 ; gain = 543.625
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 898.602 ; gain = 550.504
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -512,25 +533,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:41 . Memory (MB): peak = 892.344 ; gain = 543.625
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 898.602 ; gain = 550.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:41 . Memory (MB): peak = 892.344 ; gain = 543.625
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 898.602 ; gain = 550.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 892.344 ; gain = 543.625
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 898.602 ; gain = 550.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 892.344 ; gain = 543.625
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 898.602 ; gain = 550.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -541,81 +562,82 @@ Report BlackBoxes:
 |      |BlackBox name |Instances |
 +------+--------------+----------+
 |1     |clk_wiz_0     |         1|
-|2     |bram_hey      |         1|
+|2     |bram_dreams   |         1|
 +------+--------------+----------+
 
 Report Cell Usage: 
-+------+----------+------+
-|      |Cell      |Count |
-+------+----------+------+
-|1     |bram_hey  |     1|
-|2     |clk_wiz_0 |     1|
-|3     |CARRY4    |    34|
-|4     |LUT1      |    11|
-|5     |LUT2      |    89|
-|6     |LUT3      |    69|
-|7     |LUT4      |    68|
-|8     |LUT5      |    58|
-|9     |LUT6      |    89|
-|10    |FDCE      |   217|
-|11    |FDPE      |    12|
-|12    |FDRE      |     4|
-|13    |LDC       |    12|
-|14    |IBUF      |    10|
-|15    |OBUF      |    25|
-+------+----------+------+
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |bram_dreams |     1|
+|2     |clk_wiz_0   |     1|
+|3     |CARRY4      |    38|
+|4     |LUT1        |    10|
+|5     |LUT2        |   102|
+|6     |LUT3        |    49|
+|7     |LUT4        |    68|
+|8     |LUT5        |    93|
+|9     |LUT6        |    95|
+|10    |MUXF7       |     3|
+|11    |FDCE        |   201|
+|12    |FDPE        |    13|
+|13    |FDRE        |    37|
+|14    |LDC         |    12|
+|15    |IBUF        |    11|
+|16    |OBUF        |    34|
++------+------------+------+
 
 Report Instance Areas: 
 +------+---------------------+-----------------------------+------+
 |      |Instance             |Module                       |Cells |
 +------+---------------------+-----------------------------+------+
-|1     |top                  |                             |   707|
-|2     |  ac                 |alarm_controller             |    10|
-|3     |  ad                 |alarm_driver                 |     1|
-|4     |  alarm_reg          |clock_counter                |    50|
-|5     |    count_hours      |count_to__parameterized5_12  |    17|
-|6     |    count_minute     |count_to__parameterized4_13  |    23|
-|7     |    increment_hour   |increment_driver_14          |     5|
-|8     |    increment_minute |increment_driver_15          |     5|
-|9     |  count_seconds      |count_to__parameterized4     |    14|
-|10    |  debounce_dn        |debounce                     |    34|
-|11    |    cap_samp         |count_to__parameterized7_11  |    31|
-|12    |  debounce_up        |debounce_0                   |    34|
-|13    |    cap_samp         |count_to__parameterized7     |    31|
-|14    |  dmc                |disp_mux_ctrl                |    26|
-|15    |  en_1Hz_count       |count_to__parameterized1     |    51|
-|16    |  en_1kHz_count      |count_to__parameterized2     |    28|
-|17    |  \from_file.ra      |read_audio                   |    82|
-|18    |    addr_inc         |count_to__parameterized0     |    46|
-|19    |    dctr             |count_to                     |    28|
-|20    |  pwm_d              |pwm_driver                   |    37|
-|21    |  rt_clock           |clock_counter_1              |    51|
-|22    |    count_hours      |count_to__parameterized5     |    19|
-|23    |    count_minute     |count_to__parameterized4_8   |    22|
-|24    |    increment_hour   |increment_driver_9           |     5|
-|25    |    increment_minute |increment_driver_10          |     5|
-|26    |  sd                 |seg_driver                   |    36|
-|27    |    disp_ptr_inc     |count_to__parameterized8     |    36|
-|28    |  timer_reg          |timer                        |   216|
-|29    |    dec_min          |count_from__parameterized0   |    48|
-|30    |    dec_msec_0       |count_from                   |    14|
-|31    |    dec_msec_1       |count_from_2                 |    10|
-|32    |    dec_msec_2       |count_from_3                 |    10|
-|33    |    dec_sec          |count_from__parameterized0_4 |    47|
-|34    |    en_1kHz_count    |count_to__parameterized6     |    28|
-|35    |    increment_min    |increment_driver             |     6|
-|36    |    increment_sec    |increment_driver_5           |     5|
-|37    |    ini_reg_min      |count_to__parameterized4_6   |    24|
-|38    |    ini_reg_sec      |count_to__parameterized4_7   |    24|
+|1     |top                  |                             |   775|
+|2     |  alarm_reg          |clock_counter                |    53|
+|3     |    count_hours      |count_to__parameterized4_12  |    17|
+|4     |    count_minute     |count_to__parameterized3_13  |    26|
+|5     |    increment_hour   |increment_driver_14          |     5|
+|6     |    increment_minute |increment_driver_15          |     5|
+|7     |  count_seconds      |count_to__parameterized3     |    15|
+|8     |  debounce_dn        |debounce                     |    34|
+|9     |    cap_samp         |count_to__parameterized6_11  |    31|
+|10    |  debounce_up        |debounce_0                   |    38|
+|11    |    cap_samp         |count_to__parameterized6     |    35|
+|12    |  dmc                |disp_mux_ctrl                |    27|
+|13    |  en_1Hz_count       |count_to__parameterized1     |    50|
+|14    |  en_1kHz_count      |count_to__parameterized2     |    31|
+|15    |  \from_file.ra      |read_audio                   |    92|
+|16    |    addr_inc         |count_to__parameterized0     |    44|
+|17    |    dctr             |count_to                     |    29|
+|18    |  \pdm.pdm_d         |pdm_driver                   |    70|
+|19    |  rt_clock           |clock_counter_1              |    51|
+|20    |    count_hours      |count_to__parameterized4     |    19|
+|21    |    count_minute     |count_to__parameterized3_8   |    21|
+|22    |    increment_hour   |increment_driver_9           |     5|
+|23    |    increment_minute |increment_driver_10          |     6|
+|24    |  sd                 |seg_driver                   |    36|
+|25    |    disp_ptr_inc     |count_to__parameterized7     |    36|
+|26    |  t                  |timer                        |   228|
+|27    |    dec_min          |count_from__parameterized0   |    49|
+|28    |    dec_msec_0       |count_from                   |    11|
+|29    |    dec_msec_1       |count_from_2                 |    11|
+|30    |    dec_msec_2       |count_from_3                 |    12|
+|31    |    dec_sec          |count_from__parameterized0_4 |    47|
+|32    |    en_1kHz_count    |count_to__parameterized5     |    26|
+|33    |    increment_min    |increment_driver             |     4|
+|34    |    increment_sec    |increment_driver_5           |     4|
+|35    |    ini_reg_min      |count_to__parameterized3_6   |    12|
+|36    |    ini_reg_sec      |count_to__parameterized3_7   |    12|
+|37    |    tc               |timer_control                |    40|
+|38    |  time_alarm         |alarm_controller             |     4|
 +------+---------------------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 892.344 ; gain = 543.625
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 898.602 ; gain = 550.504
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 892.344 ; gain = 188.125
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 892.344 ; gain = 543.625
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 898.602 ; gain = 193.031
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 898.602 ; gain = 550.504
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 56 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 64 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
@@ -625,11 +647,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LDC => LDCE: 12 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-88 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+97 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:47 . Memory (MB): peak = 892.344 ; gain = 555.094
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 898.602 ; gain = 561.977
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.086 . Memory (MB): peak = 892.344 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Dec  7 15:30:38 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 898.602 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 11 00:42:39 2018...

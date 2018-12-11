@@ -30,11 +30,11 @@ module alarm_driver(
     
     always @ (posedge clk, posedge rst)
     if (rst)
-        alarm_on = 0;
+        alarm_on <= 0;
     else if(en)
     begin
         if(switch_edge)
-            alarm_on = ~alarm_on; 
+            alarm_on <= ~alarm_on; 
             //if the alarm is triggered switch the output on and off every second
     end
     else

@@ -23,7 +23,7 @@
 module tob_tb(
 
     );
-    reg clk, rst, en, btn_h, btn_m, set_time, set_alarm;
+    reg clk, rst, en, btnu, btnd, btnl, btnr;
     
     wire [7:0] an, seg;
     wire pm, a_en, a_on;
@@ -32,10 +32,10 @@ module tob_tb(
         .clk_100MHz (clk),
         .rst        (rst),       
         .en_alarm   (en),  
-        .btn_h_raw  (btn_h), 
-        .btn_m_raw  (btn_m), 
-        .set_time   (set_time),  
-        .set_alarm  (set_alarm), 
+        .btnu_raw  (btnu), 
+        .btnd_raw  (btnd), 
+        .btnl   (btnl),  
+        .btnr  (btnr), 
         .audio_en   (audio_en),  
         .run_on_sec (run_on_sec), 
         
@@ -51,10 +51,10 @@ module tob_tb(
         clk = 0;
         rst = 0;
         en = 0;
-        btn_h = 0;
-        btn_m = 0;
-        set_time = 0;
-        set_alarm = 0;
+        btnu = 0;
+        btnd = 0;
+        btnl = 0;
+        btnr = 0;
         
         forever
             #10 clk = ~clk;
@@ -68,68 +68,68 @@ module tob_tb(
     
     initial
     begin
-        #20_000 set_time = 1; 
-        #5 btn_h = 1; 
-        #5 btn_h = 0; 
-        #100 btn_h = 1; 
-        #100 btn_h = 0; 
-        #100 btn_h = 1; 
-        #100 btn_h = 0; 
-        #100 btn_h = 1; 
-        #100 btn_h = 0;
+        #20_000 btnl = 1; 
+        #5 btnu = 1; 
+        #5 btnu = 0; 
+        #100 btnu = 1; 
+        #100 btnu = 0; 
+        #100 btnu = 1; 
+        #100 btnu = 0; 
+        #100 btnu = 1; 
+        #100 btnu = 0;
         
-        #5 btn_m = 1; 
-        #5 btn_m = 0; 
-        #100 btn_m = 1; 
-        #100 btn_m = 0; 
-        #100 btn_m = 1; 
-        #100 btn_m = 0; 
-        #100 btn_m = 1; 
-        #100 btn_m = 0;
+        #5 btnd = 1; 
+        #5 btnd = 0; 
+        #100 btnd = 1; 
+        #100 btnd = 0; 
+        #100 btnd = 1; 
+        #100 btnd = 0; 
+        #100 btnd = 1; 
+        #100 btnd = 0;
         
-        #100 set_time = 0;
+        #100 btnl = 0;
         
         #100 en = 1; 
         
-        #200 set_alarm = 1; 
-        #5 btn_h = 1; 
-        #5 btn_h = 0; 
-        #100 btn_h = 1; 
-        #100 btn_h = 0; 
-        #100 btn_h = 1; 
-        #100 btn_h = 0; 
-        #100 btn_h = 1; 
-        #100 btn_h = 0;
+        #200 btnr = 1; 
+        #5 btnu = 1; 
+        #5 btnu = 0; 
+        #100 btnu = 1; 
+        #100 btnu = 0; 
+        #100 btnu = 1; 
+        #100 btnu = 0; 
+        #100 btnu = 1; 
+        #100 btnu = 0;
         
-        #5 btn_m = 1; 
-        #5 btn_m = 0; 
-        #100 btn_m = 1; 
-        #100 btn_m = 0; 
-        #100 btn_m = 1; 
-        #100 btn_m = 0; 
-        #100 btn_m = 1; 
-        #100 btn_m = 0;
-        #100 btn_m = 1; 
-        #100 btn_m = 0; 
-        #100 btn_m = 1; 
-        #100 btn_m = 0; 
-        #100 btn_m = 1; 
-        #100 btn_m = 0;
-        #100 btn_m = 1; 
-        #100 btn_m = 0; 
-        #100 btn_m = 1; 
-        #100 btn_m = 0; 
-        #100 btn_m = 1; 
-        #100 btn_m = 0;
-        #100 btn_m = 1; 
-        #100 btn_m = 0; 
-        #100 btn_m = 1; 
-        #100 btn_m = 0; 
-        #100 btn_m = 1; 
-        #100 btn_m = 0;
-        #100 btn_m = 1; 
-        #100 btn_m = 0;
+        #5 btnd = 1; 
+        #5 btnd = 0; 
+        #100 btnd = 1; 
+        #100 btnd = 0; 
+        #100 btnd = 1; 
+        #100 btnd = 0; 
+        #100 btnd = 1; 
+        #100 btnd = 0;
+        #100 btnd = 1; 
+        #100 btnd = 0; 
+        #100 btnd = 1; 
+        #100 btnd = 0; 
+        #100 btnd = 1; 
+        #100 btnd = 0;
+        #100 btnd = 1; 
+        #100 btnd = 0; 
+        #100 btnd = 1; 
+        #100 btnd = 0; 
+        #100 btnd = 1; 
+        #100 btnd = 0;
+        #100 btnd = 1; 
+        #100 btnd = 0; 
+        #100 btnd = 1; 
+        #100 btnd = 0; 
+        #100 btnd = 1; 
+        #100 btnd = 0;
+        #100 btnd = 1; 
+        #100 btnd = 0;
         
-        #100 set_alarm = 0;
+        #100 btnr = 0;
     end
 endmodule

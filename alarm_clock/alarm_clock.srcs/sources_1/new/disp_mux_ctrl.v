@@ -25,24 +25,23 @@ module disp_mux_ctrl(
     input rst,
     input set_time,
     input set_alarm,
-    input set_timer,
-    input run_timer,
+    input timer_en,
     
     output reg [1:0] s
     );
-    localparam S0 = 0, S1 = 1, S2 = 2, S3 = 3;
-    reg[2:0] state, n_state;
+    localparam S0 = 0, S1 = 1, S2 = 2;
+    reg[1:0] state, n_state;
     
-    wire [2:0] set;
-    assign set = {set_timer, set_alarm, set_time};
+    wire [1:0] set;
+    assign set = {set_alarm, set_time};
     
     reg [1:0] active;
     reg clk_2Hz;
     
-    localparam DC = 0, DA = 1, DT = 2;
+    localparam DC = 2'b00, DA = 2'b01, DT = 2'b10;
     
     always @ *
-        if(run_timer) //depending on if the timer is running set the currently active device
+        if(timer_en) //depending on if the timer is running set the currently active device
             active = DT;
         else
             active = DC;
@@ -53,8 +52,6 @@ module disp_mux_ctrl(
                     n_state = S1;
                 else if(set == 3'b010)
                     n_state = S2;
-                else if(set == 3'b100)
-                    n_state = S3;
                 else
                     n_state = S0;
             S1: if(!set[0]) //when setting a device only releasing the currently pressed button will return to the active device
@@ -65,10 +62,6 @@ module disp_mux_ctrl(
                     n_state = S0;
                 else
                     n_state = S2;
-            S3: if(!set[2])
-                    n_state = S0;
-                else
-                    n_state = S3;
             default n_state = S0;
         endcase
         
@@ -77,7 +70,6 @@ module disp_mux_ctrl(
             S0: s = active;
             S1: s = DC;
             S2: s = DA;
-            S3: s = DT;
             default: s = DC;
         endcase
             
@@ -85,9 +77,9 @@ module disp_mux_ctrl(
     always @ (posedge clk, posedge rst)
     begin
     if(rst) 
-        state = S0;
+        state <= S0;
     else
-        state = n_state;
+        state <= n_state;
     end
     
 endmodule

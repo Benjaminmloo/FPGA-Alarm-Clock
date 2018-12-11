@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date         : Fri Dec  7 15:32:13 2018
-| Host         : Milliken running 64-bit major release  (build 9200)
+| Date         : Tue Dec 11 00:43:49 2018
+| Host         : Mullikan running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
 | Device       : xc7a100t
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    61 |
-| Unused register locations in slices containing registers |   298 |
+| Number of unique control sets                            |    60 |
+| Unused register locations in slices containing registers |   294 |
 +----------------------------------------------------------+-------+
 
 
@@ -38,7 +38,7 @@ Table of Contents
 |      8 |            6 |
 |     10 |            2 |
 |     12 |            5 |
-|    16+ |            8 |
+|    16+ |            7 |
 +--------+--------------+
 
 
@@ -48,11 +48,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             276 |          130 |
-| No           | No                    | Yes                    |             196 |           37 |
-| No           | Yes                   | No                     |              24 |           12 |
-| Yes          | No                    | No                     |              40 |            8 |
-| Yes          | No                    | Yes                    |             262 |           53 |
+| No           | No                    | No                     |             304 |          127 |
+| No           | No                    | Yes                    |             182 |           35 |
+| No           | Yes                   | No                     |              42 |           15 |
+| Yes          | No                    | No                     |              36 |            7 |
+| Yes          | No                    | Yes                    |             246 |           51 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -60,70 +60,69 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------------+----------------------------------------------------------+----------------------------------+------------------+----------------+
-|            Clock Signal           |                       Enable Signal                      |         Set/Reset Signal         | Slice Load Count | Bel Load Count |
-+-----------------------------------+----------------------------------------------------------+----------------------------------+------------------+----------------+
-|  clk_wiz/inst/clk_out1            |                                                          | timer_reg/ini_reg_sec/m_reg[5]_C |                1 |              2 |
-|  clk_wiz/inst/clk_out1            |                                                          | timer_reg/ini_reg_min/m_reg[2]_C |                1 |              2 |
-|  clk_wiz/inst/clk_out1            |                                                          | timer_reg/ini_reg_min/m_reg[4]_C |                1 |              2 |
-|  clk_wiz/inst/clk_out1            |                                                          | timer_reg/ini_reg_min/m_reg[3]_C |                1 |              2 |
-|  clk_wiz/inst/clk_out1            |                                                          | timer_reg/ini_reg_min/m_reg[0]_C |                1 |              2 |
-|  clk_wiz/inst/clk_out1            |                                                          | timer_reg/ini_reg_min/m_reg[5]_C |                1 |              2 |
-|  clk_wiz/inst/clk_out1            |                                                          | timer_reg/ini_reg_min/m_reg[1]_C |                1 |              2 |
-|  clk_wiz/inst/clk_out1            | timer_reg/dec_min/m_reg[5]_P_0[0]                        | timer_reg/ini_reg_sec/m_reg[4]_P |                1 |              2 |
-|  clk_wiz/inst/clk_out1            |                                                          | timer_reg/ini_reg_sec/m_reg[1]_C |                1 |              2 |
-|  clk_wiz/inst/clk_out1            |                                                          | timer_reg/ini_reg_sec/m_reg[3]_C |                1 |              2 |
-|  clk_wiz/inst/clk_out1            |                                                          | timer_reg/ini_reg_sec/m_reg[4]_C |                1 |              2 |
-|  clk_wiz/inst/clk_out1            |                                                          | timer_reg/ini_reg_sec/m_reg[2]_C |                1 |              2 |
-|  clk_wiz/inst/clk_out1            |                                                          | timer_reg/ini_reg_sec/m_reg[0]_C |                1 |              2 |
-|  timer_reg/ini_reg_sec/m_reg[1]_P |                                                          | timer_reg/ini_reg_sec/m_reg[1]_C |                1 |              2 |
-|  timer_reg/ini_reg_sec/m_reg[3]_P |                                                          | timer_reg/ini_reg_sec/m_reg[3]_C |                1 |              2 |
-|  timer_reg/ini_reg_sec/m_reg[5]_P |                                                          | timer_reg/ini_reg_sec/m_reg[5]_C |                1 |              2 |
-|  timer_reg/ini_reg_sec/m_reg[2]_P |                                                          | timer_reg/ini_reg_sec/m_reg[2]_C |                1 |              2 |
-|  timer_reg/ini_reg_sec/m_reg[0]_P |                                                          | timer_reg/ini_reg_sec/m_reg[0]_C |                1 |              2 |
-|  debounce_dn/cap_samp/q_reg       |                                                          |                                  |                1 |              2 |
-|  debounce_dn/cap_samp/q_reg       | debounce_dn/q_i_1__0_n_0                                 |                                  |                1 |              2 |
-|  clk_wiz/inst/clk_out1            | timer_reg/dec_msec_2/reg_dec_cnt[0]                      | timer_reg/ini_reg_min/m_reg[0]_P |                1 |              2 |
-|  clk_wiz/inst/clk_out1            | timer_reg/dec_msec_2/reg_dec_cnt[0]                      | timer_reg/ini_reg_min/m_reg[1]_P |                1 |              2 |
-|  clk_wiz/inst/clk_out1            | timer_reg/dec_msec_2/reg_dec_cnt[0]                      | timer_reg/ini_reg_min/m_reg[3]_P |                1 |              2 |
-|  clk_wiz/inst/clk_out1            | timer_reg/dec_msec_2/reg_dec_cnt[0]                      | timer_reg/ini_reg_min/m_reg[2]_P |                1 |              2 |
-|  clk_wiz/inst/clk_out1            | timer_reg/dec_msec_2/reg_dec_cnt[0]                      | timer_reg/ini_reg_min/m_reg[5]_P |                1 |              2 |
-|  clk_wiz/inst/clk_out1            | timer_reg/dec_msec_2/reg_dec_cnt[0]                      | timer_reg/ini_reg_min/m_reg[4]_P |                1 |              2 |
-|  debounce_up/cap_samp/q_reg       |                                                          |                                  |                1 |              2 |
-|  debounce_up/cap_samp/q_reg       | debounce_up/q_i_1_n_0                                    |                                  |                1 |              2 |
-|  clk_wiz/inst/clk_out1            | timer_reg/dec_min/m_reg[5]_P_0[0]                        | timer_reg/ini_reg_sec/m_reg[1]_P |                1 |              2 |
-|  clk_wiz/inst/clk_out1            | timer_reg/dec_min/m_reg[5]_P_0[0]                        | timer_reg/ini_reg_sec/m_reg[3]_P |                1 |              2 |
-|  timer_reg/ini_reg_sec/m_reg[4]_P |                                                          | timer_reg/ini_reg_sec/m_reg[4]_C |                1 |              2 |
-|  clk_wiz/inst/clk_out1            | timer_reg/dec_min/m_reg[5]_P_0[0]                        | timer_reg/ini_reg_sec/m_reg[5]_P |                1 |              2 |
-|  clk_wiz/inst/clk_out1            | timer_reg/dec_min/m_reg[5]_P_0[0]                        | timer_reg/ini_reg_sec/m_reg[2]_P |                1 |              2 |
-|  clk_wiz/inst/clk_out1            | timer_reg/dec_min/m_reg[5]_P_0[0]                        | timer_reg/ini_reg_sec/m_reg[0]_P |                1 |              2 |
-|  timer_reg/ini_reg_min/m_reg[0]_P |                                                          | timer_reg/ini_reg_min/m_reg[0]_C |                1 |              2 |
-|  timer_reg/ini_reg_min/m_reg[1]_P |                                                          | timer_reg/ini_reg_min/m_reg[1]_C |                1 |              2 |
-|  timer_reg/ini_reg_min/m_reg[3]_P |                                                          | timer_reg/ini_reg_min/m_reg[3]_C |                1 |              2 |
-|  timer_reg/ini_reg_min/m_reg[2]_P |                                                          | timer_reg/ini_reg_min/m_reg[2]_C |                1 |              2 |
-|  timer_reg/ini_reg_min/m_reg[5]_P |                                                          | timer_reg/ini_reg_min/m_reg[5]_C |                1 |              2 |
-|  timer_reg/ini_reg_min/m_reg[4]_P |                                                          | timer_reg/ini_reg_min/m_reg[4]_C |                1 |              2 |
-|  clk_wiz/inst/clk_out1            | set_time_IBUF                                            | rst_IBUF                         |                2 |              8 |
-|  clk_wiz/inst/clk_out1            | timer_reg/en_1kHz_count/m_reg[3]_0[0]                    | timer_reg/dec_msec_0/m_reg[3]_2  |                1 |              8 |
-|  clk_wiz/inst/clk_out1            | timer_reg/increment_min/FSM_sequential_state_reg[1]_0[0] | rst_IBUF                         |                2 |              8 |
-|  clk_wiz/inst/clk_out1            | timer_reg/dec_msec_0/reg_dec_cnt[0]                      | timer_reg/dec_msec_0/m_reg[3]_2  |                2 |              8 |
-|  clk_wiz/inst/clk_out1            | timer_reg/dec_msec_1/reg_dec_cnt[0]                      | timer_reg/dec_msec_0/m_reg[3]_2  |                2 |              8 |
-|  clk_wiz/inst/clk_out1            | set_alarm_IBUF                                           | rst_IBUF                         |                2 |              8 |
-|  clk_wiz/inst/clk_out1            | rt_clock/increment_hour/E[0]                             | rst_IBUF                         |                2 |             10 |
-|  clk_wiz/inst/clk_out1            | alarm_reg/increment_hour/E[0]                            | rst_IBUF                         |                2 |             10 |
-|  clk_wiz/inst/clk_out1            | timer_reg/increment_min/E[0]                             | rst_IBUF                         |                2 |             12 |
-|  clk_wiz/inst/clk_out1            | timer_reg/increment_sec/E[0]                             | rst_IBUF                         |                2 |             12 |
-|  clk_wiz/inst/clk_out1            | alarm_reg/increment_minute/E[0]                          | rst_IBUF                         |                2 |             12 |
-|  clk_wiz/inst/clk_out1            | en_1Hz_count/en_1Hz                                      | count_seconds/rst0               |                2 |             12 |
-|  clk_wiz/inst/clk_out1            | rt_clock/increment_minute/m_reg[5][0]                    | rst_IBUF                         |                2 |             12 |
-|  clk_100MHz_IBUF_BUFG             | pwm_d/current_duty_0                                     | rst_IBUF                         |                3 |             16 |
-|  clk_100MHz_IBUF_BUFG             |                                                          | rst_IBUF                         |                3 |             18 |
-|  clk_wiz/inst/clk_out1            | run_timer_IBUF                                           | rst_IBUF                         |                4 |             26 |
-|  clk_100MHz_IBUF_BUFG             | ac/ena                                                   | rst_IBUF                         |                4 |             28 |
-|  clk_100MHz_IBUF_BUFG             | ac/ena                                                   |                                  |                6 |             36 |
-|  clk_100MHz_IBUF_BUFG             | ac/m_reg[19]                                             | rst_IBUF                         |                5 |             40 |
-|  clk_wiz/inst/clk_out1            |                                                          | rst_IBUF                         |               22 |            154 |
-|  clk_100MHz_IBUF_BUFG             |                                                          |                                  |              128 |            272 |
-+-----------------------------------+----------------------------------------------------------+----------------------------------+------------------+----------------+
++-----------------------------+---------------------------------+-------------------------+------------------+----------------+
+|         Clock Signal        |          Enable Signal          |     Set/Reset Signal    | Slice Load Count | Bel Load Count |
++-----------------------------+---------------------------------+-------------------------+------------------+----------------+
+|  t/tc/m_reg[2]_P            |                                 | t/tc/m_reg[2]_C_0       |                1 |              2 |
+|  t/tc/m_reg[1]_P_0          |                                 | t/tc/m_reg[1]_C         |                1 |              2 |
+|  t/tc/m_reg[0]_P            |                                 | t/tc/m_reg[0]_C_0       |                1 |              2 |
+|  t/tc/m_reg[3]_P_0          |                                 | t/tc/m_reg[3]_C         |                1 |              2 |
+|  t/tc/m_reg[4]_P            |                                 | t/tc/m_reg[4]_C_0       |                1 |              2 |
+|  t/tc/m_reg[1]_P            |                                 | t/tc/m_reg[1]_C_0       |                1 |              2 |
+|  t/tc/m_reg[3]_P            |                                 | t/tc/m_reg[3]_C_0       |                1 |              2 |
+|  t/tc/m_reg[4]_P_0          |                                 | t/tc/m_reg[4]_C         |                1 |              2 |
+|  t/tc/m_reg[0]_P_0          |                                 | t/tc/m_reg[0]_C         |                1 |              2 |
+|  t/tc/m_reg[2]_P_0          |                                 | t/tc/m_reg[2]_C         |                1 |              2 |
+|  t/tc/m_reg[5]_P            |                                 | t/tc/m_reg[5]_C_0       |                1 |              2 |
+|  t/tc/m_reg[5]_P_0          |                                 | t/tc/m_reg[5]_C         |                1 |              2 |
+|  clk_wiz/inst/clk_out1      | t/dec_msec_2/reg_dec_cnt[1]     | t/tc/m_reg[3]_P_0       |                1 |              2 |
+|  clk_wiz/inst/clk_out1      | t/dec_msec_2/reg_dec_cnt[1]     | t/tc/m_reg[4]_P_0       |                1 |              2 |
+|  clk_wiz/inst/clk_out1      | t/dec_msec_2/reg_dec_cnt[1]     | t/tc/m_reg[0]_P_0       |                1 |              2 |
+|  clk_wiz/inst/clk_out1      | t/dec_msec_2/reg_dec_cnt[1]     | t/tc/m_reg[2]_P_0       |                1 |              2 |
+|  clk_wiz/inst/clk_out1      | t/dec_msec_2/reg_dec_cnt[1]     | t/tc/m_reg[5]_P_0       |                1 |              2 |
+|  debounce_dn/cap_samp/q_reg |                                 |                         |                1 |              2 |
+|  debounce_dn/cap_samp/q_reg | debounce_dn/q_i_1__0_n_0        |                         |                1 |              2 |
+|  debounce_up/cap_samp/q_reg |                                 |                         |                1 |              2 |
+|  debounce_up/cap_samp/q_reg | debounce_up/q_i_1_n_0           |                         |                1 |              2 |
+|  clk_wiz/inst/clk_out1      |                                 | t/tc/m_reg[3]_C         |                1 |              2 |
+|  clk_wiz/inst/clk_out1      |                                 | t/tc/m_reg[3]_C_0       |                1 |              2 |
+|  clk_wiz/inst/clk_out1      |                                 | t/tc/m_reg[4]_C         |                1 |              2 |
+|  clk_wiz/inst/clk_out1      |                                 | t/tc/m_reg[1]_C_0       |                1 |              2 |
+|  clk_wiz/inst/clk_out1      |                                 | t/tc/m_reg[0]_C_0       |                1 |              2 |
+|  clk_wiz/inst/clk_out1      |                                 | t/tc/m_reg[4]_C_0       |                1 |              2 |
+|  clk_wiz/inst/clk_out1      |                                 | t/tc/m_reg[5]_C_0       |                1 |              2 |
+|  clk_wiz/inst/clk_out1      |                                 | t/tc/m_reg[2]_C         |                1 |              2 |
+|  clk_wiz/inst/clk_out1      |                                 | t/tc/m_reg[1]_C         |                1 |              2 |
+|  clk_wiz/inst/clk_out1      |                                 | t/tc/m_reg[5]_C         |                1 |              2 |
+|  clk_wiz/inst/clk_out1      |                                 | t/tc/m_reg[2]_C_0       |                1 |              2 |
+|  clk_wiz/inst/clk_out1      |                                 | t/tc/m_reg[0]_C         |                1 |              2 |
+|  clk_wiz/inst/clk_out1      | t/dec_msec_2/reg_dec_cnt[0]     | t/tc/m_reg[2]_P         |                1 |              2 |
+|  clk_wiz/inst/clk_out1      | t/dec_msec_2/reg_dec_cnt[0]     | t/tc/m_reg[0]_P         |                1 |              2 |
+|  clk_wiz/inst/clk_out1      | t/dec_msec_2/reg_dec_cnt[0]     | t/tc/m_reg[4]_P         |                1 |              2 |
+|  clk_wiz/inst/clk_out1      | t/dec_msec_2/reg_dec_cnt[0]     | t/tc/m_reg[1]_P         |                1 |              2 |
+|  clk_wiz/inst/clk_out1      | t/dec_msec_2/reg_dec_cnt[0]     | t/tc/m_reg[3]_P         |                1 |              2 |
+|  clk_wiz/inst/clk_out1      | t/dec_msec_2/reg_dec_cnt[0]     | t/tc/m_reg[5]_P         |                1 |              2 |
+|  clk_wiz/inst/clk_out1      | t/dec_msec_2/reg_dec_cnt[1]     | t/tc/m_reg[1]_P_0       |                1 |              2 |
+|  clk_wiz/inst/clk_out1      | t/tc/reg_dec_cnt[0]             | t/dec_msec_0/m_reg[3]_2 |                2 |              8 |
+|  clk_wiz/inst/clk_out1      | btnl_IBUF                       | rst_IBUF                |                2 |              8 |
+|  clk_wiz/inst/clk_out1      | btnr_IBUF                       | rst_IBUF                |                2 |              8 |
+|  clk_wiz/inst/clk_out1      | t/dec_msec_1/reg_dec_cnt[1]     | t/dec_msec_0/m_reg[3]_2 |                1 |              8 |
+|  clk_wiz/inst/clk_out1      | t/dec_msec_1/m_reg[3]_0[0]      | t/dec_msec_0/m_reg[3]_2 |                2 |              8 |
+|  clk_wiz/inst/clk_out1      | t/tc/E[0]                       | rst_IBUF                |                2 |              8 |
+|  clk_wiz/inst/clk_out1      | alarm_reg/increment_hour/E[0]   | rst_IBUF                |                2 |             10 |
+|  clk_wiz/inst/clk_out1      | rt_clock/increment_hour/E[0]    | rst_IBUF                |                2 |             10 |
+|  clk_wiz/inst/clk_out1      | t/tc/reg_ini_en[1]              | rst_IBUF                |                2 |             12 |
+|  clk_wiz/inst/clk_out1      | t/tc/reg_ini_en[0]              | rst_IBUF                |                2 |             12 |
+|  clk_wiz/inst/clk_out1      | alarm_reg/increment_minute/E[0] | rst_IBUF                |                3 |             12 |
+|  clk_wiz/inst/clk_out1      | rt_clock/increment_minute/E[0]  | rst_IBUF                |                2 |             12 |
+|  clk_wiz/inst/clk_out1      | en_1Hz_count/en_1Hz             | count_seconds/rst0      |                2 |             12 |
+|  clk_100MHz_IBUF_BUFG       |                                 | rst_IBUF                |                3 |             18 |
+|  clk_wiz/inst/clk_out1      | timer_en_IBUF                   | rst_IBUF                |                4 |             26 |
+|  clk_100MHz_IBUF_BUFG       | t/tc/en0                        | rst_IBUF                |                4 |             28 |
+|  clk_100MHz_IBUF_BUFG       | t/tc/en0                        |                         |                5 |             32 |
+|  clk_100MHz_IBUF_BUFG       | from_file.ra/dctr/m_reg[0]_0    | rst_IBUF                |                5 |             40 |
+|  clk_wiz/inst/clk_out1      |                                 | rst_IBUF                |               23 |            158 |
+|  clk_100MHz_IBUF_BUFG       |                                 |                         |              125 |            300 |
++-----------------------------+---------------------------------+-------------------------+------------------+----------------+
 
 

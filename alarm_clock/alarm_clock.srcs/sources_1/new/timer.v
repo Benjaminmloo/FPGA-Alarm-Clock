@@ -25,10 +25,12 @@ module timer(
     input rst, 
     input en,
     input ld_rq,
-    input btn_s,
-    input btn_m,
+    input btn_sec,
+    input btn_min,
+    input start,
+    
     output [4 * 8 - 1:0] d,
-    output done
+    output trigger
     );
     
     localparam DIGIT_CNTR_W  = 4;
@@ -37,6 +39,7 @@ module timer(
     
     localparam MSEC_RST_M  = 0;
     localparam MSEC_MAX_M  = 9;
+    
     
     genvar i;
        
@@ -60,35 +63,50 @@ module timer(
     wire [7:0]                  min_bcd, 
                                 sec_bcd;
     
-    wire en_1kHz, inc_s, inc_m;
-    
-    wire ld;
+    wire    en_1kHz, 
+            inc_sec, 
+            inc_min, 
+            ld, 
+            count_en,
+            done;
     
 //////////////////////////////////////////////////////
 //COUNTER LOGIC
 //////////////////////////////////////////////////////  
+
+    assign done =  ~|{min_m, sec_m, msec_m[2], msec_m[1], msec_m[0]}; //done high when all values are 0
     
-    assign reg_ini_en = {
-                            inc_m & ld,
-                            inc_s & ld
-                        };
+    timer_control tc(
+        .clk        (clk),
+        .rst        (rst),
+        .en         (en),
+        .start      (start),
+        .ld_rq      (ld_rq),
+        .done       (done),
+        
+        .count_en   (count_en),
+        .ld         (ld),
+        .trigger    (trigger)
+        );
+            
+    assign reg_ini_en = {inc_min & ld, inc_sec & ld};
                             
                             
     count_to #(13, 5_000) en_1kHz_count(
         .clk        (clk),
         .rst        (rst),
         .en         (en),
+        
         .shift_out  (en_1kHz)
         );
         
     dec_en #(5) de(
-        .empty(reg_dec_empty),
-        .en(en_1kHz),
-        .ld(ld_rq),
-        .dec(reg_dec_cnt)
-        );
+        .empty      (reg_dec_empty),
+        .en         (en_1kHz & count_en),
         
-    assign ld = ld_rq & ~en;
+        .dec        (reg_dec_cnt)
+        ); 
+        
     
 //////////////////////////////////////////////////////
 //INCREMENT SIGNALS DRIVERS
@@ -101,28 +119,31 @@ module timer(
         .clk        (clk),
         .rst        (rst),
         .en         (ld),
-        .d          (btn_s),
-        .q          (inc_s)
+        .d          (btn_sec),
+        
+        .q          (inc_sec)
         );
         
     increment_driver increment_min(
         .clk        (clk),
         .rst        (rst),
         .en         (ld),
-        .d          (btn_m),
-        .q          (inc_m)
+        .d          (btn_min),
+        
+        .q          (inc_min)
         );
         
 //////////////////////////////////////////////////////
-//COUNTER REGISTERS
+//COUNT DOWN REGISTERS
 ////////////////////////////////////////////////////// 
 
     count_from #(DIGIT_CNTR_W, MSEC_MAX_M) dec_msec_0(
         .clk        (clk),
         .rst        (rst),
         .dec        (reg_dec_cnt[0]),
-        .ld         (ld_rq),
+        .ld         (ld),
         .ld_m       (MSEC_RST_M),
+        
         .m          (msec_m[0]),
         .empty      (reg_dec_empty[0])
         ); 
@@ -131,8 +152,9 @@ module timer(
         .clk        (clk),
         .rst        (rst),
         .dec        (reg_dec_cnt[1]),
-        .ld         (ld_rq),
+        .ld         (ld),
         .ld_m       (MSEC_RST_M),
+        
         .m          (msec_m[1]),
         .empty      (reg_dec_empty[1])
         ); 
@@ -141,8 +163,9 @@ module timer(
         .clk        (clk),
         .rst        (rst),
         .dec        (reg_dec_cnt[2]),
-        .ld         (ld_rq),
+        .ld         (ld),
         .ld_m       (MSEC_RST_M),
+        
         .m          (msec_m[2]),
         .empty      (reg_dec_empty[2])
         );
@@ -151,7 +174,7 @@ module timer(
         .clk        (clk),
         .rst        (rst),
         .dec        (reg_dec_cnt[3]), 
-        .ld         (ld_rq),
+        .ld         (ld),
         .ld_m       (ini_sec_m),
         .m          (sec_m),
         .empty      (reg_dec_empty[3])
@@ -161,7 +184,7 @@ module timer(
         .clk        (clk),
         .rst        (rst),
         .dec        (reg_dec_cnt[4]),
-        .ld         (ld_rq),
+        .ld         (ld),
         .ld_m       (ini_min_m),
         .m          (min_m),
         .empty      (reg_dec_empty[4])
@@ -205,10 +228,6 @@ module timer(
         );   
         
     
-    //the ouput of the register is in bcd to be displayed on a 7 segment display
-    //the display format is as follows
-    //{a/p, , h1, h0. m1, m0, , }
-    assign d = {4'b0, min_bcd, sec_bcd, msec_m[2], msec_m[1], msec_m[0]};
-    assign done = ~&d & en;
+    assign d = {4'b1111, min_bcd, sec_bcd, msec_m[2], msec_m[1], msec_m[0]};
             
 endmodule

@@ -6,6 +6,7 @@ verilog xil_defaultlib  --include "../../../../alarm_clock.srcs/sources_1/ip/clk
 "../../../../alarm_clock.srcs/sources_1/new/increment_driver.v" \
 "../../../../alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v" \
 "../../../../alarm_clock.srcs/sources_1/new/timer.v" \
+"../../../../alarm_clock.srcs/sources_1/new/timer_control.v" \
 "../../../../alarm_clock.srcs/sim_1/new/timer_tb.v" \
 
 # compile glbl module

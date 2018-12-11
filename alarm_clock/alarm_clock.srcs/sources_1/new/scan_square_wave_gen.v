@@ -55,9 +55,9 @@ module square_wave_gen #(
     //when ever the wave counter indicates a new edge awitch the out put to create square wave
     always @ (posedge clk)
         if(rst)
-            audio = 0;
+            audio <= 0;
         else if(en & new_edge)
-            audio = ~audio;
+            audio <= ~audio;
             
      assign current_period = min_clks_to_edge;// edge_period + min_clks_to_edge;
      
@@ -68,13 +68,13 @@ module square_wave_gen #(
     always @ (posedge clk, posedge rst)
     begin
         if(rst)
-            count = 28'b0;
+            count <= 28'b0;
         else
             if(en)
                 if(new_edge)
-                    count = 28'b0;
+                    count <= 28'b0;
                 else
-                    count = count + 1;
+                    count <= count + 1;
     end
             
 endmodule

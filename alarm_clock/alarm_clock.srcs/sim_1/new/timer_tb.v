@@ -24,13 +24,13 @@ module timer_tb(
 
     );
     
-    reg    clk,
+    reg     clk,
             rst,
             en,
             ld,
             start,
-            btn_s,
-            btn_m;
+            btnu,
+            btnd;
             
     wire [4*8 - 1:0] d;
     
@@ -39,9 +39,10 @@ module timer_tb(
         .rst        (rst),
         .en         (en),
         .ld_rq      (ld),
-        .btn_s      (btn_s),
-        .btn_m      (btn_m),
-        .d          (d)
+        .btn_min    (btnu),
+        .btn_sec    (btnd),
+        .d          (d),
+        .trigger    (trigger)
         );
         
         
@@ -51,62 +52,49 @@ module timer_tb(
             rst = 0;
             en = 0;
             ld = 0;
-            btn_s = 0;
-            btn_m = 0;
+            btnu = 0;
+            btnd = 0;
             
             forever 
-                #5 clk = ~clk;
+                #1 clk = ~clk;
         end
         
         initial
         begin
-            #10 rst = ~rst;
-            #10 rst = ~rst;
-            
-            #10 en = 1;
-            
-            #10 btn_s = 1;
-            #10 btn_s = 0;
-            
-            #10 btn_m = 1;
-            #10 btn_m = 0;
-            
-            #10 en = 0;
-            
-            #10 btn_s = 1;
-            #10 btn_s = 0;
-            
-            #10 btn_m = 1;
-            #10 btn_m = 0;
-            
-            #10 ld = 1;
-            
-            #10 btn_s = 1;
-            #30 btn_s = 0;
-            
-            #10 btn_m = 1;
-            #30 btn_m = 0;
-            
-            #20 ld = 0;
-            
-            #10 btn_s = 1;
-            #30 btn_s = 0;
-            
-            #10 btn_m = 1;
-            #30 btn_m = 0;
-            
-            #10 en = 1;
+            #10 rst = 1;
+            #10 rst = 0;
                         
-            #10 ld = 1;
+            #10 btnu = 1;
+            #10 btnu = 0;
             
-            #10 btn_s = 1;
-            #30 btn_s = 0;
+            #10 btnd = 1;
+            #10 btnd = 0;
             
-            #10 btn_m = 1;
-            #30 btn_m = 0;
+            #10 en = 1;
             
+            #10 btnu = 1;
+            #10 btnu = 0;
             
-            #20 ld = 0;
+            #10 btnd = 1;
+            #10 btnd = 0;
+            
+            #20 ld = 1;
+            
+            #10 btnu = 1;
+            #10 btnu = 0;
+            
+            #10 btnd = 1;
+            #10 btnd = 0;
+            
+            #10 ld = 0;
+                                    
+            #10 btnu = 1;
+            #10 btnu = 0;
+            
+                     
+            #1000 btnu = 1;
+            #10 btnu = 0;
+            
         end
         
 endmodule

@@ -24,8 +24,8 @@ module clock_counter (
     input rst, 
     input en,
     input set,
-    input btn_h,
-    input btn_m,
+    input btn_hr,
+    input btn_mn,
     output [4 * 8 - 1:0] d
     );
     wire [7:0] display_header;
@@ -36,7 +36,7 @@ module clock_counter (
     
     wire rst_internal;
     wire pm;
-    wire inc_m, inc_h;
+    wire inc_mn, inc_hr;
     wire so_minute;
     
 
@@ -44,7 +44,7 @@ module clock_counter (
 //COUNTERS
 //////////////////////////////////////////////////////     
     sequential_enable #(2) counter_enable(
-        .en_in({so_minute, en & ~set | inc_m}),
+        .en_in({so_minute, en & ~set | inc_mn}),
         .en_out(counter_en)
         );
 
@@ -61,7 +61,7 @@ module clock_counter (
     count_to #(5, 23) count_hours(
         .clk        (clk),
         .rst        (rst),
-        .en         (counter_en[1] | inc_h),
+        .en         (counter_en[1] | inc_hr),
         .m          (hours)
         );
 
@@ -76,16 +76,16 @@ module clock_counter (
         .clk        (clk),
         .rst        (rst),
         .en         (set),
-        .d          (btn_m),
-        .q          (inc_m)
+        .d          (btn_mn),
+        .q          (inc_mn)
         );
         
     increment_driver increment_hour(
         .clk        (clk),
         .rst        (rst),
         .en         (set),
-        .d          (btn_h),
-        .q          (inc_h)
+        .d          (btn_hr),
+        .q          (inc_hr)
         );
 
 //////////////////////////////////////////////////////

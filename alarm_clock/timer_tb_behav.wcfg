@@ -12,14 +12,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="5993795243020fs"></ZoomEndTime>
+      <ZoomEndTime time="1770976929fs"></ZoomEndTime>
       <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="118"></ValueColumnWidth>
+      <ValueColumnWidth column_width="114"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="10" />
+   <WVObjectSize size="12" />
    <wvobject fp_name="/timer_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -32,17 +32,25 @@
       <obj_property name="ElementShortName">en</obj_property>
       <obj_property name="ObjectShortName">en</obj_property>
    </wvobject>
-   <wvobject fp_name="/timer_tb/ld" type="logic">
+   <wvobject fp_name="/timer_tb/DUV/ld_rq" type="logic">
+      <obj_property name="ElementShortName">ld_rq</obj_property>
+      <obj_property name="ObjectShortName">ld_rq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/timer_tb/DUV/ld" type="logic">
       <obj_property name="ElementShortName">ld</obj_property>
       <obj_property name="ObjectShortName">ld</obj_property>
    </wvobject>
-   <wvobject fp_name="/timer_tb/btn_s" type="logic">
-      <obj_property name="ElementShortName">btn_s</obj_property>
-      <obj_property name="ObjectShortName">btn_s</obj_property>
+   <wvobject fp_name="/timer_tb/DUV/btn_sec" type="logic">
+      <obj_property name="ElementShortName">btn_sec</obj_property>
+      <obj_property name="ObjectShortName">btn_sec</obj_property>
    </wvobject>
-   <wvobject fp_name="/timer_tb/btn_m" type="logic">
-      <obj_property name="ElementShortName">btn_m</obj_property>
-      <obj_property name="ObjectShortName">btn_m</obj_property>
+   <wvobject fp_name="/timer_tb/DUV/btn_min" type="logic">
+      <obj_property name="ElementShortName">btn_min</obj_property>
+      <obj_property name="ObjectShortName">btn_min</obj_property>
+   </wvobject>
+   <wvobject fp_name="/timer_tb/DUV/count_en" type="logic">
+      <obj_property name="ElementShortName">count_en</obj_property>
+      <obj_property name="ObjectShortName">count_en</obj_property>
    </wvobject>
    <wvobject fp_name="vbus82" type="vbus">
       <obj_property name="label">MIN_DISP</obj_property>

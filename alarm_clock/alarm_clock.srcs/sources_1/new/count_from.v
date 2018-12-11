@@ -43,15 +43,15 @@ module count_from
     always @ (posedge clk, posedge rst, posedge ld)
     begin
         if(rst)
-            m = {(COUNT_W){1'b0}};
+            m <= {(COUNT_W){1'b0}};
         else if(ld)
-            m = ld_m;
+            m <= ld_m;
         else
             if(dec)
                 if(empty)
-                    m = MAX_VAL;
+                    m <= MAX_VAL;
                 else
-                    m = m - 1;
+                    m <= m - 1;
            
             
     end

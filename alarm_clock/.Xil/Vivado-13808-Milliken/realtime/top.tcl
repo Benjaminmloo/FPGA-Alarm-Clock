@@ -38,7 +38,7 @@ set rt::rc [catch {
     }
       rt::read_verilog -include W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new {
       w:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/.Xil/Vivado-13808-Milliken/realtime/clk_wiz_0_stub.v
-      w:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/.Xil/Vivado-13808-Milliken/realtime/bram_hey_stub.v
+      w:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/.Xil/Vivado-13808-Milliken/realtime/bram_dreams_stub.v
       W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_controller.v
       W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/alarm_driver.v
       W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/clock_counter.v
@@ -50,7 +50,9 @@ set rt::rc [catch {
       W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/disp_mux_ctrl.v
       W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/hours_to_bcd_encoder.v
       W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/increment_driver.v
+      W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/led_driver.v
       W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/mins_to_bcd_encoder.v
+      W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pdm_driver.v
       W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/pwm_driver.v
       W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/read_audio.v
       W:/win/ELEC3500/lab/lab_9/fpga_alarm_clock/alarm_clock/alarm_clock.srcs/sources_1/new/scan_square_wave_gen.v

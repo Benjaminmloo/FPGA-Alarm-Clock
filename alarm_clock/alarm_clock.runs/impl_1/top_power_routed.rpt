@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date             : Fri Dec  7 15:33:09 2018
-| Host             : Milliken running 64-bit major release  (build 9200)
+| Date             : Tue Dec 11 00:44:37 2018
+| Host             : Mullikan running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
 | Device           : xc7a100tcsg324-1
@@ -34,7 +34,7 @@ Table of Contents
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.098        |
-| Device Static (W)        | 0.104        |
+| Device Static (W)        | 0.103        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.1         |
 | Junction Temperature (C) | 25.9         |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.010 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |     2165 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      887 |     63400 |            1.40 |
-|   CARRY4       |    <0.001 |       34 |     15850 |            0.21 |
-|   Register     |    <0.001 |      399 |    126800 |            0.31 |
-|   Others       |     0.000 |      570 |       --- |             --- |
-|   F7/F8 Muxes  |     0.000 |      192 |     63400 |            0.30 |
-| Signals        |    <0.001 |     2121 |       --- |             --- |
-| Block RAM      |    <0.001 |      135 |       135 |          100.00 |
+| Slice Logic    |    <0.001 |     2124 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      870 |     63400 |            1.37 |
+|   CARRY4       |    <0.001 |       38 |     15850 |            0.24 |
+|   Register     |    <0.001 |      405 |    126800 |            0.32 |
+|   F7/F8 Muxes  |    <0.001 |      203 |     63400 |            0.32 |
+|   Others       |     0.000 |      531 |       --- |             --- |
+| Signals        |    <0.001 |     2004 |       --- |             --- |
+| Block RAM      |     0.001 |      125 |       135 |           92.59 |
 | MMCM           |     0.086 |        1 |         6 |           16.67 |
-| I/O            |    <0.001 |       36 |       210 |           17.14 |
-| Static Power   |     0.104 |          |           |                 |
+| I/O            |    <0.001 |       46 |       210 |           21.90 |
+| Static Power   |     0.103 |          |           |                 |
 | Total          |     0.201 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
@@ -146,8 +146,6 @@ Table of Contents
 | Name                                           | Power (W) |
 +------------------------------------------------+-----------+
 | top                                            |     0.098 |
-|   ac                                           |    <0.001 |
-|   ad                                           |    <0.001 |
 |   alarm_reg                                    |    <0.001 |
 |     count_hours                                |    <0.001 |
 |     count_minute                               |    <0.001 |
@@ -163,14 +161,14 @@ Table of Contents
 |   dmc                                          |    <0.001 |
 |   en_1Hz_count                                 |    <0.001 |
 |   en_1kHz_count                                |    <0.001 |
-|   from_file.ra                                 |     0.011 |
+|   from_file.ra                                 |     0.010 |
 |     addr_inc                                   |    <0.001 |
 |     dctr                                       |    <0.001 |
-|     real_data.BRAM.hey_data                    |     0.010 |
-|       U0                                       |     0.010 |
-|         inst_blk_mem_gen                       |     0.010 |
-|           gnbram.gnativebmg.native_blk_mem_gen |     0.010 |
-|             valid.cstr                         |     0.010 |
+|     real_data.DREAMS.dreams_data               |     0.009 |
+|       U0                                       |     0.009 |
+|         inst_blk_mem_gen                       |     0.009 |
+|           gnbram.gnativebmg.native_blk_mem_gen |     0.009 |
+|             valid.cstr                         |     0.009 |
 |               has_mux_a.A                      |     0.001 |
 |               ramloop[0].ram.r                 |    <0.001 |
 |                 prim_init.ram                  |    <0.001 |
@@ -228,27 +226,7 @@ Table of Contents
 |                 prim_init.ram                  |    <0.001 |
 |               ramloop[124].ram.r               |    <0.001 |
 |                 prim_init.ram                  |    <0.001 |
-|               ramloop[125].ram.r               |    <0.001 |
-|                 prim_init.ram                  |    <0.001 |
-|               ramloop[126].ram.r               |    <0.001 |
-|                 prim_init.ram                  |    <0.001 |
-|               ramloop[127].ram.r               |    <0.001 |
-|                 prim_init.ram                  |    <0.001 |
-|               ramloop[128].ram.r               |    <0.001 |
-|                 prim_init.ram                  |    <0.001 |
-|               ramloop[129].ram.r               |    <0.001 |
-|                 prim_init.ram                  |    <0.001 |
 |               ramloop[12].ram.r                |    <0.001 |
-|                 prim_init.ram                  |    <0.001 |
-|               ramloop[130].ram.r               |    <0.001 |
-|                 prim_init.ram                  |    <0.001 |
-|               ramloop[131].ram.r               |    <0.001 |
-|                 prim_init.ram                  |    <0.001 |
-|               ramloop[132].ram.r               |    <0.001 |
-|                 prim_init.ram                  |    <0.001 |
-|               ramloop[133].ram.r               |    <0.001 |
-|                 prim_init.ram                  |    <0.001 |
-|               ramloop[134].ram.r               |    <0.001 |
 |                 prim_init.ram                  |    <0.001 |
 |               ramloop[13].ram.r                |    <0.001 |
 |                 prim_init.ram                  |    <0.001 |
@@ -442,7 +420,7 @@ Table of Contents
 |                 prim_init.ram                  |    <0.001 |
 |               ramloop[9].ram.r                 |    <0.001 |
 |                 prim_init.ram                  |    <0.001 |
-|   pwm_d                                        |    <0.001 |
+|   pdm.pdm_d                                    |     0.001 |
 |   rt_clock                                     |    <0.001 |
 |     count_hours                                |    <0.001 |
 |     count_minute                               |    <0.001 |
@@ -450,7 +428,7 @@ Table of Contents
 |     increment_minute                           |    <0.001 |
 |   sd                                           |    <0.001 |
 |     disp_ptr_inc                               |    <0.001 |
-|   timer_reg                                    |    <0.001 |
+|   t                                            |    <0.001 |
 |     dec_min                                    |    <0.001 |
 |     dec_msec_0                                 |    <0.001 |
 |     dec_msec_1                                 |    <0.001 |
@@ -461,6 +439,8 @@ Table of Contents
 |     increment_sec                              |    <0.001 |
 |     ini_reg_min                                |    <0.001 |
 |     ini_reg_sec                                |    <0.001 |
+|     tc                                         |    <0.001 |
+|   time_alarm                                   |    <0.001 |
 +------------------------------------------------+-----------+
 
 

@@ -25,16 +25,15 @@ module dec_en #(
     )(
         input [NUM_DIGITS - 1:0] empty,
         input en,
-        input ld,
         output [NUM_DIGITS - 1:0] dec
     );
     
     genvar i;
     
-    assign dec[0] = ~&empty[NUM_DIGITS - 1:0] & en & ~ld;
+    assign dec[0] = ~&empty[NUM_DIGITS - 1:0] & en;
     
     for(i = 1; i < NUM_DIGITS; i = i +1)
     begin
-        assign dec[i] = ~&empty[NUM_DIGITS - 1:i] & empty[i - 1] & dec[i - 1] & en & ~ld;
+        assign dec[i] = ~&empty[NUM_DIGITS - 1:i] & empty[i - 1] & dec[i - 1] & en;
     end
 endmodule

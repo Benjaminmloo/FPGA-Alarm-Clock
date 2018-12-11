@@ -33,24 +33,28 @@ module read_audio #(
     );
     
     localparam CLK_FRQ = 100_000_000;
-    localparam SMP_RATE =   (DATA_SET == 1) ? 44_100:
-                            (DATA_SET == 2) ? 16_000:
-                            (DATA_SET == 3) ? 8_000:
+    localparam SMP_RATE =   (DATA_SET == 1) ? 44_100:   //My old man
+                            (DATA_SET == 2) ? 16_000:   //Matches
+                            (DATA_SET == 3) ? 8_000:    //hey
+                            (DATA_SET == 4) ? 16_000:   //Dreams
                             8_000;
     
     localparam ADDR_W =     (DATA_SET == 1) ? 16:
                             (DATA_SET == 2) ? 19:
                             (DATA_SET == 3) ? 20:
+                            (DATA_SET == 4) ? 20:
                             32;
         
     localparam DCTR_W =     (DATA_SET == 1) ? 12:
                             (DATA_SET == 2) ? 13:
-                            (DATA_SET == 2) ? 14:
+                            (DATA_SET == 3) ? 14:
+                            (DATA_SET == 4) ? 14:
                             14;
     
     localparam NUM_SMP =    (DATA_SET == 1) ? 2 ** 16:
                             (DATA_SET == 2) ? 284_304:
                             (DATA_SET == 3) ? 552_960:
+                            (DATA_SET == 4) ? 510_560:
                             2**16;
                             
     
@@ -112,6 +116,15 @@ module read_audio #(
         else if(DATA_SET == 3)
         begin:BRAM
             bram_hey hey_data (
+                .clka(clk),    // input wire clka
+                .ena(en),      // input wire ena
+                .addra(addr),  // input wire [18 : 0] addra
+                .douta(audio)  // output wire [7 : 0] douta
+                );
+        end
+        else if(DATA_SET == 4)
+        begin:DREAMS
+            bram_dreams dreams_data (
                 .clka(clk),    // input wire clka
                 .ena(en),      // input wire ena
                 .addra(addr),  // input wire [18 : 0] addra

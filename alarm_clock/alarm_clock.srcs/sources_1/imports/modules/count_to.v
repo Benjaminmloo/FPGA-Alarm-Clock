@@ -41,12 +41,12 @@ module count_to
     always @ (posedge clk, posedge rst)
     begin
         if(rst)
-            m = {(COUNT_W){1'b0}};
+            m <= {(COUNT_W){1'b0}};
         else
             if(en)
                 if(shift_out)
-                    m = {(COUNT_W){1'b0}};
+                    m <= {(COUNT_W){1'b0}};
                 else
-                    m = m + 1;
+                    m <= m + 1;
     end
 endmodule

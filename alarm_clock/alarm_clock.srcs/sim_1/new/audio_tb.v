@@ -30,9 +30,8 @@ module audio_tb(
     
     wire [AUDIO_W - 1:0] audio_out;
     wire audio_pwm;
-    
-    reg [AUDIO_W - 1:0] audio_data [2 ** AUDIO_W - 1:0];
-           
+    wire [8:0] led_audio_meter;
+               
     
     read_audio #(AUDIO_W, 2,  0) ra(
         .clk        (clk),
@@ -44,12 +43,18 @@ module audio_tb(
     pwm_driver #(AUDIO_W) pwm_d(
         .clk        (clk),
         .duty_in    (audio_out),
-        .pwm_out    (audio_pwm)
+        .audio_out    (audio_pwm)
+        );
+        
+    led_driver led_d(
+        .clk        (clk),
+        .rst        (rst),
+        .audio_data (audio_out),
+        .led_out    (led_audio_meter)
         );
         
     initial
     begin
-        $readmemh("music_8b_amp.rom", audio_data);
         clk = 0;
         rst = 0;
         audio_en = 0;

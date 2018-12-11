@@ -25,6 +25,7 @@ module increment_driver(
     input rst,
     input en, 
     input d,
+    
     output reg q
     );
     parameter S0 = 2'b00, S1 = 2'b01, S2 = 2'b10;
@@ -33,9 +34,9 @@ module increment_driver(
     
    always @ (posedge clk, posedge rst)
         if(rst)
-            state = S0;
+            state <= S0;
         else if(en)
-            state = state_n;
+            state <= state_n;
             
     always @ * 
         case(state)
